@@ -1,0 +1,88 @@
+{
+  "Home": {
+    "headerTitle": "Církev v Praze",
+
+    "headerAbout": "O nás",
+    "headerBlog": "Blog",
+    "headerConfession": "Vyznanie viery",
+    "headerEvents": "Podujatia",
+    "headerGallery": "Galéria",
+    "headerPhotos": "Fotky",
+
+    "headerContact": "Kontakt",
+    "headerDownload": "Na stiahnutie",
+
+    "headerPagesHome": "Domov",
+    "headerPagesX": "Na stiahnutie",
+
+    "heroTitle1": "Církev",
+    "heroTitle2": "v Praze",
+
+    "heroVerse1": "Ja som vínny kmeň a vy ste ratolesti.",
+    "heroVerse2": "Kto zostáva vo mne a ja v ňom, ten prináša veľa ovocia,",
+    "heroVerse3": "pretože bezo mňa nič nemôžete činiť.",
+    "heroRef": "Ján 15:5",
+
+    "home01title1": "MILUJEME KRISTA. MILUJEME JEHO ĽUD.",
+    "home01title2": "BUDUJEME JEHO CIRKEV.",
+    "heroRef3": "Rimanom 1:19-20",
+
+    "home01p1": "Sme veriaci v Pána Ježiša Krista, ktorého sme osobne prijali ako nášho Spasiteľa.",
+    "home01p2": "On je tou najúžasnejšou a najpríjemnejšou osobou.",
+    "home01p3": "Milujeme Ho a snažíme sa dávať Mu prvé miesto vo všetkých veciach.",
+    "home01p4": "Radujte sa z očistenia Ježišovou krvou, majte účasť na božskom živote, naplňte sa Duchom Svätým a buďte privedení do spoločenstva Kristovho Tela!",
+
+    "home02title": "ČOMU VERÍME",
+
+    "home02p1": "Zachovávame všeobecnú vieru, ktorá je zdieľaná všetkými veriacimi kresťanmi, obsah ktorej bol ustanovený raz a navždy v Starom a Novom Zákone.",
+    "home02p2": "Konkrétne je táto všeobecná, viera zostavená z nasledujúcich faktov, v ktoré veríme, v súvislosti s Bibliou, Bohom, Kristom, spásou a večnosťou: Považujeme Bibliu za úplné a jediné božské zjavenie.",
+    "home02p3": "Pevne veríme, že Boh je večne jeden a tiež večne Otcom, Synom a Duchom – traja, ktorí sú odlišní avšak neoddeliteľní.",
+    "home02p4": "Veríme, že Kristus je úplný Boh i dokonalý človek. Bez opustenia Svojho božstva bol počatý v lone ľudskej panny, žil naozajstným ľudským životom na zemi a zomrel zástupnou a všetko zahŕňajúcou smrťou na kríži. Po troch dňoch vstal telesne z mŕtvych a vystúpil do nebies. Teraz je v sláve, plne Boh a stále plne človek. Očakávame Jeho blízky príchod s Božím kráľovstvom, skrze ktoré bude vládnuť nad zemou v miléniu a vo večnosti.",
+    "home02p5": "Vyznávame, že tretí z Trojice, Duch, je takisto Bohom. Všetko, čo Otec má a je, je vyjadrené Synom a všetko, čo Syn má a je, je uskutočnené ako Duch.",
+    "home02p6": "Ďalej veríme, že ľudstvo potrebuje Božiu spásu. Keďže sme boli úplne neschopní naplniť ťažké požiadavky Božej spravodlivosti, svätosti a slávy, Kristus všetky požiadavky naplnil Svojou smrťou na kríži. Kvôli Kristovej smrti nám Boh odpustil naše hriechy, zmieril nás so sebou samým a ospravedlnil nás tým, že Krista učinil našou spravodlivosťou. Na základe Kristovho vykúpenia Boh obrodzuje vykúpených Svojím Duchom pre dovŕšenie svoje spásy, aby sa mohli stať Jeho deťmi.",
+    "home02p7": "Majúc teraz Boží život a prirodzenosť, veriaci vychutnávajú každodennú spásu v Jeho Tele v tomto veku a večnú spásu v prichádzajúcom veku a vo večnosti. Vo večnosti budeme prebývať s Bohom v Novom Jeruzaleme, dovŕšení Božej spásy Jeho vyvolených.",
+    "home02b1": "viac",
+    "home02b2": "menej",
+
+    "home03title": "PODUJATIA",
+    "home03sub": "BLÍŽIACE SA PODUJATIA",
+
+    "cookiesText": "Táto stránka nezhromažďuje žiadne údaje.",
+    "cookiesButton": "Pokračovať",
+    "cookiesButtonNo": "Nesúhlasím",
+
+    "back": "Naspäť",
+
+    "homeBlog": "Na blog",
+    "blogMore": "Pre viac podobného obsahu prejdite na rhemabooks.org",
+    "blogsAll": "Všetky blogy",
+
+    "contactMessageSuccess": "Správa úspešne odoslaná",
+    "contactTitle": "Kontakt",
+    "contactName": "Vaše Meno",
+    "contactEmail": "Váš e-mail",
+    "contactSubject": "Predmet",
+    "contactPhone": "Telefón",
+    "contactMessage": "Vaša správa",
+    "contactAgree": "Súhlasím so",
+    "contactGdpr": "spracovaním údajov",
+
+    "contactSend": "Poslať",
+    "contactError2": "Neodoslané! Napíšte nám na náš email, prosím.",
+    "contactError": "Chyba! Napíšte nám na info@miestnacirkev.sk, prosím.",
+    "contactSuccess": "Vaša správa bola úspešne odoslaná!",
+
+    "contactInvite01": "Pre osobný kontakt alebo štúdium biblie",
+    "contactInvite02": "nás kontaktujte prosím cez formulár.",
+    "contactInvite03": "V Ňom bol život a život bol svetlom ľudí.",
+    "contactInvite04": "Ján 1:4",
+
+    "gdpr1": "Vami poskytnuté údaje neuchovávame v žiadnej databáze.",
+    "gdpr2": "Email bude použitý len na odpoveď na Vašu správu.",
+
+    "galleryPhoto": "Foto galéria",
+    "galleryAudio": "Audio galéria",
+    "galleryVideo": "Video galéria",
+    "galleryDownload": "Na stahnutie"
+  }
+}

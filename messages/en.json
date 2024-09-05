@@ -1,0 +1,82 @@
+{
+  "Home": {
+    "headerTitle": "The Church in Prague",
+    "headerAbout": "About",
+    "headerBlog": "Blog",
+    "headerConfession": "Confession of faith",
+    "headerEvents": "Events",
+    "headerGallery": "Gallery",
+    "headerPhotos": "Photos",
+    "headerContact": "Contact",
+    "headerDownload": "Download",
+    "headerPagesHome": "Home",
+    "headerPagesX": "Na stiahnutie",
+
+    "heroTitle1": "The Church",
+    "heroTitle2": "in Prague",
+
+    "heroVerse1": "I am the vine; you are the branches.",
+    "heroVerse2": "He who abides in Me and I in him, he bears much fruit;",
+    "heroVerse3": "for apart from Me you can do nothing.",
+    "heroRef": "John 15:5",
+
+    "home01title1": "  WE LOVE CHRIST. WE LOVE HIS PEOPLE.",
+    "home01title2": "WE BUILD HIS CHURCH.",
+
+    "home01p1": "We believe in the Lord Jesus Christ, whom we have received personally as our Savior.",
+    "home01p2": "He is the most amazing and loveable person.",
+    "home01p3": "We love Him and endeavor to give Him the first place in all things.",
+    "home01p4": "Rejoice in being washed by His blood, partaking on the divine nature, be filled with the Holy Spirit and be led to the fellowship of His Body!",
+
+    "home02title": "WHAT WE BELIEVE",
+    "home02p1": "We keep the general faith, which is shared by all Christian believers, the content of which was established once and for all in the Old and New Testament.",
+    "home02p2": "Specifically, this general belief is composed of the following facts we believe regarding the Bible, God, Christ, salvation, and eternity: We hold the Bible to be the complete and only divine revelation.",
+    "home02p3": "We strongly believe that God is eternally one and also eternally Father, Son and Spirit - three who are distinct but not separate.",
+    "home02p4": "We believe that Christ is complete God and perfect man. Without abandoning His divinity, He was conceived in the womb of a human virgin, lived a genuine human life on earth, and died a vicarious and all-inclusive death on the cross. After three days he rose bodily from the dead and ascended to heaven. He is now in glory, fully God and still fully man. We await His imminent arrival with the Kingdom of God, through which He will rule over the earth in the millennium and in eternity.",
+    "home02p5": "We confess that the third of the Trinity, the Spirit, is also God. All that the Father has and is is expressed by the Son, and all that the Son has and is is realized as Spirit.",
+    "home02p6": "Furthermore, we believe that humanity needs God's salvation. Since we were completely unable to meet the heavy demands of God's righteousness, holiness, and glory, Christ fulfilled all demands by His death on the cross. Because of Christ's death, God forgave us our sins, reconciled us to himself, and justified us by making Christ our righteousness. On the basis of Christ's redemption, God regenerates the redeemed with His Spirit for the completion of His salvation, so that they can become His children.",
+    "home02p7": "Having God's life and nature now, believers enjoy daily salvation in His Body in this age and eternal salvation in the age to come and in eternity. In eternity we will dwell with God in the New Jerusalem, the consummation of God's salvation of His elect.",
+    "home02b1": "more",
+    "home02b2": "less",
+
+    "home03title": "EVENTS",
+    "home03sub": "UPCOMING EVENTS",
+
+    "cookiesText": "This site does not collect any information.",
+    "cookiesButton": "Continue",
+    "cookiesButtonNo": "Decline",
+
+    "back": "Back",
+
+    "homeBlog": "Go to blog",
+    "blogMore": "For more of similar content go to rhemabooks.org",
+    "blogsAll": "See all blogs",
+
+    "contactMessageSuccess": "Message sent successfully",
+    "contactTitle": "Contact",
+    "contactName": "Name",
+    "contactSubject": "Subject",
+    "contactEmail": "Your e-mail",
+    "contactPhone": "Phone",
+    "contactMessage": "Your message",
+    "contactAgree": "I agree to",
+    "contactGdpr": "process my data",
+
+    "contactSend": "Send",
+    "contactError2": "Not sent! Contact via our email, please.",
+    "contactError": "Error! Write to info@miestnacirkev.sk, please.",
+    "contactSuccess": "Message successfully sent!",
+
+    "contactInvite01": "For personal contact or Bible study",
+    "contactInvite02": "contact us via contact form please.",
+    "contactInvite03": "In him was life, and that life was the light of all mankind.",
+    "contactInvite04": "John 1:4",
+    "gdpr1": "We do not store the data provided by you in any database.",
+    "gdpr2": "The email will only be used to respond to your message.",
+
+    "galleryPhoto": "Photo Gallery",
+    "galleryAudio": "Audio Gallery",
+    "galleryVideo": "Video Gallery",
+    "galleryDownload": "Download"
+  }
+}

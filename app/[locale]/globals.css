@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Yanone+Kaffeesatz:wght@200;300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+  background-color: #2e2236;
+  color: #4e7297;
+}
+
+.hero {
+  background-image: linear-gradient(to top, #12121168, #87848479, #0d0c0c74),
+    url('/site_pics/stream.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+}
+
+input {
+  padding-left: 10px;
+  color: black;
+}
+
+.blogpage {
+  background-image: linear-gradient(to top, #12121168, #87848479, #0d0c0c74),
+    url('/blogpage.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+}
+
+.podcastpage {
+  background-image: linear-gradient(to top, #12121168, #87848479, #0d0c0c74),
+    url('/blogpage.webp');
+  background-repeat: repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+}
+
+.glassmorphism-black {
+  background: rgba(18, 18, 18, 0.64);
+  backdrop-filter: blur(37px);
+  -webkit-backdrop-filter: blur(37px);
+}
+
+.glassmorphism-audio {
+  background: rgba(67, 62, 62, 0.37);
+  backdrop-filter: blur(37px);
+  -webkit-backdrop-filter: blur(37px);
+}
+
+@media (max-width: 768px) {
+  .herom {
+    background-image: linear-gradient(to top, #12121168, #87848479, #0d0c0c74),
+      url('/site_pics/stream.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: calc(310%);
+  }
+
+  .video-mob {
+    width: 99vw;
+  }
+
+  .sticky {
+    position: static;
+  }
+}
