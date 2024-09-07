@@ -15,13 +15,13 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className='hero h-[90vh] lg:h-[110vh] text-[50px] lg:text-[75px] text-white -mt-[25%] lg:-mt-[8%] '>
+      <main className='hero h-[90vh] lg:h-[110vh] text-[35px] lg:text-[45px] text-white -mt-[25%] lg:-mt-[8%] font-extralight'>
         <h1 className='text-center pt-[50%] lg:pt-[20%] leading-[50px] lg:leading-[75px]'>
           {t('heroTitle1')} <br className='flex lg:hidden' /> {t('heroTitle2')}
         </h1>
 
-        <p className='text-center text-[25px] lg:text-[30px] mx-2 mt-4 lg:mt-0'>
-          <br /> {t('heroVerse2')} <br /> {t('heroVerse3')} <br />
+        <p className='text-center text-[15px] lg:text-[20px] mx-2 mt-4 lg:-mt-8'>
+          <br /> {t('heroVerse1')} <br /> {t('heroVerse2')} <br />
           <span className='text-[18px] text-center'> {t('heroRef')}</span>
         </p>
       </main>

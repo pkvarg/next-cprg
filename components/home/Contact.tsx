@@ -90,9 +90,9 @@ const Contact = () => {
 
   return (
     <>
-      <div className='bg-[#2e2236] h-8 lg:scroll-mt-14' id='contact'></div>
-      <div className='bg-[#2e2236] pt-8 lg:pt-16 pb-10 text-[25px] text-white'>
-        <h1 className='text-[30px] lg:text-[35px] text-white text-center lg:pt-0 py-4'>
+      <div className='bg-[#80422C] h-8 lg:scroll-mt-14' id='contact'></div>
+      <div className='bg-[#80422C] pt-8 lg:pt-16 pb-10 text-[25px] text-white'>
+        <h1 className='text-[20px] lg:text-[25px] text-white text-center lg:pt-0 py-4'>
           {t('contactTitle')}
         </h1>
         <div className='mx-4 md:mx-6 lg:mx-0 flex lg:flex-row flex-col lg:justify-center lg:gap-[10%] '>
@@ -107,7 +107,7 @@ const Contact = () => {
                 onSubmit={sendEmail}
                 className='flex flex-col gap-[2.5px]'
               >
-                <div>
+                <div className='text-[18px]'>
                   <div className='flex flex-col'>
                     <label className='form-label mt-[2.5%] text-[20px]'>
                       {t('contactName')}
@@ -150,7 +150,7 @@ const Contact = () => {
                     {t('contactMessage')}
                   </label>
                   <textarea
-                    className='form-control rounded-xl text-[#2e2236]  pl-[10px]'
+                    className='form-control rounded-xl text-[#2e2236] text-[20px] pl-[10px]'
                     rows={5}
                     name='message'
                     value={mailMessage}
@@ -170,7 +170,7 @@ const Contact = () => {
                     />
 
                     <label
-                      className='form-check-label text-[25px] lg:text-[25px] ml-[15px] mt-[7px]'
+                      className='form-check-label text-[18px] lg:text-[18px] ml-[15px] mt-[3px]'
                       htmlFor='flexCheckDefault'
                     >
                       {t('contactAgree')}{' '}
@@ -181,7 +181,7 @@ const Contact = () => {
                         {t('contactGdpr')}{' '}
                       </button>
                       {showGdpr && (
-                        <p className='w-[300px] lg:w-[240px] text-[22.5px] text-left mt-2 leading-6'>
+                        <p className='w-[300px] lg:w-[240px] text-[18px] text-left mt-2 leading-6'>
                           {t('gdpr1')}
                         </p>
                       )}
@@ -201,7 +201,7 @@ const Contact = () => {
                   onChange={(e) => setPasswordGroupTwo(e.target.value)}
                 />
                 <button
-                  className='text-[25px] bg-violet mt-10 pt-[5px] rounded-xl border border-white hover:text-[#2e2236] hover:bg-white'
+                  className='text-[20px] bg-violet mt-10 pt-[2.5px] rounded-xl border border-white hover:text-[#2e2236] hover:bg-white'
                   type='submit'
                   value='Send'
                 >
@@ -211,23 +211,15 @@ const Contact = () => {
             </div>
             <div></div>
           </div>
-          <div className='lg:w-[30%] '>
-            <h1 className='mt-14 text-center'>{t('contactInvite01')}</h1>
-            <h2 className='text-center'>{t('contactInvite02')}</h2>
-            <div className='mt-16 flex lg:ml-16 justify-center lg:mr-[15%]'>
-              <Image
-                className='w-[50%]'
-                src='/tree.png'
-                alt='tree of life'
-                height={200}
-                width={200}
-              />
-            </div>
-            <h3 className='mt-12 text-[#A0B937] text-center'>
+          <div className='lg:w-[30%] text-[20px]'>
+            {/* <h1 className='mt-14 text-center'>{t('contactInvite01')}</h1>
+            <h2 className='text-center'>{t('contactInvite02')}</h2> */}
+            <div className='mt-16 flex lg:ml-16 justify-center lg:mr-[15%]'></div>
+            {/* <h3 className='mt-12 text-center'>
               {t('contactInvite03')}
 
               <span className='text-[17.5px] '>{t('contactInvite04')}</span>
-            </h3>
+            </h3> */}
           </div>
         </div>
       </div>

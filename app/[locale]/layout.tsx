@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Yanone_Kaffeesatz } from 'next/font/google'
+import { Yanone_Kaffeesatz, Lora } from 'next/font/google'
 import './globals.css'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
@@ -7,10 +7,11 @@ import AudioProvider from '@/utils/AudioProvider'
 import { cn } from '@/lib/utils'
 import PodcastPlayer from '@/components/audio/PodcastPlayer'
 
-const inter = Yanone_Kaffeesatz({ subsets: ['latin'] })
+//const inter = Yanone_Kaffeesatz({ subsets: ['latin'] })
+const inter = Lora({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Církev v prazeBratislave',
+  title: 'Církev v Praze',
   description: 'místní církev, církev v Praze',
 }
 

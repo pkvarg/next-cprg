@@ -11,8 +11,10 @@ body {
 }
 
 .hero {
-  background-image: linear-gradient(to top, #12121168, #87848479, #0d0c0c74),
-    url('/site_pics/stream.webp');
+  /* background-image: linear-gradient(to top, #3333337b, #3333337b, #6666663f),
+    url('/site_pics/field_1.webp'); */
+  background-image: linear-gradient(to top, #3333337b, #3333337b),
+    url('/site_pics/field_1.webp');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

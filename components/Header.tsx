@@ -35,14 +35,16 @@ const Header = () => {
       id='navbar'
       className={
         isSticky
-          ? 'sticky top-0  w-full text-white nav-font bg-[#768c51] z-9999'
+          ? 'sticky top-0  w-full text-white nav-font bg-[#733b28] z-9999'
           : 'top-0  w-full text-white nav-font'
       }
     >
       <div className='justify-between px-4 mx-auto md:items-center md:flex md:px-8'>
         <div className='mb-0 lg:mb-2'>
-          <div className='flex items-center justify-between py-3 md:py-5 md:block'>
-            <p className='text-[2.05rem] font-normal'>{t('headerTitle')}</p>
+          <div className='flex items-center justify-between py-3 md:py-2 md:block'>
+            <p className='text-[25px] font-normal mt-[5px]'>
+              {t('headerTitle')}
+            </p>
             <div className='md:hidden'>
               <button
                 className='p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border'
@@ -87,11 +89,11 @@ const Header = () => {
               navbar ? 'block' : 'hidden'
             }`}
           >
-            <ul className='justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[30px] lg:text-[25px] items-center'>
+            <ul className='justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[22.50px] lg:text-[20px] items-center'>
               <li>
                 <Link
                   href={`${locale}/#about`}
-                  className='hover:text-red-600 cursor-pointer'
+                  className='hover:text-[#ffff00] cursor-pointer'
                 >
                   {t('headerAbout')}
                 </Link>
@@ -99,7 +101,7 @@ const Header = () => {
               <li>
                 <Link
                   href={`${locale}/blog`}
-                  className='hover:text-red-600 cursor-pointer'
+                  className='hover:text-[#ffff00] cursor-pointer'
                 >
                   {t('headerBlog')}
                 </Link>
@@ -107,7 +109,7 @@ const Header = () => {
               <li>
                 <Link
                   href={`${locale}/#events`}
-                  className='hover:text-red-600 cursor-pointer'
+                  className='hover:text-[#ffff00] cursor-pointer'
                 >
                   {t('headerEvents')}
                 </Link>
@@ -115,9 +117,11 @@ const Header = () => {
 
               <div className='group relative  cursor-pointer'>
                 <div className='flex items-center justify-between'>
-                  <p className='hover:text-red-600'>{t('headerGallery')}</p>
+                  <p className='hover:text-[#ffff00] cursor-pointer'>
+                    {t('headerGallery')}
+                  </p>
                 </div>
-                <div className='invisible absolute z-50 flex w-max flex-col px-4 py-1 text-white shadow-xl group-hover:visible group-hover:bg-[#768c51]'>
+                <div className='invisible absolute z-50 flex w-max flex-col px-4 py-1 text-white shadow-xl group-hover:visible group-hover:bg-[#0f1b0a]'>
                   {/* <Link
                     href={`${locale}/gallery`}
                     className='cursor-pointer hover:text-red-600'
@@ -126,18 +130,18 @@ const Header = () => {
                   </Link> */}
                   <Link
                     href={`${locale}/podcasts`}
-                    className='cursor-pointer hover:text-red-600'
+                    className='hover:text-[#ffff00] cursor-pointer'
                   >
                     Audio
                   </Link>
                   <Link
                     href={`${locale}/video`}
-                    className='cursor-pointer hover:text-red-600'
+                    className='hover:text-[#ffff00] cursor-pointer'
                   >
                     Video
                   </Link>
 
-                  {/* <Link href={'/download'} className='hover:text-red-600'>
+                  {/* <Link href={'/download'}  className='hover:text-[#ffff00] cursor-pointer'>
                       {t('headerDownload')}
                     </Link> */}
                 </div>
@@ -146,7 +150,7 @@ const Header = () => {
               <li>
                 <Link
                   href={`${locale}/#contact`}
-                  className='hover:text-red-600 cursor-pointer'
+                  className='hover:text-[#ffff00] cursor-pointer'
                 >
                   {t('headerContact')}
                 </Link>
@@ -155,11 +159,6 @@ const Header = () => {
               <li>
                 <LanguageBar />
               </li>
-              {/* <li>
-                <Link href='/login'>
-                  <FiLogIn className='hover:text-red-600 font-extrabold' />
-                </Link>
-              </li> */}
             </ul>
           </div>
         </div>

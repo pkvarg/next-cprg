@@ -9,26 +9,28 @@ const HomeUpcomingSection = async () => {
 
   const locale = await getLocale()
 
-  const events = await db.blog.findMany({
-    where: {
-      category: 'events',
-      upcoming: true,
-      english: locale === 'en' ? true : false,
-    },
-    select: {
-      id: true,
-      title: true,
-      category: true,
-      media: true,
-      text: true,
-      upcoming: true,
-      english: true,
-      link: true,
-    },
-    orderBy: {
-      title: 'asc',
-    },
-  })
+  // const events = await db.blog.findMany({
+  //   where: {
+  //     category: 'events',
+  //     upcoming: true,
+  //     english: locale === 'en' ? true : false,
+  //   },
+  //   select: {
+  //     id: true,
+  //     title: true,
+  //     category: true,
+  //     media: true,
+  //     text: true,
+  //     upcoming: true,
+  //     english: true,
+  //     link: true,
+  //   },
+  //   orderBy: {
+  //     title: 'asc',
+  //   },
+  // })
+
+  const events = []
 
   return (
     events.length > 0 && (
