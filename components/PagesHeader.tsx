@@ -17,11 +17,14 @@ const PagesHeader = () => {
   const { locale } = useParams()
 
   return (
-    <nav id='navbar' className={'top-0  w-full text-white nav-font'}>
+    <nav
+      id='navbar'
+      className={'top-0  w-full text-white nav-font bg-[#733b28]'}
+    >
       <div className='justify-between px-4 mx-auto md:items-center md:flex md:px-8'>
         <div className='mb-0 lg:mb-2'>
-          <div className='flex items-center justify-between py-3 md:py-5 md:block'>
-            <Link className='text-[2.05rem] font-normal' href={`/${locale}`}>
+          <div className='flex items-center justify-between py-3 md:py-2 md:block'>
+            <Link className='text-[25px] font-normal' href={`/${locale}`}>
               {t('headerPagesHome')}
             </Link>
             <div className='md:hidden'>
@@ -68,7 +71,7 @@ const PagesHeader = () => {
               navbar ? 'block' : 'hidden'
             }`}
           >
-            <ul className='justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[30px] lg:text-[25px] items-center'>
+            <ul className='justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[20px] lg:text-[20px] items-center'>
               <div className='group relative  cursor-pointer'>
                 <div className='flex items-center justify-between'>
                   <p className='hover:text-red-600'>{t('headerGallery')}</p>
@@ -104,12 +107,12 @@ const PagesHeader = () => {
 
               <li>
                 <a
-                  href='https://www.prud.sk'
+                  href='https://www.proudzivota.cz'
                   className='hover:text-red-600 cursor-pointer'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  Eshop prud.sk
+                  Eshop proudzivota.cz
                 </a>
               </li>
 

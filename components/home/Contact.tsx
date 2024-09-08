@@ -3,8 +3,9 @@ import React, { useRef, useState } from 'react'
 import Message from '../Message'
 import axios from 'axios'
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
+
 import { useParams } from 'next/navigation'
+import Link from 'next/link'
 
 const Contact = () => {
   const t = useTranslations('Home')
@@ -95,7 +96,7 @@ const Contact = () => {
         <h1 className='text-[20px] lg:text-[25px] text-white text-center lg:pt-0 py-4'>
           {t('contactTitle')}
         </h1>
-        <div className='mx-4 md:mx-6 lg:mx-0 flex lg:flex-row flex-col lg:justify-center lg:gap-[10%] '>
+        <div className='mx-4 md:mx-6 lg:mx-0 flex lg:flex-row flex-col lg:justify-center items-center lg:gap-[10%] '>
           <div className='pt-[50px] lg:pt-0 lg:w-[30%]'>
             {messageSuccess && (
               <Message variant='success'>{messageSuccess}</Message>
@@ -212,6 +213,33 @@ const Contact = () => {
             <div></div>
           </div>
           <div className='lg:w-[30%] text-[20px]'>
+            <h1 className='text-[25px] pb-4'>Pravidelná setkání</h1>
+            <p>
+              Úterý 18:30 hod{' '}
+              <span className='text-[15.5px]'> - Modlitební setkání</span>
+            </p>
+            <p>
+              Čtvrtek 18:00 hod{' '}
+              <span className='text-[15.5px]'> - Biblické studium </span>
+            </p>
+            <p className='mb-4'>
+              Neděle 09:30 hod{' '}
+              <span className='text-[15.5px]'>
+                {' '}
+                - Pánův stůl (Večeře Páně) a prorokovací setkání{' '}
+              </span>
+            </p>
+
+            <Link href={`${locale}/meetings`} className='underline text-[18px]'>
+              Co děláme na nedělním setkání
+            </Link>
+
+            <p className='py-4 text-[17.5px]'>
+              <a href='mailto:info@cirkevvpraze.cz'>
+                Email: info@cirkevvpraze.cz
+              </a>
+            </p>
+
             {/* <h1 className='mt-14 text-center'>{t('contactInvite01')}</h1>
             <h2 className='text-center'>{t('contactInvite02')}</h2> */}
             <div className='mt-16 flex lg:ml-16 justify-center lg:mr-[15%]'></div>

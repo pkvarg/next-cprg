@@ -89,7 +89,7 @@ const Header = () => {
               navbar ? 'block' : 'hidden'
             }`}
           >
-            <ul className='justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[22.50px] lg:text-[20px] items-center'>
+            <ul className='justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[20px] lg:text-[20px] items-center'>
               <li>
                 <Link
                   href={`${locale}/#about`}
