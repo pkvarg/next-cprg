@@ -33,7 +33,7 @@ const Blog = async () => {
       <div className='blogpage h-screen'>
         <PagesHeader />
 
-        <div className='text-white text-center text-[30px]'>Blog</div>
+        <div className='text-white text-center text-[30px] my-4'>Blog</div>
         <div className='mt-8 flex flex-col items-center gap-1 w-full'>
           {blogs.length > 0 &&
             blogs.map((blog) => (
@@ -48,13 +48,13 @@ const Blog = async () => {
       </div>
 
       <div>
-        <div className='bg-[#768c51] text-white py-8 lg:py-16 text-[20px] lg:text-[30px]'>
+        <div className='bg-[#9D7739] text-white py-8 lg:py-16 text-[20px] lg:text-[20px]'>
           <div className='flex flex-col items-center justify-evenly mx-4 lg:mx-[20%]'>
             {blogs.length > 0 &&
               blogs.map((blog) => (
                 <div className='flex flex-col' id={blog.id} key={blog.id}>
                   <div className='flex flex-col gap-2 justify-center items-center py-2 mt-8'>
-                    <h2 className='text-[30px]'>{blog.title}</h2>
+                    <h2 className='text-[25px]'>{blog.title}</h2>
                     {blog.media && (
                       <img
                         src={blog.media}
@@ -62,9 +62,7 @@ const Blog = async () => {
                         className='w-[100px]'
                       />
                     )}
-                    <p className='font-[300] text-[20px] lg:text-[30px] text-justify'>
-                      {blog.text}
-                    </p>
+                    <p className='font-[300]  text-justify my-4'>{blog.text}</p>
                   </div>
                   <Link
                     href={blog?.link}

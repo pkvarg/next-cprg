@@ -33,7 +33,7 @@ export default async function AllBlogs() {
               <div>
                 <h1 className='text-green-500'>Title: {blog.title}</h1>
                 <h2 className='text-green-200'>Category: {blog.category}</h2>
-                <div className='flex flex-row gap-2'>
+                {/* <div className='flex flex-row gap-2'>
                   <p>Image: </p>
                   {blog.media !== '' ? (
                     <Image
@@ -44,7 +44,7 @@ export default async function AllBlogs() {
                   ) : (
                     <p>no image</p>
                   )}
-                </div>
+                </div> */}
                 <p className='text-[17.5px]'>Text: {blog.text}</p>
                 <p className='text-green-200'>Link: {blog.link}</p>
                 <p className={blog.english ? 'text-green-500' : 'text-red-500'}>

@@ -113,7 +113,7 @@ const CreateBlogForm: React.FC = () => {
           <option value='events'>Event</option>
           <option value='blogs'>Blog</option>
         </select>
-        <div className='flex relative bg-[#2e2236] mt-8'>
+        {/* <div className='flex relative bg-[#2e2236] mt-8'>
           <button
             type='button'
             className='w-[36px] h-[36px] border border-green-100 flex items-center justify-center cursor-pointer'
@@ -151,7 +151,7 @@ const CreateBlogForm: React.FC = () => {
           <Image className='w-[250px] my-4' src={media} alt={title} />
         ) : (
           <p>without image</p>
-        )}
+        )} */}
         {category !== 'announcements' && (
           <label className='text-white mt-4'>
             <input

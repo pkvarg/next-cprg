@@ -213,25 +213,24 @@ const Contact = () => {
             <div></div>
           </div>
           <div className='lg:w-[30%] text-[20px]'>
-            <h1 className='text-[25px] pb-4'>Pravidelná setkání</h1>
+            <h1 className='text-[25px] pb-4'> {t('contactRightTitle')}</h1>
             <p>
-              Úterý 18:30 hod{' '}
-              <span className='text-[15.5px]'> - Modlitební setkání</span>
+              {t('contactRightTue')}
+              <span className='text-[15.5px]'>{t('contactRightTueDesc')}</span>
             </p>
             <p>
-              Čtvrtek 18:00 hod{' '}
-              <span className='text-[15.5px]'> - Biblické studium </span>
+              {t('contactRightThu')}
+
+              <span className='text-[15.5px]'>{t('contactRightThuDesc')}</span>
             </p>
             <p className='mb-4'>
-              Neděle 09:30 hod{' '}
-              <span className='text-[15.5px]'>
-                {' '}
-                - Pánův stůl (Večeře Páně) a prorokovací setkání{' '}
-              </span>
+              {t('contactRightSun')}
+
+              <span className='text-[15.5px]'>{t('contactRightSunDesc')}</span>
             </p>
 
             <Link href={`${locale}/meetings`} className='underline text-[18px]'>
-              Co děláme na nedělním setkání
+              {t('contactRightLink')}
             </Link>
 
             <p className='py-4 text-[17.5px]'>

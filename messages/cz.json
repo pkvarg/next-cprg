@@ -74,8 +74,8 @@
     "back": "Naspäť",
 
     "homeBlog": "Na blog",
-    "blogMore": "Pre viac podobného obsahu prejdite na rhemabooks.org",
-    "blogsAll": "Všetky blogy",
+    "blogMore": "Pro více podobného obsahu přejděte na rhemabooks.org",
+    "blogsAll": "Všechny blogy",
 
     "contactMessageSuccess": "Zpráva úspěšně odeslána",
     "contactTitle": "Kontakt",
@@ -99,6 +99,30 @@
 
     "gdpr1": "Vami poskytnuté údaje neuchováme v žádné databázi.",
     "gdpr2": "Email bude použit jen na odpověď na Vašu správu.",
+
+    "contactRightTitle": "Pravidelná setkání",
+    "contactRightTue": "Úterý 18:30 hod ",
+    "contactRightTueDesc": " - Modlitební setkání",
+    "contactRightThu": "Čtvrtek 18:00 hod ",
+    "contactRightThuDesc": " - Biblické studium",
+    "contactRightSun": "Neděle 09:30 hod ",
+    "contactRightSunDesc": " - Pánův stůl (Večeře Páně) a prorokovací setkání ",
+    "contactRightLink": "Co děláme na nedělním setkání?",
+
+    "meetingsTitle": "Co děláme na nedělním setkání?",
+    "meetingsP1": " - Neděli nazýváme dnem Páně. Jedná se o první den v týdnu, den Pánova vzkříšení. Od počátků církve se křesťané společně scházeli v den Páně, aby si připomínali Pána a sdíleli Boží Slovo.",
+    "meetingsP1ver1": "První den v týdnu jsme se sešli k lámání chleba. Pavel s nimi rozmlouval… a protáhl svou řeč až do půlnoci.",
+    "meetingsP1ver1Ref": " (Skutky 20,7)",
+    "meetingsP1ver2": "V den Páně jsem se ocitl v duchu…",
+    "meetingsP1ver2Ref": " (Zjevení 1,10)",
+    "meetingsP2": " - Program našeho setkání v den Páně Pánův stůl (9.30 - 10.30 hod)",
+    "meetingsP3": "U Pánova stolu (při tzv. Večeři Páně) lámeme chléb a pijeme kalich, abychom si připomínali našeho Pána Ježíše Krista. Zatímco máme podíl na chlebu a kalichu, zpíváme chvalozpěvy a chválíme Pána.",
+    "meetingsP3ver": "Pak vzal chléb, vzdal díky, rozlomil a dal jim se slovy: „Toto je mé tělo, které se za vás dává. To čiňte na mou památku. A právě tak vzal po večeři kalich a řekl: „Tento kalich je nová smlouva v mé krvi, která se za vás vylévá.“",
+    "meetingsP3verRef": " (Lukáš 22,19-20)",
+    "meetingsP4": " - Prorokovací setkání (10:30 – 11:30 hod)",
+    "meetingsP5": "Prorokovat znamená především mluvit Boží Slovo. Nemáme žádného ustanoveného kazatele, který by prorokoval, protože Bible říká, že prorokovat můžeme všichni. Bratři a sestry v církvi jsou každý týden povzbuzováni, aby četli Svaté Slovo pro ranní obživení a během setkání v den Páně se pak sdíleli o tom, z čeho se těšili. Nicméně je možné se sdílet i na nějaké jiné téma.",
+    "meetingsP5ver": "Jeden po druhém můžete všichni prorokovat, aby se všichni učili a všichni byli povzbuzováni.",
+    "meetingsP5verRef": " (1. Korintským 14,31)",
 
     "galleryPhoto": "Foto galerie",
     "galleryAudio": "Audio galerie",

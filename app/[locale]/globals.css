@@ -28,7 +28,7 @@ input {
 
 .blogpage {
   background-image: linear-gradient(to top, #12121168, #87848479, #0d0c0c74),
-    url('/blogpage.webp');
+    url('/site_pics/field_2.webp');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -37,7 +37,7 @@ input {
 
 .podcastpage {
   background-image: linear-gradient(to top, #12121168, #87848479, #0d0c0c74),
-    url('/blogpage.webp');
+    url('/site_pics/field_2.webp');
   background-repeat: repeat;
   background-position: center center;
   background-size: cover;
