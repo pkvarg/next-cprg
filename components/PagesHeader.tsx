@@ -76,7 +76,7 @@ const PagesHeader = () => {
                 <div className='flex items-center justify-between'>
                   <p className='hover:text-red-600'>{t('headerGallery')}</p>
                 </div>
-                <div className='invisible absolute z-50 flex w-max flex-col px-4 py-1 text-white shadow-xl group-hover:visible group-hover:bg-[#aeaba4]'>
+                <div className='invisible absolute z-50 flex w-max flex-col px-4 py-1 text-white shadow-xl group-hover:visible group-hover:bg-[#000000]'>
                   {/* <Link
                     href={`/${locale}/gallery`}
                     className='cursor-pointer hover:text-red-600'
