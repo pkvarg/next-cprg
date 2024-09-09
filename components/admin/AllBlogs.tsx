@@ -4,8 +4,11 @@ import EditBlogButton from './EditBlogButton'
 import DeleteBlogButton from './DeleteBlogButton'
 import RefreshButton from './RefreshButton'
 import Image from 'next/image'
+import { getLocale } from 'next-intl/server'
 
 export default async function AllBlogs() {
+  const locale = await getLocale()
+
   const blogs = await db.blog.findMany({
     select: {
       id: true,
@@ -24,7 +27,9 @@ export default async function AllBlogs() {
   return (
     <div className='mt-8'>
       <RefreshButton />
-      <h1 className='text-[30px] text-center text-white'>All Blogs</h1>
+      <h1 className='text-[30px] text-center text-white'>
+        {locale === 'en' ? 'All Blogs' : 'Všechny blogy'}
+      </h1>
 
       <div className='flex justify-center items-center mx-4 lg:mx-[5%]'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-white text-[25px] py-8'>
@@ -55,7 +60,9 @@ export default async function AllBlogs() {
                 {blog.upcoming && <p>Upcoming / New: true </p>}
               </div>
               <div className='flex flex-col gap-2 items-start mt-2'>
-                <EditBlogButton link={`/en/admin/blogs/edit/${blog.id}`} />
+                <EditBlogButton
+                  link={`/${locale}/admin/blogs/edit/${blog.id}`}
+                />
                 <DeleteBlogButton blogId={`${blog.id}`} />
               </div>
 

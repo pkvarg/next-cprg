@@ -6,7 +6,7 @@
 
 body {
   overflow-x: hidden;
-  background-color: #80422c;
+  background-color: #733b28;
 }
 
 .hero {
@@ -50,7 +50,8 @@ input {
 }
 
 .glassmorphism-audio {
-  background: rgba(67, 62, 62, 0.37);
+  background: #80422c;
+
   backdrop-filter: blur(37px);
   -webkit-backdrop-filter: blur(37px);
 }

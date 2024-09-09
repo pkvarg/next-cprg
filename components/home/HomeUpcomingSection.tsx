@@ -9,28 +9,26 @@ const HomeUpcomingSection = async () => {
 
   const locale = await getLocale()
 
-  // const events = await db.blog.findMany({
-  //   where: {
-  //     category: 'events',
-  //     upcoming: true,
-  //     english: locale === 'en' ? true : false,
-  //   },
-  //   select: {
-  //     id: true,
-  //     title: true,
-  //     category: true,
-  //     media: true,
-  //     text: true,
-  //     upcoming: true,
-  //     english: true,
-  //     link: true,
-  //   },
-  //   orderBy: {
-  //     title: 'asc',
-  //   },
-  // })
-
-  const events = []
+  const events = await db.blog.findMany({
+    where: {
+      category: 'events',
+      upcoming: true,
+      english: locale === 'en' ? true : false,
+    },
+    select: {
+      id: true,
+      title: true,
+      category: true,
+      media: true,
+      text: true,
+      upcoming: true,
+      english: true,
+      link: true,
+    },
+    orderBy: {
+      title: 'asc',
+    },
+  })
 
   //const events = []
 
@@ -56,7 +54,7 @@ const HomeUpcomingSection = async () => {
                   {event.link && (
                     <div className='flex justify-center'>
                       <Link
-                        className='mt-8 mb-4 border border-[#2e2236] rounded-2xl px-4 pt-1 hover:bg-[#2e2236] hover:text-white'
+                        className='mt-8 mb-4 border border-[#733b28;] rounded-2xl px-4 pt-1 hover:bg-[#733b28;] hover:text-white'
                         href={event.link}
                         target='_blank'
                       >

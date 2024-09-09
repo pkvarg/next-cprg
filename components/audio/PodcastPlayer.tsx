@@ -128,7 +128,7 @@ const PodcastPlayer = () => {
         <div className='flex items-center gap-4 max-md:hidden'>
           <Link href={`/podcast/${audio?.podcastId}`}>
             <Image
-              src={'/player_pics/icon.webp'}
+              src={'/player_pics/grain.webp'}
               width={64}
               height={64}
               alt='player1'
@@ -137,7 +137,7 @@ const PodcastPlayer = () => {
           </Link>
           <div className='flex w-[160px] flex-col'>
             <h2 className='text-14 truncate font-semibold text-white'>
-              {audio?.podcastTitle}
+              {audio?.title}
             </h2>
             {/* <p className='text-12 font-normal text-white-2'>{audio?.author}</p> */}
           </div>

@@ -5,8 +5,10 @@ import DeleteBlogButton from './DeleteBlogButton'
 import RefreshButton from './RefreshButton'
 import EditPodcastButton from './EditPodcastButton'
 import DeletePodcastButton from './DeletePodcastButton'
+import { getLocale } from 'next-intl/server'
 
 export default async function AllPodcasts() {
+  const locale = await getLocale()
   const podcasts = await db.podcast.findMany({
     select: {
       id: true,
@@ -18,12 +20,21 @@ export default async function AllPodcasts() {
     },
     orderBy: { updatedAt: 'desc' },
   })
-  if (podcasts.length === 0) return <p>No podcasts found</p>
+  if (podcasts.length === 0)
+    return (
+      <p className='ml-[10%] text-white'>
+        {locale === 'en'
+          ? 'No podcasts found'
+          : 'Nebyly nalezeny žádné podcasty'}
+      </p>
+    )
 
   return (
     <div className='mt-8'>
       <RefreshButton />
-      <h1 className='text-[30px] text-center text-white'>All Podcasts</h1>
+      <h1 className='text-[30px] text-center text-white'>
+        {locale === 'en' ? 'All Podcasts' : 'Všechny podcasty'}
+      </h1>
 
       <div className='flex justify-center items-center mx-4 lg:mx-[5%]'>
         <div className='gap-4 text-white text-[25px] py-8'>
@@ -54,7 +65,7 @@ export default async function AllPodcasts() {
               </div>
               <div className='flex flex-col gap-2 items-start mt-2'>
                 <EditPodcastButton
-                  link={`/en/admin/podcasts/edit/${podcast.id}`}
+                  link={`/${locale}/admin/podcasts/edit/${podcast.id}`}
                 />
                 <DeletePodcastButton podcastId={`${podcast.id}`} />
               </div>

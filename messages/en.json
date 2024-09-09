@@ -120,6 +120,29 @@
     "meetingsP5ver": "One by one you may all prophesy so that all may learn and all may be encouraged.",
     "meetingsP5verRef": " (1 Corinthians 14:31)",
 
+    "counterVisitors": "Visitors count",
+    "refreshAdmin": "Cannot see your updates? Click here to refresh page",
+
+    "adminNewestBlog": "Newest Blog",
+    "adminUpcomingEvent": "Upcoming Event",
+    "adminEnglish": "Is this to be displayed on the english webpage?",
+
+    "adminCreateBlog": "Create Blog",
+    "adminCreatingBlog": "Creating...",
+
+    "adminBack": "Back To Admin",
+
+    "adminCreatePodcast": "Create Podcast",
+
+    "adminCreatingPodcast": "Creating Podcast...",
+    "adminCreatePodcastNoMp3": "No mp3",
+
+    "adminCreateVideo": "Create Video",
+    "adminCreateVideoNotShownTitle": "Title...will not be shown publicly",
+    "adminCreatingVideo": "Creating Video",
+
+    "adminLink": "Add a link pointing to a different website?",
+
     "galleryPhoto": "Photo Gallery",
     "galleryAudio": "Audio Gallery",
     "galleryVideo": "Video Gallery",

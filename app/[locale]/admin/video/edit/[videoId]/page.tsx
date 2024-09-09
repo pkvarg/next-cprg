@@ -5,8 +5,8 @@ import { useParams } from 'next/navigation'
 import { getSingleVideo, editSingleVideo } from '../../../_actions/videoActions'
 import DeleteVideoButton from '@/components/admin/DeleteVideoButton'
 
-import { AiOutlineDelete } from 'react-icons/ai'
 import VideoBack from '@/components/admin/VideoBack'
+import { useTranslations } from 'next-intl'
 
 interface Video {
   id: string
@@ -17,6 +17,7 @@ interface Video {
 }
 
 const EditVideo = () => {
+  const t = useTranslations('Home')
   const [isPending, startTransition] = useTransition()
   const [message, setMessage] = useState('')
 
@@ -120,8 +121,7 @@ const EditVideo = () => {
                 : 'text-red-500 text-[25px] mt-4 cursor-pointer'
             }
           >
-            Is this to be displayed on the english webpage ?{' '}
-            {english ? 'Yes' : 'No'}
+            {t('adminEnglish')} {english ? 'Yes' : 'No'}
           </p>
           <input type='hidden' name='english' value={english ? 'on' : 'off'} />
 

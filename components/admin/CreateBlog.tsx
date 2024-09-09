@@ -11,8 +11,10 @@ import { app } from '@/utils/firebaseConfig'
 import { create } from '@/app/[locale]/admin/_actions/blogActions'
 import { useTransition } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 const CreateBlogForm: React.FC = () => {
+  const t = useTranslations('Home')
   const [isPending, startTransition] = useTransition()
   const [message, setMessage] = useState('')
   const [category, setCategory] = useState<string>('blogs')
@@ -89,7 +91,9 @@ const CreateBlogForm: React.FC = () => {
         method='post'
         className='relative flex flex-col gap-2 mx-4 lg:mx-[20%] text-[25px]'
       >
-        <h1 className='text-white text-center text-[30px]'>Create Blog</h1>
+        <h1 className='text-white text-center text-[30px]'>
+          {t('adminCreateBlog')}
+        </h1>
         <input
           name='title'
           type='text'
@@ -113,7 +117,7 @@ const CreateBlogForm: React.FC = () => {
           <option value='events'>Event</option>
           <option value='blogs'>Blog</option>
         </select>
-        {/* <div className='flex relative bg-[#2e2236] mt-8'>
+        {/* <div className='flex relative mt-8'>
           <button
             type='button'
             className='w-[36px] h-[36px] border border-green-100 flex items-center justify-center cursor-pointer'
@@ -161,7 +165,10 @@ const CreateBlogForm: React.FC = () => {
               onChange={(e) => setUpcoming(e.target.checked)}
             />
             <span className='pl-2'>
-              {category === 'blogs' ? 'Newest Blog' : 'Upcoming Event'}?
+              {category === 'blogs'
+                ? t('adminNewestBlog')
+                : t('adminUpcomingEvent')}
+              ?
             </span>
           </label>
         )}
@@ -173,9 +180,7 @@ const CreateBlogForm: React.FC = () => {
             checked={english}
             onChange={(e) => setEnglish(e.target.checked)}
           />
-          <span className='pl-2'>
-            Is this to be displayed on the english webpage?
-          </span>
+          <span className='pl-2'>{t('adminEnglish')}</span>
         </label>
         <textarea
           className='text-[#2e2236] mt-4 pl-1'
@@ -184,15 +189,14 @@ const CreateBlogForm: React.FC = () => {
           onChange={(e) => setText(e.target.value)}
           placeholder='Text...'
         />
-        {category === 'events' && (
-          <input
-            name='link'
-            type='text'
-            placeholder='Link'
-            value={link}
-            onChange={(e) => setLink(e.target.value)}
-          />
-        )}
+
+        <input
+          name='link'
+          type='text'
+          placeholder='Link'
+          value={link}
+          onChange={(e) => setLink(e.target.value)}
+        />
 
         {message && (
           <p className='text-center bg-yellow-500 text-white text-[25px]'>
@@ -204,7 +208,7 @@ const CreateBlogForm: React.FC = () => {
           type='submit'
           disabled={isPending}
         >
-          {isPending ? '...Creating...' : 'Create Blog'}
+          {isPending ? t('adminCreatingBlog') : t('adminCreateBlog')}
         </button>
       </form>
     </div>

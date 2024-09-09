@@ -2,8 +2,11 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
+import { useTranslations } from 'next-intl'
+import LanguageBar from '../LanguageBar'
 
 const AdminNavbar = () => {
+  const t = useTranslations('Home')
   const [navbar, setNavbar] = useState(false)
   const { locale } = useParams()
 
@@ -13,7 +16,7 @@ const AdminNavbar = () => {
         <div className='justify-between px-4 mx-auto md:items-center md:flex md:px-8'>
           <div className='mb-0 lg:mb-2'>
             <div className='flex items-center justify-between md:block'>
-              <Link href='/'>Home</Link>
+              <Link href='/'>{t('headerPagesHome')}</Link>
 
               <div className='md:hidden'>
                 <button
@@ -63,19 +66,18 @@ const AdminNavbar = () => {
                 <li>
                   <Link href={`/${locale}/admin/audio`}>Audio</Link>
                 </li>
-
                 <li>
                   <Link href={`/${locale}/admin/video`}>Video</Link>
+                </li>{' '}
+                <li>
+                  <LanguageBar />
                 </li>
-
                 {/* <li>
                   <Link href={`/${locale}/admin/blogs`}>Blogs</Link>
                 </li> */}
-
                 {/* <li>
                   <Link href={`/${locale}/admin/announcements`}>Oznamy</Link>
                 </li> */}
-
                 {/* <li
                   className='text-red-500 cursor-pointer pt-[1px]'
                   onClick={handleLogout}

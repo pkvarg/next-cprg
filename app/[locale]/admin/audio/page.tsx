@@ -10,7 +10,7 @@ const Audio = () => {
     <div>
       <AdminBack />
 
-      <h1 className='text-[30px] text-center text-white'>Audio</h1>
+      <h1 className='text-[25px] my-8 text-center text-white'>Audio</h1>
       <AllPodcasts />
       <CreatePodcastForm />
     </div>

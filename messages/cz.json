@@ -124,6 +124,26 @@
     "meetingsP5ver": "Jeden po druhém můžete všichni prorokovat, aby se všichni učili a všichni byli povzbuzováni.",
     "meetingsP5verRef": " (1. Korintským 14,31)",
 
+    "counterVisitors": "Počet návštěvníků",
+    "refreshAdmin": "Nevidíte své aktualizace? Klikněte sem.",
+    "adminNewestBlog": "Nejnovější blog",
+    "adminUpcomingEvent": "Nadcházející událost",
+    "adminEnglish": "Má být toto zobrazeno na anglické webové stránce?",
+    "adminCreateBlog": "Vytvořit blog",
+    "adminCreatingBlog": "Vytvářím blog...",
+
+    "adminBack": "Zpět",
+
+    "adminCreatePodcast": "Vytvořit podcast",
+    "adminCreatingPodcast": "Vytváření podcastu...",
+    "adminCreatePodcastNoMp3": "Bez mp3",
+
+    "adminCreateVideo": "Vytvořit video",
+    "adminCreateVideoNotShownTitle": "Titul...nebude zobrazen veřejně",
+    "adminCreatingVideo": "Vytváření videa",
+
+    "adminLink": "Přidat odkaz směřující na jiný web?",
+
     "galleryPhoto": "Foto galerie",
     "galleryAudio": "Audio galerie",
     "galleryVideo": "Video galerie",

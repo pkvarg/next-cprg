@@ -13,6 +13,7 @@ import DeleteBlogButton from '@/components/admin/DeleteBlogButton'
 import AdminBack from '@/components/admin/AdminBack'
 import { AiOutlineDelete } from 'react-icons/ai'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 interface Blog {
   id: string
@@ -26,6 +27,7 @@ interface Blog {
 }
 
 const EditBlog = () => {
+  const t = useTranslations('Home')
   const [isPending, startTransition] = useTransition()
   const [message, setMessage] = useState('')
 
@@ -190,7 +192,7 @@ const EditBlog = () => {
             <option value='blogs'>Blog</option>
           </select>
 
-          <div className='flex relative bg-[#2e2236] mt-8'>
+          <div className='flex relative mt-8'>
             <button
               type='button'
               className='w-[36px] h-[36px] border border-green-100 flex items-center justify-center cursor-pointer'
@@ -267,8 +269,7 @@ const EditBlog = () => {
                 : 'text-red-500 text-[25px] mt-4 cursor-pointer'
             }
           >
-            Is this to be displayed on the english webpage ?{' '}
-            {english ? 'Yes' : 'No'}
+            {t('adminEnglish')} {english ? 'Yes' : 'No'}
           </p>
           <input type='hidden' name='english' value={english ? 'on' : 'off'} />
 
@@ -280,7 +281,8 @@ const EditBlog = () => {
                 : 'text-red-500 text-[25px] mt-4 cursor-pointer'
             }
           >
-            Add a link pointing to a different website? {hasLink ? 'Yes' : 'No'}
+            {t('adminLink')}
+            {hasLink ? 'Yes' : 'No'}
           </p>
 
           {hasLink && (

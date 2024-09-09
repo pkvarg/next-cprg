@@ -17,6 +17,7 @@ import DeletePodcastButton from '@/components/admin/DeletePodcastButton'
 import { AiOutlineDelete } from 'react-icons/ai'
 import AudioBack from '@/components/admin/AudioBack'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 interface Podcast {
   id: string
@@ -28,6 +29,7 @@ interface Podcast {
 }
 
 const EditPodcast = () => {
+  const t = useTranslations('Home')
   const [isPending, startTransition] = useTransition()
   const [message, setMessage] = useState('')
   const [open, setOpen] = useState<boolean>(false)
@@ -187,7 +189,7 @@ const EditPodcast = () => {
             <option value='other'>Other</option>
           </select>
 
-          <div className='flex relative bg-[#2e2236] mt-8'>
+          <div className='flex relative  mt-8'>
             <button
               type='button'
               className='w-[36px] h-[36px] border border-green-100 flex items-center justify-center cursor-pointer'
@@ -251,8 +253,7 @@ const EditPodcast = () => {
                 : 'text-red-500 text-[25px] mt-4 cursor-pointer'
             }
           >
-            Is this to be displayed on the english webpage ?{' '}
-            {english ? 'Yes' : 'No'}
+            {t('adminEnglish')} {english ? 'Yes' : 'No'}
           </p>
           <input type='hidden' name='english' value={english ? 'on' : 'off'} />
 

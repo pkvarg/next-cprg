@@ -1,12 +1,9 @@
 import React from 'react'
 
-import { redirect } from 'next/navigation'
-
 import AdminNavbar from '@/components/admin/AdminNavbar'
 import CreateBlogForm from '@/components/admin/CreateBlog'
 import AllBlogs from '@/components/admin/AllBlogs'
 import Counter from '@/components/admin/Counter'
-import Footer from '@/components/Footer'
 
 const admin = async () => {
   return (

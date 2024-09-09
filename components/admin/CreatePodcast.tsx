@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState } from 'react'
 import {
   getStorage,
@@ -11,8 +10,10 @@ import { app } from '@/utils/firebaseConfig'
 import { create } from '@/app/[locale]/admin/_actions/podcastActions'
 import { useTransition } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 const CreatePodcastForm: React.FC = () => {
+  const t = useTranslations('Home')
   const [isPending, startTransition] = useTransition()
   const [message, setMessage] = useState('')
   const [open, setOpen] = useState<boolean>(false)
@@ -84,9 +85,11 @@ const CreatePodcastForm: React.FC = () => {
       <form
         onSubmit={handleSubmit}
         method='post'
-        className='relative flex flex-col gap-2 mx-4 lg:mx-[20%] text-[25px]'
+        className='relative flex flex-col gap-2 mx-4 lg:mx-[20%] text-[25px] mt-8'
       >
-        <h1 className='text-white text-center text-[30px]'>Create Podcast</h1>
+        <h1 className='text-white text-center text-[20px]'>
+          {t('adminCreatePodcast')}
+        </h1>
         <input
           name='title'
           type='text'
@@ -110,7 +113,7 @@ const CreatePodcastForm: React.FC = () => {
           <option value='messages'>Message</option>
           <option value='other'>Other</option>
         </select>
-        <div className='flex relative bg-[#2e2236] mt-8'>
+        <div className='flex relative  mt-8'>
           <button
             type='button'
             className='w-[36px] h-[36px] border border-green-100 flex items-center justify-center cursor-pointer'
@@ -147,7 +150,7 @@ const CreatePodcastForm: React.FC = () => {
         {audioUrl !== '' ? (
           <p className='text-[18px] text-white my-4'>URL:{audioUrl}</p>
         ) : (
-          <p>without mp3</p>
+          <p className='text-red-500'> {t('adminCreatePodcastNoMp3')}</p>
         )}
 
         {/* {category !== 'announcements' && (
@@ -171,9 +174,7 @@ const CreatePodcastForm: React.FC = () => {
             checked={english}
             onChange={(e) => setEnglish(e.target.checked)}
           />
-          <span className='pl-2'>
-            Is this to be displayed on the english webpage?
-          </span>
+          <span className='pl-2'>{t('adminEnglish')}</span>
         </label>
         <textarea
           className='text-[#2e2236] mt-4 pl-1'
@@ -193,7 +194,7 @@ const CreatePodcastForm: React.FC = () => {
           type='submit'
           disabled={isPending}
         >
-          {isPending ? '...Creating...' : 'Create Podcast'}
+          {isPending ? t('adminCreatingPodcast') : t('adminCreatePodcast')}
         </button>
       </form>
     </div>

@@ -1,5 +1,5 @@
 export interface AudioProps {
-  podcastTitle: string
+  title: string
   audioUrl: string
   podcastId: string
 }
@@ -27,7 +27,7 @@ export interface PodcastCardProps {
 
 export interface PodcastDetailPlayerProps {
   audioUrl: string
-  podcastTitle: string
+  title: string
   podcastId: string
-  podcastDescription: string | null
+  description: string | null
 }
