@@ -67,10 +67,10 @@ const Blog = async () => {
                   <Link
                     href={blog?.link}
                     target='_blank'
-                    className='text-[20px] ml-auto cursor-pointer hover:text-yellow-400'
+                    className='text-[17.5px] ml-auto cursor-pointer hover:text-yellow-400'
                   >
                     {locale === 'cz'
-                      ? 'Pre viac podobného obsahu prejdite na rhemabooks.org'
+                      ? 'Pro více podobného obsahu přejděte na rhemabooks.org'
                       : 'For more of similar content go to rhemabooks.org'}
                   </Link>
                 </div>

@@ -46,7 +46,9 @@ export default async function AllBlogs() {
                   )}
                 </div> */}
                 <p className='text-[17.5px]'>Text: {blog.text}</p>
-                <p className='text-green-200'>Link: {blog.link}</p>
+                <p className='text-green-200 text-[10px] my-4'>
+                  Link: {blog.link}
+                </p>
                 <p className={blog.english ? 'text-green-500' : 'text-red-500'}>
                   English: {blog.english ? 'true' : 'false'}
                 </p>

@@ -31,12 +31,12 @@ const Podcasts = async () => {
     <div className='podcastpage min-h-screen overflow-x-hidden'>
       <PagesHeader />
 
-      <div className='text-white text-center text-[30px]'>
+      <div className='text-white text-center text-[25px] mt-8'>
         <h1>{locale === 'en' ? 'Podcasts' : 'Podcasty'}</h1>
       </div>
 
       {podcasts.length === 0 ? (
-        <p className='text-[35px] text-red-500 text-center h-screen '>
+        <p className='text-[20px] text-red-500 text-center h-screen mt-16'>
           <span className='bg-white p-2'>
             No podcasts found in this language!
           </span>

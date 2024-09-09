@@ -25,12 +25,12 @@ const VideoPage = async () => {
     <div className='podcastpage min-h-screen overflow-x-hidden'>
       <PagesHeader />
 
-      <div className='text-white text-center text-[30px]'>
+      <div className='text-white text-center text-[25px] mt-8'>
         <h1>{locale === 'en' ? 'Videos' : 'Video'}</h1>
       </div>
 
       {videos.length === 0 ? (
-        <p className='text-[35px] text-red-500 text-center h-screen '>
+        <p className='text-[20px] text-red-500 text-center h-screen mt-8'>
           <span className='bg-white p-2'>
             No videos found in this language!
           </span>
