@@ -3,7 +3,7 @@ export async function isValidPassword(
   hashedPassword: string
 ) {
   console.log('result', (await hashPassword(password)) === hashedPassword)
-  // console.log('gen', await hashPassword(password))
+  console.log('generate', await hashPassword(password))
   return (await hashPassword(password)) === hashedPassword
 }
 

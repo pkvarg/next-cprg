@@ -34,11 +34,13 @@ async function isAuthenticated(req: NextRequest) {
     .split(':')
 
   return (
-    username === process.env.ADMIN_USERNAME &&
-    (await isValidPassword(
-      password,
-      process.env.HASHED_ADMIN_PASSWORD as string
-    ))
+    username === process.env.ADMIN_USERNAME ||
+    username === process.env.ADMIN_USERNAME_A ||
+    (username === process.env.ADMIN_USERNAME_B &&
+      (await isValidPassword(
+        password,
+        process.env.HASHED_ADMIN_PASSWORD_A as string
+      )))
   )
 }
 
