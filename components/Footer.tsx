@@ -1,31 +1,15 @@
 'use client'
 import React from 'react'
 import CookieConsent from 'react-cookie-consent'
-import axios from 'axios'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { useParams } from 'next/navigation'
+import { updateVisitors } from '@/utils/visitorsCounter'
 
 const Footer = () => {
-  const { locale, id } = useParams()
   const t = useTranslations('Home')
 
-  const config = {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  }
-
   const increaseVisitors = async () => {
-    try {
-      const { data } = await axios.put(
-        `https://api.pictusweb.com/api/visitors/cba/increase`,
-        // `http://localhost:2000/api/visitors/cba/increase`,
-        config
-      )
-    } catch (error) {
-      console.log(error)
-    }
+    await updateVisitors()
   }
 
   return (

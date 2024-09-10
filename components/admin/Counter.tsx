@@ -1,32 +1,19 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+
 import { useTranslations } from 'next-intl'
+import { getVisitors } from '@/utils/visitorsCounter'
 
 const Counter = () => {
   const t = useTranslations('Home')
   const [count, setCount] = useState(0)
 
-  const config = {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  }
-
-  const getVisitors = async () => {
-    const { data } = await axios.get(
-      `https://api.pictusweb.com/api/visitors/cba/counter`,
-
-      // `http://localhost:2000/api/visitors/cba/counter`,
-
-      config
-    )
-
-    setCount(data)
-  }
-
   useEffect(() => {
-    getVisitors()
+    const visitorsCount = async () => {
+      const data = await getVisitors()
+      if (data.count?.count) setCount(data.count.count)
+    }
+    visitorsCount()
   }, [])
 
   return (

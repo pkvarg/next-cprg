@@ -57,7 +57,7 @@ const Contact = () => {
     }
   }
 
-  const origin = 'MIESTNACIRKEV.SK'
+  const origin = 'CIRKEVVPRAZE.CZ'
 
   const callContactApi = async (
     name: string,
