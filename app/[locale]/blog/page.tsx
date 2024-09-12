@@ -5,6 +5,7 @@ import db from '@/db/db'
 import Link from 'next/link'
 import ServerScrollLink from '@/components/ServerScrollLink'
 import Footer from '@/components/Footer'
+import Image from 'next/image'
 
 const Blog = async () => {
   const locale = await getLocale()
@@ -56,10 +57,12 @@ const Blog = async () => {
                   <div className='flex flex-col gap-2 justify-center items-center py-2 mt-8'>
                     <h2 className='text-[25px]'>{blog.title}</h2>
                     {blog.media && (
-                      <img
+                      <Image
                         src={blog.media}
                         alt={blog.title}
                         className='w-[100px]'
+                        height={250}
+                        width={250}
                       />
                     )}
                     <p className='font-[300]  text-justify my-4'>{blog.text}</p>

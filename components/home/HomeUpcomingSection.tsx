@@ -24,9 +24,10 @@ const HomeUpcomingSection = async () => {
       upcoming: true,
       english: true,
       link: true,
+      updatedAt: true,
     },
     orderBy: {
-      title: 'asc',
+      updatedAt: 'desc',
     },
   })
 

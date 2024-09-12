@@ -43,7 +43,7 @@ const EditVideo = () => {
 
   useEffect(() => {
     getVideo()
-  }, [])
+  }, [getVideo])
 
   useEffect(() => {
     if (video) {

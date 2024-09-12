@@ -6,6 +6,7 @@ import { getMessages } from 'next-intl/server'
 import AudioProvider from '@/utils/AudioProvider'
 import { cn } from '@/lib/utils'
 import PodcastPlayer from '@/components/audio/PodcastPlayer'
+import ScrollToTop from '@/components/ScrollToTop'
 
 //const inter = Yanone_Kaffeesatz({ subsets: ['latin'] })
 const inter = Lora({ subsets: ['latin'] })
@@ -42,17 +43,17 @@ export default async function RootLayout({
             content='místní církev, církev v Praze'
           />
           <meta property='og:type' content='website' />
-          <meta property='og:site_name' content='miestnacirkev.sk' />
-          <meta property='og:url' content='https://www.miestnacirkev' />
+          <meta property='og:site_name' content='cirkevvpraze.cz' />
+          <meta property='og:url' content='https://www.cirkevvpraze.cz' />
 
           <meta
             property='og:image'
-            content='https://www.miestnacirkev.sk/vineyardmeta.webp'
+            content='https://www.cirkevvpraze.cz/cprg_meta.webp'
           />
           <meta property='og:image:type' content='png' />
           <meta property='og:image:width' content='400' />
           <meta property='og:image:height' content='400' />
-          <meta property='og:image:alt' content='miestnacirkev.sk' />
+          <meta property='og:image:alt' content='cirkevvpraze.cz' />
           <meta property='fb:app_id' content='627076731624225' />
         </head>
         <AudioProvider>
@@ -60,6 +61,7 @@ export default async function RootLayout({
             {children}
 
             <PodcastPlayer />
+            <ScrollToTop />
           </body>
         </AudioProvider>
       </html>

@@ -19,7 +19,7 @@ const PagesHeader = () => {
   return (
     <nav
       id='navbar'
-      className={'top-0  w-full text-white nav-font bg-[#733b28]'}
+      className={'top-0  w-full text-white nav-font bg-transparent'}
     >
       <div className='justify-between px-4 mx-auto md:items-center md:flex md:px-8'>
         <div className='mb-0 lg:mb-2'>

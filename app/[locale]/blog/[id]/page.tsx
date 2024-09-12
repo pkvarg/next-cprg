@@ -7,6 +7,7 @@ import Link from 'next/link'
 
 import { useTranslations } from 'next-intl'
 import Footer from '@/components/Footer'
+import Image from 'next/image'
 
 interface Blog {
   id: string
@@ -38,7 +39,7 @@ const Blog = () => {
 
   useEffect(() => {
     getBlog()
-  }, [])
+  }, [getBlog])
 
   useEffect(() => {
     if (blog && id) {
@@ -65,10 +66,12 @@ const Blog = () => {
                 <div className='flex flex-col gap-2 justify-center items-center py-2 mt-8'>
                   <h2 className='text-[30px]'>{blog.title}</h2>
                   {blog.media && (
-                    <img
+                    <Image
                       src={blog.media}
                       alt={blog.title}
                       className='w-[100px]'
+                      width={250}
+                      height={250}
                     />
                   )}
                   <p className='font-[300] text-[20px] lg:text-[30px] text-justify'>
