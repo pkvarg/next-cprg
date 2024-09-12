@@ -48,7 +48,7 @@ const Footer = () => {
         {t('cookiesText')}{' '}
       </CookieConsent>
       <footer className='bg-[#80422C] font-light'>
-        <section className='mx-4 text-white text-[15px] lg:text-[20px] pt-0 lg:pt-4 pb-8'>
+        <section className='mx-4 text-white text-[15px] lg:text-[20px] pt-8 lg:pt-4 pb-8'>
           <div className='flex flex-row gap-2 justify-center items-center'>
             <p className='text-[15px] mt-[0px]'>&copy;</p>
             <p> {Date().substring(11, 15)}</p>

@@ -29,8 +29,8 @@
 
     "home01p1": "Jsme věřící v Pána Ježíše Krista, kterého jsme osobně přijali jako našeho Spasitele.",
     "home01p2": "On je tou nejúžasnější a nejpříjemnější osobou.",
-    "home01p3": "Milujeme Ho a snažíme se dávat Mu první místo ve všech věcech.",
-    "home01p4": "Radujte se z očištění Ježíšovou krví, mějte účast na božském životě, naplňte se Duchem svatým a buďte přivedeni do společenství Kristova Těla!",
+    "home01p3": "Milujeme Ho a snažíme se Mu dávat ve všem první místo.",
+    "home01p4": "Radujte se z očištění Ježíšovou krví, mějte účast na božském životě, naplňujte se Duchem svatým a buďte přivedeni do společenství Těla Kristova!",
 
     "home02title": "KDO JSME",
 
@@ -101,12 +101,12 @@
     "gdpr2": "Email bude použit jen na odpověď na Vašu správu.",
 
     "contactRightTitle": "Pravidelná setkání",
-    "contactRightTue": "Úterý 18:30 hod ",
-    "contactRightTueDesc": " - Modlitební setkání",
-    "contactRightThu": "Čtvrtek 18:00 hod ",
-    "contactRightThuDesc": " - Biblické studium",
-    "contactRightSun": "Neděle 09:30 hod ",
-    "contactRightSunDesc": " - Pánův stůl (Večeře Páně) a prorokovací setkání ",
+    "contactRightTue": "Úterý 19:00 hod",
+    "contactRightTueDesc": " - Setkání se službou slova (online)",
+    "contactRightThu": "Čtvrtek 18:00 hod",
+    "contactRightThuDesc": " - Modlitební setkání (různá místa)",
+    "contactRightSun": "Neděle 10:00 hod",
+    "contactRightSunDesc": " - Pánův stůl (Večeře Páně) a sdílení (různá místa)",
     "contactRightLink": "Co děláme na nedělním setkání?",
 
     "meetingsTitle": "Co děláme na nedělním setkání?",
