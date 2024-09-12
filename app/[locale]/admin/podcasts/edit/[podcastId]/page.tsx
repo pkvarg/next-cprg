@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect, useTransition } from 'react'
+import React, { useState, useEffect, useTransition, useCallback } from 'react'
 import {
   getStorage,
   ref,
@@ -47,7 +47,8 @@ const EditPodcast = () => {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null)
 
   const { podcastId } = useParams()
-  const getPodcast = async () => {
+
+  const getPodcast = useCallback(async () => {
     if (podcastId) {
       const singlePodcast = await getSinglePodcast(podcastId.toString())
       if (singlePodcast.success && singlePodcast.podcast) {
@@ -57,11 +58,11 @@ const EditPodcast = () => {
         } as Podcast)
       }
     }
-  }
+  }, [podcastId]) // memoize based on blogId
 
   useEffect(() => {
     getPodcast()
-  }, [])
+  }, [getPodcast]) // now this will only run when getBlog changes
 
   useEffect(() => {
     if (podcast) {

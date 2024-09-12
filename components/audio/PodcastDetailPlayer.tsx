@@ -65,10 +65,14 @@ const PodcastDetailPlayer = ({
           </Button>
         </div>
 
-        <div className='flex flex-col gap-5 mx-4 lg:mx-0'>
-          <h1 className='text-[25px] tracking-[-0.32px] text-white'>{title}</h1>
+        <div className='flex flex-col lg:gap-5 mx-4 lg:mx-0'>
+          <h1 className='text-[22.5px] tracking-[-0.32px] text-white'>
+            {title}
+          </h1>
 
-          <p className='text-white text-[20px] text-justify'>{description}</p>
+          <p className='text-white text-[17.5px] lg:text-justify'>
+            {description}
+          </p>
         </div>
       </div>
     </div>

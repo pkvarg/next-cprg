@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import PagesHeader from '@/components/PagesHeader'
 import { getSingleBlog } from '../../admin/_actions/blogActions'
 import { useParams } from 'next/navigation'
@@ -25,7 +25,7 @@ const Blog = () => {
   const { locale, id } = useParams()
   const t = useTranslations('Home')
 
-  const getBlog = async () => {
+  const getBlog = useCallback(async () => {
     if (id) {
       const singleBlog = await getSingleBlog(id.toString())
 
@@ -35,7 +35,7 @@ const Blog = () => {
         return <h1>...getting data...</h1>
       }
     }
-  }
+  }, [id]) // memoize based on blogId
 
   useEffect(() => {
     getBlog()

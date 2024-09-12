@@ -35,11 +35,11 @@ const Blog = async () => {
         <PagesHeader />
 
         <div className='text-white text-center text-[30px] my-4'>Blog</div>
-        <div className='mt-8 flex flex-col items-center gap-1 w-full'>
+        <div className='mt-8 lg:mt-16 flex flex-col items-center gap-1 w-full'>
           {blogs.length > 0 &&
             blogs.map((blog) => (
               <div
-                className='text-white text-[25px] cursor-pointer w-full max-w-[95%] lg:max-w-[50%] hover:text-yellow-400'
+                className='text-white text-[20px] cursor-pointer w-full max-w-[95%] lg:max-w-[50%] hover:text-yellow-400'
                 key={blog.id}
               >
                 <ServerScrollLink id={blog.id} title={blog.title} />
@@ -55,7 +55,7 @@ const Blog = async () => {
               blogs.map((blog) => (
                 <div className='flex flex-col' id={blog.id} key={blog.id}>
                   <div className='flex flex-col gap-2 justify-center items-center py-2 mt-8'>
-                    <h2 className='text-[25px]'>{blog.title}</h2>
+                    <h2 className='text-[22.5px]'>{blog.title}</h2>
                     {blog.media && (
                       <Image
                         src={blog.media}

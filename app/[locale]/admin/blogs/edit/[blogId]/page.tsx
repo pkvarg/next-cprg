@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect, useTransition } from 'react'
+import React, { useState, useEffect, useTransition, useCallback } from 'react'
 import {
   getStorage,
   ref,
@@ -48,18 +48,18 @@ const EditBlog = () => {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null)
 
   const { blogId } = useParams()
-  const getBlog = async () => {
+  const getBlog = useCallback(async () => {
     if (blogId) {
       const singleBlog = await getSingleBlog(blogId.toString())
       if (singleBlog.success && singleBlog.blog) {
         setBlog(singleBlog.blog)
       }
     }
-  }
+  }, [blogId]) // memoize based on blogId
 
   useEffect(() => {
     getBlog()
-  }, [getBlog])
+  }, [getBlog]) // now this will only run when getBlog changes
 
   useEffect(() => {
     if (blog) {

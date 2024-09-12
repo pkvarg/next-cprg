@@ -211,8 +211,11 @@ const Contact = () => {
             </div>
             <div></div>
           </div>
-          <div className='lg:w-[30%] text-[20px]'>
-            <h1 className='text-[25px] pb-4'> {t('contactRightTitle')}</h1>
+          <div className='lg:w-[30%] text-[17.5px]'>
+            <h1 className='text-[20px] pb-4 mt-16 lg:mt-0'>
+              {' '}
+              {t('contactRightTitle')}
+            </h1>
             <p>
               {t('contactRightTue')}
               <span className='text-[15.5px]'>{t('contactRightTueDesc')}</span>

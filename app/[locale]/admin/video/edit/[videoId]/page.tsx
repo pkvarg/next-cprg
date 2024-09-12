@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect, useTransition } from 'react'
+import React, { useState, useEffect, useTransition, useCallback } from 'react'
 
 import { useParams } from 'next/navigation'
 import { getSingleVideo, editSingleVideo } from '../../../_actions/videoActions'
@@ -30,7 +30,8 @@ const EditVideo = () => {
   const [video, setVideo] = useState<Video | null>(null)
 
   const { videoId } = useParams()
-  const getVideo = async () => {
+
+  const getVideo = useCallback(async () => {
     if (videoId) {
       const singleVideo = await getSingleVideo(videoId.toString())
       if (singleVideo.success && singleVideo.video) {
@@ -39,7 +40,7 @@ const EditVideo = () => {
         } as Video)
       }
     }
-  }
+  }, [videoId]) // memoize based on blogId
 
   useEffect(() => {
     getVideo()
