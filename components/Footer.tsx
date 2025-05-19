@@ -3,19 +3,38 @@ import React from 'react'
 import CookieConsent from 'react-cookie-consent'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { updateVisitors } from '@/utils/visitorsCounter'
+//import { updateVisitors } from '@/utils/visitorsCounter'
 
 const Footer = () => {
   const t = useTranslations('Home')
 
-  const increaseVisitors = async () => {
-    await updateVisitors()
+  // const increaseVisitors = async () => {
+  //   await updateVisitors()
+  // }
+
+  const apiUrl = 'https://hono-api.pictusweb.com/api/visitors/cprg/increase'
+  //const apiUrl = 'http://localhost:3013/api/visitors/cprg/increase'
+
+  const incrementCount = async () => {
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      if (!response.ok) {
+        throw new Error('Failed to increment count')
+      }
+    } catch (err) {
+      console.log(err instanceof Error ? err.message : 'An unknown error occurred')
+    }
   }
 
   return (
     <>
       <CookieConsent
-        location='bottom'
+        location="bottom"
         style={{
           background: '#9D7739',
           color: '#ffffff',
@@ -32,7 +51,7 @@ const Footer = () => {
         expires={365}
         enableDeclineButton
         onAccept={() => {
-          increaseVisitors()
+          incrementCount()
         }}
         declineButtonStyle={{
           background: 'red',
@@ -42,21 +61,21 @@ const Footer = () => {
         }}
         declineButtonText={t('cookiesButtonNo')}
         onDecline={() => {
-          increaseVisitors()
+          incrementCount()
         }}
       >
         {t('cookiesText')}{' '}
       </CookieConsent>
-      <footer className='bg-[#80422C] font-light'>
-        <section className='mx-4 text-white text-[15px] lg:text-[20px] pt-8 lg:pt-4 pb-8'>
-          <div className='flex flex-row gap-2 justify-center items-center'>
-            <p className='text-[15px] mt-[0px]'>&copy;</p>
+      <footer className="bg-[#80422C] font-light">
+        <section className="mx-4 text-white text-[15px] lg:text-[20px] pt-8 lg:pt-4 pb-8">
+          <div className="flex flex-row gap-2 justify-center items-center">
+            <p className="text-[15px] mt-[0px]">&copy;</p>
             <p> {Date().substring(11, 15)}</p>
             <p>Církev v Praze</p>
           </div>
-          <div className='flex flex-col lg:flex-row gap-0 lg:gap-2 items-center justify-center'></div>
-          <div className='flex justify-center mt-0 lg:mt-2 text-[15px]'>
-            <Link href='https://pictusweb.sk' target='_blank'>
+          <div className="flex flex-col lg:flex-row gap-0 lg:gap-2 items-center justify-center"></div>
+          <div className="flex justify-center mt-0 lg:mt-2 text-[15px]">
+            <Link href="https://pictusweb.sk" target="_blank">
               &#60;&#47;&#62; PICTUSWEB development
             </Link>
           </div>
