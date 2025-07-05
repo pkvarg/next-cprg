@@ -32,7 +32,7 @@ const Counter = () => {
     }
 
     getStats()
-  }, [])
+  })
 
   const stats = [
     {

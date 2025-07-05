@@ -64,7 +64,7 @@ const EditPodcast = () => {
 
   useEffect(() => {
     getPodcast()
-  }, [])
+  })
 
   useEffect(() => {
     if (podcast) {

@@ -70,7 +70,7 @@ const EditBlog = () => {
 
   useEffect(() => {
     getBlog()
-  }, [])
+  })
 
   useEffect(() => {
     if (blog) {

@@ -113,6 +113,7 @@ import {
   Play,
   ExternalLink,
 } from 'lucide-react'
+import Image from 'next/image'
 
 const CreateVideoForm: React.FC = () => {
   const [isPending, startTransition] = useTransition()
@@ -194,7 +195,7 @@ const CreateVideoForm: React.FC = () => {
               className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:border-red-500/50 focus:ring-2 focus:ring-red-500/20 focus:outline-none transition-all duration-200"
             />
             <p className="text-slate-400 text-sm">
-              This title is for admin purposes only and won't be displayed publicly.
+              This title is for admin purposes only and will not be displayed publicly.
             </p>
           </div>
 
@@ -251,7 +252,7 @@ const CreateVideoForm: React.FC = () => {
                 {isYouTubeUrl(url) && getYouTubeId(url) ? (
                   <div className="space-y-3">
                     <div className="relative aspect-video rounded-lg overflow-hidden bg-slate-900">
-                      <img
+                      <Image
                         src={`https://img.youtube.com/vi/${getYouTubeId(url)}/maxresdefault.jpg`}
                         alt="YouTube thumbnail"
                         className="w-full h-full object-cover"

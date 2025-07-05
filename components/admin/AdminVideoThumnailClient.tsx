@@ -2,6 +2,7 @@
 'use client'
 import React, { useState } from 'react'
 import { Video as VideoIcon, Play } from 'lucide-react'
+import Image from 'next/image'
 
 interface VideoThumbnailProps {
   src: string
@@ -25,7 +26,7 @@ export const VideoThumbnail: React.FC<VideoThumbnailProps> = ({ src, alt, title 
 
   return (
     <div className="relative w-full h-full">
-      <img
+      <Image
         src={src}
         alt={alt}
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

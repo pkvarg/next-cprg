@@ -1,13 +1,13 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
-import { getLocale } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import GoToBlogButton from '../admin/GoToBlogButton'
 
 import db from '@/db/db'
 import Image from 'next/image'
 
 const HomeBlogSection = async () => {
-  const t = useTranslations('Home')
+  const t = await getTranslations('Home')
 
   const locale = await getLocale()
 
@@ -29,18 +29,6 @@ const HomeBlogSection = async () => {
     },
   })
 
-  //const blog = {}
-
-  const buttonTitle = t('homeBlog').toString()
-
-  // if (blog === null) {
-  //   return (
-  //     <div className='text-white bg-[#9D7739] h-[100px] flex justify-center items-center'>
-  //       <h1 className=''>No Blogs</h1>
-  //     </div>
-  //   )
-  // }
-
   return (
     <div>
       <div className="bg-[#9D7739] text-white py-8 lg:py-16 text-[20px] lg:text-[20px]">
@@ -53,10 +41,7 @@ const HomeBlogSection = async () => {
               <h2 className="text-[25px]">{blog?.title}</h2>
               {blog?.media && <Image src={blog?.media} alt={blog?.title} className="w-[100px]" />}
               <p className="font-[300] text-justify my-4">{blog?.text}</p>
-              {/* <GoToBlogButton
-                link={`/blog/${blog?.id}`}
-                title={buttonTitle}
-              /> */}
+
               <GoToBlogButton link={`${locale}/blog`} title={t('blogsAll')} />
             </div>
           ) : (
