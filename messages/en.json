@@ -147,5 +147,27 @@
     "galleryAudio": "Audio Gallery",
     "galleryVideo": "Video Gallery",
     "galleryDownload": "Download"
+  },
+
+  "Download": {
+    "pageTitle": "Download",
+    "titleEn": "Mystery of Human Life",
+    "titleCs": "Tajemství lidského života",
+    "descriptionEn": "Mystery of Human Life leaflet for download.",
+    "descriptionCs": "Tajemství lidského života leaflet for download.",
+    "loading": "Loading PDF...",
+    "errorTitle": "Loading Error",
+    "errorNotFound": "PDF file not found",
+    "errorLoading": "Error loading PDF file",
+    "errorPreview": "Error displaying PDF preview",
+    "errorInstruction": "Make sure the file \"{filename}\" is located in the public folder.",
+    "preview": "Preview",
+    "downloadButton": "Download PDF",
+    "browserNotSupported": "Your browser does not support PDF file display.",
+    "clickToDownload": "Click here to download",
+    "downloadInfoTitle": "For Download",
+    "downloadInfoDescription": "Click the \"Download PDF\" button to save the document to your device. The file will be downloaded in PDF format.",
+    "problemsText": "Having problems with downloading?",
+    "contactUs": "Contact us"
   }
 }

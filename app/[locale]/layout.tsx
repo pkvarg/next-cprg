@@ -16,15 +16,20 @@ export const metadata: Metadata = {
   description: 'místní církev, církev v Praze',
 }
 
-export default async function RootLayout({
-  children,
-  params,
-}: Readonly<{
-  children: React.ReactNode
-  params: {
-    locale: string
-  }
-}>) {
+export default async function RootLayout(
+  props: Readonly<{
+    children: React.ReactNode
+    params: {
+      locale: string
+    }
+  }>
+) {
+  const params = await props.params;
+
+  const {
+    children
+  } = props;
+
   const messages = await getMessages()
 
   return (

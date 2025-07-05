@@ -1,10 +1,9 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
+//import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import LanguageBar from './LanguageBar'
-import { FiLogIn } from 'react-icons/fi'
-import { MdCloudDownload } from 'react-icons/md'
-import LoaderSpinner from './LoaderSpinner'
+
 import { useTranslations } from 'next-intl'
 import { useParams } from 'next/navigation'
 
@@ -91,17 +90,17 @@ const Header = () => {
           >
             <ul className="justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[20px] lg:text-[20px] items-center">
               <li>
-                <Link href={`${locale}/#about`} className="hover:text-[#ffff00] cursor-pointer">
+                <Link href={'#about'} className="hover:text-[#ffff00] cursor-pointer">
                   {t('headerAbout')}
                 </Link>
               </li>
               <li>
-                <Link href={`${locale}/blog`} className="hover:text-[#ffff00] cursor-pointer">
+                <Link href={`/blog`} className="hover:text-[#ffff00] cursor-pointer">
                   {t('headerBlog')}
                 </Link>
               </li>
               <li>
-                <Link href={`${locale}/#events`} className="hover:text-[#ffff00] cursor-pointer">
+                <Link href={'#events'} className="hover:text-[#ffff00] cursor-pointer">
                   {t('headerEvents')}
                 </Link>
               </li>
@@ -112,26 +111,26 @@ const Header = () => {
                 </div>
                 <div className="invisible absolute z-50 flex w-max flex-col px-4 py-1 text-white shadow-xl group-hover:visible group-hover:bg-[#0f1b0a]">
                   {/* <Link
-                    href={`${locale}/gallery`}
+                    href={`/gallery`}
                     className='cursor-pointer hover:text-red-600'
                   >
                     {t('headerPhotos')}
                   </Link> */}
-                  <Link href={`${locale}/podcasts`} className="hover:text-[#ffff00] cursor-pointer">
+                  <Link href={`/podcasts`} className="hover:text-[#ffff00] cursor-pointer">
                     Audio
                   </Link>
-                  <Link href={`${locale}/video`} className="hover:text-[#ffff00] cursor-pointer">
+                  <Link href={`/video`} className="hover:text-[#ffff00] cursor-pointer">
                     Video
                   </Link>
 
-                  {/* <Link href={'/download'}  className='hover:text-[#ffff00] cursor-pointer'>
-                      {t('headerDownload')}
-                    </Link> */}
+                  <Link href={'/download'} className="hover:text-[#ffff00] cursor-pointer">
+                    {t('headerDownload')}
+                  </Link>
                 </div>
               </div>
 
               <li>
-                <Link href={`${locale}/#contact`} className="hover:text-[#ffff00] cursor-pointer">
+                <Link href={'#contact'} className="hover:text-[#ffff00] cursor-pointer">
                   {t('headerContact')}
                 </Link>
               </li>

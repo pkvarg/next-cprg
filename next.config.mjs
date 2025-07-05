@@ -17,6 +17,17 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'hono-api.pictusweb.com',
+        pathname: '/api/upload/cprg/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '3013',
+        pathname: '/api/upload/cprg/**',
+      },
     ],
   },
 }

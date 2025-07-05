@@ -1,92 +1,81 @@
 'use client'
 import React, { useState } from 'react'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import { useParams } from 'next/navigation'
-import { useTranslations } from 'next-intl'
-import LanguageBar from '../LanguageBar'
+import { Menu, X, Home, Music, Video } from 'lucide-react'
 
 const AdminNavbar = () => {
-  const t = useTranslations('Home')
   const [navbar, setNavbar] = useState(false)
   const { locale } = useParams()
 
   return (
-    <header>
-      <nav className='w-full text-white nav-font'>
-        <div className='justify-between px-4 mx-auto md:items-center md:flex md:px-8'>
-          <div className='mb-0 lg:mb-2'>
-            <div className='flex items-center justify-between md:block'>
-              <Link href='/'>{t('headerPagesHome')}</Link>
+    <header className="relative z-50">
+      <nav className="backdrop-blur-md bg-slate-900/80 border-b border-slate-700/50 sticky top-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo */}
+            <div className="flex items-center space-x-4">
+              <Link
+                href="/"
+                className="flex items-center space-x-2 text-white hover:text-blue-400 transition-colors duration-200"
+              >
+                <Home size={24} />
+                <span className="font-semibold text-lg">Home</span>
+              </Link>
+            </div>
 
-              <div className='md:hidden'>
-                <button
-                  className='p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border'
-                  onClick={() => setNavbar(!navbar)}
-                >
-                  {navbar ? (
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      className='w-10 h-10'
-                      viewBox='0 0 20 20'
-                      fill='currentColor'
-                    >
-                      <path
-                        fillRule='evenodd'
-                        d='M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z'
-                        clipRule='evenodd'
-                      />
-                    </svg>
-                  ) : (
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      className='w-10 h-10'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      stroke='currentColor'
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        d='M4 6h16M4 12h16M4 18h16'
-                      />
-                    </svg>
-                  )}
-                </button>
-              </div>
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              <Link
+                href={`/admin/audio`}
+                className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-white hover:from-blue-500/30 hover:to-purple-500/30 transition-all duration-200 border border-blue-500/20 hover:border-blue-500/40"
+              >
+                <Music size={20} />
+                <span>Audio</span>
+              </Link>
+
+              <Link
+                href={`/admin/video`}
+                className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-white hover:from-purple-500/30 hover:to-pink-500/30 transition-all duration-200 border border-purple-500/20 hover:border-purple-500/40"
+              >
+                <Video size={20} />
+                <span>Video</span>
+              </Link>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setNavbar(!navbar)}
+                className="p-2 rounded-lg bg-slate-800/50 text-white hover:bg-slate-700/50 transition-colors duration-200"
+              >
+                {navbar ? <X size={24} /> : <Menu size={24} />}
+              </button>
             </div>
           </div>
-          <div>
-            <div
-              className={`flex-1 justify-self-center h-[80vh] lg:h-auto pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                navbar ? 'block' : 'hidden'
-              }`}
-            >
-              <ul className='justify-center items-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[30px] lg:text-[25px] text-red-500'>
-                <li>
-                  <Link href={`/${locale}/admin/audio`}>Audio</Link>
-                </li>
-                <li>
-                  <Link href={`/${locale}/admin/video`}>Video</Link>
-                </li>{' '}
-                <li>
-                  <LanguageBar />
-                </li>
-                {/* <li>
-                  <Link href={`/${locale}/admin/blogs`}>Blogs</Link>
-                </li> */}
-                {/* <li>
-                  <Link href={`/${locale}/admin/announcements`}>Oznamy</Link>
-                </li> */}
-                {/* <li
-                  className='text-red-500 cursor-pointer pt-[1px]'
-                  onClick={handleLogout}
-                >
-                  Odhlásiť sa
-                </li> */}
-              </ul>
+
+          {/* Mobile Navigation */}
+          {navbar && (
+            <div className="md:hidden border-t border-slate-700/50 py-4 space-y-3">
+              <Link
+                href={`/admin/audio`}
+                className="flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-white hover:from-blue-500/30 hover:to-purple-500/30 transition-all duration-200"
+                onClick={() => setNavbar(false)}
+              >
+                <Music size={20} />
+                <span>Audio</span>
+              </Link>
+
+              <Link
+                href={`/admin/video`}
+                className="flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-white hover:from-purple-500/30 hover:to-pink-500/30 transition-all duration-200"
+                onClick={() => setNavbar(false)}
+              >
+                <Video size={20} />
+                <span>Video</span>
+              </Link>
             </div>
-          </div>
+          )}
         </div>
       </nav>
     </header>

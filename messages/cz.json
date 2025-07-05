@@ -10,7 +10,7 @@
     "headerPhotos": "Fotografie",
 
     "headerContact": "Kontakt",
-    "headerDownload": "Na stiahnutie",
+    "headerDownload": "Ke stažení",
 
     "headerPagesHome": "Domů",
     "headerPagesX": "Ke stažení",
@@ -148,5 +148,27 @@
     "galleryAudio": "Audio galerie",
     "galleryVideo": "Video galerie",
     "galleryDownload": "Na stahnutie"
+  },
+
+  "Download": {
+    "pageTitle": "Ke stažení",
+    "titleEn": "Mystery of Human Life",
+    "titleCs": "Tajemství lidského života",
+    "descriptionEn": "Mystery of Human Life leták ke stažení.",
+    "descriptionCs": "Leták Tajemství lidského života ke stažení.",
+    "loading": "Načítá se PDF...",
+    "errorTitle": "Chyba při načítání",
+    "errorNotFound": "PDF soubor nebyl nalezen",
+    "errorLoading": "Chyba při načítání PDF souboru",
+    "errorPreview": "Chyba při zobrazení náhledu PDF",
+    "errorInstruction": "Ujistěte se, že soubor \"{filename}\" je umístěn ve složce public.",
+    "preview": "Náhled",
+    "downloadButton": "Stáhnout PDF",
+    "browserNotSupported": "Váš prohlížeč nepodporuje zobrazení PDF souborů.",
+    "clickToDownload": "Klikněte zde pro stažení",
+    "downloadInfoTitle": "Ke stažení",
+    "downloadInfoDescription": "Klikněte na tlačítko \"Stáhnout PDF\" pro uložení dokumentu do vašeho zařízení. Soubor bude stažen ve formátu PDF.",
+    "problemsText": "Máte problémy se stahováním?",
+    "contactUs": "Kontaktujte nás"
   }
 }

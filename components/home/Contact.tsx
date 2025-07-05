@@ -152,35 +152,6 @@ const Contact = () => {
     }
   }
 
-  // const callContactApi = async (
-  //   name: string,
-  //   email: string,
-  //   phone: string,
-  //   mailMessage: string,
-  // ) => {
-  //   const config = {
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //   }
-
-  //   try {
-  //     const { data } = await axios.put(
-  //       'https://tss.pictusweb.com/email/universal/mailer',
-  //       //'http://localhost:3010/email/universal/mailer',
-  //       { name, email, phone, mailMessage, locale, origin },
-  //       config,
-  //     )
-
-  //     if (data.status === 'Success') {
-  //       setMessageSuccess(t('contactMessageSuccess'))
-  //     }
-  //   } catch (error) {
-  //     setMessage(t('contactError'))
-  //     console.log(error)
-  //   }
-  // }
-
   return (
     <>
       <div className="bg-[#80422C] h-8 lg:scroll-mt-14" id="contact"></div>
@@ -303,7 +274,7 @@ const Contact = () => {
               <span className="text-[15.5px]">{t('contactRightSunDesc')}</span>
             </p>
 
-            <Link href={`${locale}/meetings`} className="underline text-[18px]">
+            <Link href={`/meetings`} className="underline text-[18px]">
               {t('contactRightLink')}
             </Link>
 

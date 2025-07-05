@@ -43,30 +43,24 @@ const HomeBlogSection = async () => {
 
   return (
     <div>
-      <div className='bg-[#9D7739] text-white py-8 lg:py-16 text-[20px] lg:text-[20px]'>
-        <div className='flex flex-col items-center justify-evenly mx-4 lg:mx-[20%]'>
+      <div className="bg-[#9D7739] text-white py-8 lg:py-16 text-[20px] lg:text-[20px]">
+        <div className="flex flex-col items-center justify-evenly mx-4 lg:mx-[20%]">
           {blog !== null ? (
             <div
               key={blog?.id}
-              className='flex flex-col gap-2 justify-center items-center py-2 mt-8'
+              className="flex flex-col gap-2 justify-center items-center py-2 mt-8"
             >
-              <h2 className='text-[25px]'>{blog?.title}</h2>
-              {blog?.media && (
-                <Image
-                  src={blog?.media}
-                  alt={blog?.title}
-                  className='w-[100px]'
-                />
-              )}
-              <p className='font-[300] text-justify my-4'>{blog?.text}</p>
+              <h2 className="text-[25px]">{blog?.title}</h2>
+              {blog?.media && <Image src={blog?.media} alt={blog?.title} className="w-[100px]" />}
+              <p className="font-[300] text-justify my-4">{blog?.text}</p>
               {/* <GoToBlogButton
-                link={`${locale}/blog/${blog?.id}`}
+                link={`/blog/${blog?.id}`}
                 title={buttonTitle}
               /> */}
               <GoToBlogButton link={`${locale}/blog`} title={t('blogsAll')} />
             </div>
           ) : (
-            <h1 className='text-white bg-[#9D7739] h-8'>No blogs</h1>
+            <h1 className="text-white bg-[#9D7739] h-8">No blogs</h1>
           )}
         </div>
       </div>

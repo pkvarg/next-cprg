@@ -31,15 +31,15 @@ const Blog = async () => {
 
   return (
     <>
-      <div className='blogpage h-screen'>
+      <div className="blogpage h-screen">
         <PagesHeader />
 
-        <div className='text-white text-center text-[30px] my-4'>Blog</div>
-        <div className='mt-8 lg:mt-16 flex flex-col items-center gap-1 w-full'>
+        <div className="text-white text-center text-[30px] my-4">Blog</div>
+        <div className="mt-8 lg:mt-16 flex flex-col items-center gap-1 w-full">
           {blogs.length > 0 &&
             blogs.map((blog) => (
               <div
-                className='text-white text-[20px] cursor-pointer w-full max-w-[95%] lg:max-w-[50%] hover:text-yellow-400'
+                className="text-white text-[20px] cursor-pointer w-full max-w-[95%] lg:max-w-[50%] hover:text-yellow-400"
                 key={blog.id}
               >
                 <ServerScrollLink id={blog.id} title={blog.title} />
@@ -49,28 +49,28 @@ const Blog = async () => {
       </div>
 
       <div>
-        <div className='bg-[#9D7739] text-white py-8 lg:py-16 text-[20px] lg:text-[20px]'>
-          <div className='flex flex-col items-center justify-evenly mx-4 lg:mx-[20%]'>
+        <div className="bg-[#9D7739] text-white py-8 lg:py-16 text-[20px] lg:text-[20px]">
+          <div className="flex flex-col items-center justify-evenly mx-4 lg:mx-[20%]">
             {blogs.length > 0 &&
               blogs.map((blog) => (
-                <div className='flex flex-col' id={blog.id} key={blog.id}>
-                  <div className='flex flex-col gap-2 justify-center items-center py-2 mt-8'>
-                    <h2 className='text-[22.5px]'>{blog.title}</h2>
+                <div className="flex flex-col" id={blog.id} key={blog.id}>
+                  <div className="flex flex-col gap-2 justify-center items-center py-2 mt-8">
+                    <h2 className="text-[22.5px]">{blog.title}</h2>
                     {blog.media && (
                       <Image
                         src={blog.media}
                         alt={blog.title}
-                        className='w-[100px]'
+                        className="w-[100px]"
                         height={250}
                         width={250}
                       />
                     )}
-                    <p className='font-[300]  text-justify my-4'>{blog.text}</p>
+                    <p className="font-[300]  text-justify my-4">{blog.text}</p>
                   </div>
                   <Link
                     href={blog?.link}
-                    target='_blank'
-                    className='text-[17.5px] ml-auto cursor-pointer hover:text-yellow-400'
+                    target="_blank"
+                    className="text-[17.5px] ml-auto cursor-pointer hover:text-yellow-400"
                   >
                     {locale === 'cz'
                       ? 'Pro více podobného obsahu přejděte na rhemabooks.org'

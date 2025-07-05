@@ -1,5 +1,5 @@
 'use client'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import { useParams } from 'next/navigation'
 
 interface ServerScrollLinkProps {
@@ -10,8 +10,8 @@ interface ServerScrollLinkProps {
 const ServerScrollLink: React.FC<ServerScrollLinkProps> = ({ id, title }) => {
   const { locale } = useParams()
   return (
-    <Link href={`/${locale}/blog/#${id}`}>
-      <li className='text-center lg:text-start'>{title}</li>
+    <Link href={`/blog/#${id}`}>
+      <li className="text-center lg:text-start">{title}</li>
     </Link>
   )
 }
