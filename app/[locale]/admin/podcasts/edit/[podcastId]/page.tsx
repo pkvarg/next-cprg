@@ -50,21 +50,21 @@ const EditPodcast = () => {
 
   const { podcastId } = useParams()
 
-  const getPodcast = async () => {
-    if (podcastId) {
-      const singlePodcast = await getSinglePodcast(podcastId.toString())
-      if (singlePodcast.success && singlePodcast.podcast) {
-        setPodcast({
-          ...singlePodcast.podcast,
-          description: singlePodcast.podcast.description || '',
-        } as Podcast)
+  useEffect(() => {
+    const getPodcast = async () => {
+      if (podcastId) {
+        const singlePodcast = await getSinglePodcast(podcastId.toString())
+        if (singlePodcast.success && singlePodcast.podcast) {
+          setPodcast({
+            ...singlePodcast.podcast,
+            description: singlePodcast.podcast.description || '',
+          } as Podcast)
+        }
       }
     }
-  }
 
-  useEffect(() => {
     getPodcast()
-  })
+  }, [podcastId]) // Include podcastId as dependency
 
   useEffect(() => {
     if (podcast) {

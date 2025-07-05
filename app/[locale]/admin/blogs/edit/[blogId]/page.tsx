@@ -59,18 +59,18 @@ const EditBlog = () => {
 
   const { blogId } = useParams()
 
-  const getBlog = async () => {
-    if (blogId) {
-      const singleBlog = await getSingleBlog(blogId.toString())
-      if (singleBlog.success && singleBlog.blog) {
-        setBlog(singleBlog.blog)
+  useEffect(() => {
+    const getBlog = async () => {
+      if (blogId) {
+        const singleBlog = await getSingleBlog(blogId.toString())
+        if (singleBlog.success && singleBlog.blog) {
+          setBlog(singleBlog.blog)
+        }
       }
     }
-  }
 
-  useEffect(() => {
     getBlog()
-  })
+  }, [blogId]) // Include blogId as dependency
 
   useEffect(() => {
     if (blog) {

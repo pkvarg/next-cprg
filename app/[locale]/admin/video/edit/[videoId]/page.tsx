@@ -38,20 +38,20 @@ const EditVideo = () => {
 
   const { videoId } = useParams()
 
-  const getVideo = async () => {
-    if (videoId) {
-      const singleVideo = await getSingleVideo(videoId.toString())
-      if (singleVideo.success && singleVideo.video) {
-        setVideo({
-          ...singleVideo.video,
-        } as Video)
+  useEffect(() => {
+    const getVideo = async () => {
+      if (videoId) {
+        const singleVideo = await getSingleVideo(videoId.toString())
+        if (singleVideo.success && singleVideo.video) {
+          setVideo({
+            ...singleVideo.video,
+          } as Video)
+        }
       }
     }
-  }
 
-  useEffect(() => {
     getVideo()
-  })
+  }, [videoId]) // Include videoId as dependency
 
   useEffect(() => {
     if (video) {
