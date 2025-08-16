@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Link from 'next/link'
 import { Users, Bot, Mail, TrendingUp } from 'lucide-react'
 
 const Counter = () => {
@@ -59,12 +60,21 @@ const Counter = () => {
       bgColor: 'from-green-500/20 to-emerald-500/20',
       borderColor: 'border-green-500/30',
     },
+    {
+      name: 'Analytics',
+      value: null,
+      icon: TrendingUp,
+      color: 'from-orange-500 to-red-500',
+      bgColor: 'from-orange-500/20 to-red-500/20',
+      borderColor: 'border-orange-500/30',
+      isLink: true,
+    },
   ]
 
   if (loading) {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {[...Array(3)].map((_, i) => (
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        {[...Array(4)].map((_, i) => (
           <div key={i} className="animate-pulse">
             <div className="bg-slate-800/50 rounded-xl h-32 border border-slate-700/50"></div>
           </div>
@@ -74,22 +84,25 @@ const Counter = () => {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
       {stats.map((stat, index) => {
         const Icon = stat.icon
-        return (
+        const CardContent = (
           <div
-            key={stat.name}
             className={`relative overflow-hidden rounded-xl bg-gradient-to-br ${stat.bgColor} backdrop-blur-sm border ${stat.borderColor} p-6 hover:scale-105 transition-transform duration-200`}
           >
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-slate-300 text-sm font-medium">{stat.name}</p>
-                <p
-                  className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}
-                >
-                  {stat.value.toLocaleString()}
-                </p>
+                {stat.value !== null ? (
+                  <p
+                    className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}
+                  >
+                    {stat.value.toLocaleString()}
+                  </p>
+                ) : (
+                  <p className="text-slate-300 text-sm">View Dashboard</p>
+                )}
               </div>
               <div className={`p-3 rounded-lg bg-gradient-to-r ${stat.color}`}>
                 <Icon className="w-6 h-6 text-white" />
@@ -100,6 +113,21 @@ const Counter = () => {
             <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-32 h-32 rounded-full bg-gradient-to-r from-white/5 to-white/10 blur-xl"></div>
           </div>
         )
+
+        if (stat.isLink) {
+          return (
+            <Link
+              key={stat.name}
+              href="https://umami-p00gs00gwcwo00s4k4c4kgg8.pictusweb.com/share/KkcE727xQQoyzTbx/cirkevvpraze.cz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {CardContent}
+            </Link>
+          )
+        }
+
+        return <div key={stat.name}>{CardContent}</div>
       })}
     </div>
   )
