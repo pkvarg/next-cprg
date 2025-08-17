@@ -60,7 +60,6 @@ export default async function RootLayout(
           <meta property='og:image:height' content='400' />
           <meta property='og:image:alt' content='cirkevvpraze.cz' />
           <meta property='fb:app_id' content='627076731624225' />
-          <script defer src="https://umami-p00gs00gwcwo00s4k4c4kgg8.pictusweb.com/script.js" data-website-id="9ffb9e17-5e14-476b-af03-bbe52807b6a8"></script>
         </head>
         <AudioProvider>
           <body className={cn(inter.className)}>

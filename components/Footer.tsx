@@ -31,6 +31,19 @@ const Footer = () => {
     }
   }
 
+  const loadUmamiScript = () => {
+    // Check if script is already loaded
+    if (document.querySelector('script[data-website-id="9ffb9e17-5e14-476b-af03-bbe52807b6a8"]')) {
+      return
+    }
+
+    const script = document.createElement('script')
+    script.defer = true
+    script.src = 'https://umami-p00gs00gwcwo00s4k4c4kgg8.pictusweb.com/script.js'
+    script.setAttribute('data-website-id', '9ffb9e17-5e14-476b-af03-bbe52807b6a8')
+    document.head.appendChild(script)
+  }
+
   return (
     <>
       <CookieConsent
@@ -52,6 +65,7 @@ const Footer = () => {
         enableDeclineButton
         onAccept={() => {
           incrementCount()
+          loadUmamiScript()
         }}
         declineButtonStyle={{
           background: 'red',
