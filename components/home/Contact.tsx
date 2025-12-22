@@ -36,14 +36,14 @@ const Contact = () => {
     const specialChars = text.match(/[^a-zA-Z0-9\s]/g) || []
     if (specialChars.length / text.length > 0.4) return true
 
-    // Check for random character patterns (less than 20% vowels)
+    // Check for random character patterns (less than 25% vowels for stricter validation)
     const vowels = text.match(/[aeiouAEIOUáéíóúýäëïöüÁÉÍÓÚÝ]/g) || []
-    if (vowels.length / text.length < 0.2) return true
+    if (vowels.length / text.length < 0.25) return true
 
-    // Check for excessive uppercase (more than 50% uppercase letters)
+    // Check for excessive uppercase (more than 40% uppercase letters for stricter validation)
     const uppercase = text.match(/[A-Z]/g) || []
     const letters = text.match(/[a-zA-Z]/g) || []
-    if (letters && letters.length > 0 && uppercase.length / letters.length > 0.5) return true
+    if (letters && letters.length > 0 && uppercase.length / letters.length > 0.4) return true
 
     // Check for repetitive characters (same char 5+ times in a row)
     if (/(.)\1{4,}/.test(text)) return true
