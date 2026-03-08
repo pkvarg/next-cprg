@@ -328,7 +328,7 @@ const Contact = () => {
               <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-[2.5px]">
                 <div className="text-[18px]">
                   <div className="flex flex-col">
-                    <label className="text-sacred-cream/70 text-[0.95rem] font-lato mt-[2.5%]">{t('contactName')}</label>
+                    <label className="text-sacred-cream/70 text-[1.1rem] font-lato mt-[2.5%]">{t('contactName')}</label>
                     <input
                       className="form-control contact-input"
                       type="text"
@@ -338,7 +338,7 @@ const Contact = () => {
                       required
                     />
 
-                    <label className="text-sacred-cream/70 text-[0.95rem] font-lato mt-[2.5%]">{t('contactEmail')}</label>
+                    <label className="text-sacred-cream/70 text-[1.1rem] font-lato mt-[2.5%]">{t('contactEmail')}</label>
                     <input
                       className="form-control contact-input"
                       type="email"
@@ -347,7 +347,7 @@ const Contact = () => {
                       onChange={(e) => setEmail(e.target.value)}
                       required
                     />
-                    <label className="text-sacred-cream/70 text-[0.95rem] font-lato mt-[2.5%]"> {t('contactPhone')}</label>
+                    <label className="text-sacred-cream/70 text-[1.1rem] font-lato mt-[2.5%]">{t('contactPhone')}</label>
                     <input
                       className="form-control contact-input"
                       type="text"
@@ -372,7 +372,8 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <label className="text-sacred-cream/70 text-[0.95rem] font-lato mt-[2.5%]">{t('contactMessage')}</label>
+                  <label className="text-sacred-cream/70 text-[1.1rem] font-lato mt-[2.5%]">{t('contactMessage')}</label>
+
                   <textarea
                     className="form-control contact-input"
                     rows={5}
@@ -394,7 +395,7 @@ const Contact = () => {
                     />
 
                     <label
-                      className="form-check-label text-sacred-cream/60 text-[0.85rem] leading-6 ml-[15px] mt-[3px]"
+                      className="form-check-label text-sacred-cream/60 text-[1rem] leading-6 ml-[15px] mt-[3px]"
                       htmlFor="flexCheckDefault"
                     >
                       {t('contactAgree')}{' '}
@@ -402,7 +403,7 @@ const Contact = () => {
                         {t('contactGdpr')}{' '}
                       </button>
                       {showGdpr && (
-                        <p className="w-[300px] lg:w-[240px] text-sacred-cream/60 text-[0.85rem] text-left mt-2 leading-6">
+                        <p className="w-[300px] lg:w-[240px] text-sacred-cream/60 text-[1rem] text-left mt-2 leading-6">
                           {t('gdpr1')}
                         </p>
                       )}
@@ -422,7 +423,7 @@ const Contact = () => {
                   onChange={(e) => setPasswordGroupTwo(e.target.value)}
                 />
                 <button
-                  className="w-full mt-8 py-3 bg-sacred-terracotta text-sacred-cream font-lato tracking-widest uppercase text-[0.9rem] hover:bg-sacred-gold hover:text-sacred-dark transition-all rounded"
+                  className="w-full mt-8 py-3 bg-sacred-terracotta text-sacred-cream font-lato tracking-widest uppercase text-[1.05rem] hover:bg-sacred-gold hover:text-sacred-dark transition-all rounded"
                   type="submit"
                   value="Send"
                 >
@@ -432,28 +433,28 @@ const Contact = () => {
             </div>
             <div></div>
           </div>
-          <div className="lg:w-[30%] text-[17.5px]">
+          <div className="lg:w-[30%] text-[20px]">
             <h1 className="font-cormorant text-[1.3rem] italic text-sacred-gold mb-4 mt-16 lg:mt-0"> {t('contactRightTitle')}</h1>
-            <p className="text-sacred-cream/75 text-[1rem] font-lato font-light leading-relaxed">
+            <p className="text-sacred-cream/75 text-[1.15rem] font-lato font-light leading-relaxed">
               {t('contactRightTue')}
-              <span className="text-[15.5px]">{t('contactRightTueDesc')}</span>
+              <span className="text-[18px]">{t('contactRightTueDesc')}</span>
             </p>
-            <p className="text-sacred-cream/75 text-[1rem] font-lato font-light leading-relaxed">
+            <p className="text-sacred-cream/75 text-[1.15rem] font-lato font-light leading-relaxed">
               {t('contactRightThu')}
 
-              <span className="text-[15.5px]">{t('contactRightThuDesc')}</span>
+              <span className="text-[18px]">{t('contactRightThuDesc')}</span>
             </p>
-            <p className="text-sacred-cream/75 text-[1rem] font-lato font-light leading-relaxed mb-4">
+            <p className="text-sacred-cream/75 text-[1.15rem] font-lato font-light leading-relaxed mb-4">
               {t('contactRightSun')}
 
-              <span className="text-[15.5px]">{t('contactRightSunDesc')}</span>
+              <span className="text-[18px]">{t('contactRightSunDesc')}</span>
             </p>
 
-            <Link href={`/${locale}/meetings`} className="underline text-sacred-cream/60 hover:text-sacred-gold text-[1rem]">
+            <Link href={`/${locale}/meetings`} className="underline text-sacred-cream/60 hover:text-sacred-gold text-[1.15rem]">
               {t('contactRightLink')}
             </Link>
 
-            <p className="py-4 text-[17.5px]">
+            <p className="py-4 text-[20px]">
               <a href="mailto:info@cirkevvpraze.cz" className="text-sacred-gold hover:text-sacred-gold-light">Email: info@cirkevvpraze.cz</a>
             </p>
 
@@ -463,7 +464,7 @@ const Contact = () => {
             {/* <h3 className='mt-12 text-center'>
               {t('contactInvite03')}
 
-              <span className='text-[17.5px] '>{t('contactInvite04')}</span>
+              <span className='text-[20px] '>{t('contactInvite04')}</span>
             </h3> */}
           </div>
         </div>

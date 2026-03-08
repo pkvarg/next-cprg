@@ -20,10 +20,10 @@ export default function Home() {
           {t('heroTitle1')} <br className='flex lg:hidden' /> {t('heroTitle2')}
         </h1>
 
-        <p className='font-lato text-[1rem] lg:text-[1.1rem] text-sacred-cream/80 text-center mt-6 max-w-xl mx-auto leading-relaxed font-light'>
+        <p className='font-lato text-[1.15rem] lg:text-[1.25rem] text-sacred-cream/80 text-center mt-6 max-w-xl mx-auto leading-relaxed font-light'>
           {t('heroVerse1')} {t('heroVerse2')}
           <br />
-          <span className='text-sacred-gold text-[0.85rem]'>{t('heroRef')}</span>
+          <span className='text-sacred-gold text-[1rem]'>{t('heroRef')}</span>
         </p>
       </main>
 

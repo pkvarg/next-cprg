@@ -32,16 +32,16 @@ const Header = () => {
   return (
     <nav
       id="navbar"
-      className={
+      className={`fixed top-0 w-full nav-font z-[9999] transition-all duration-300 ${
         isSticky
-          ? 'sticky top-0 w-full nav-font bg-sacred-dark/95 backdrop-blur-sm border-b border-sacred-gold/20 z-9999'
-          : 'top-0 w-full nav-font'
-      }
+          ? 'bg-sacred-dark/95 backdrop-blur-sm border-b border-sacred-gold/20'
+          : 'bg-transparent'
+      }`}
     >
       <div className="justify-between px-4 mx-auto md:items-center md:flex md:px-8">
         <div className="mb-0 lg:mb-2">
           <div className="flex items-center justify-between py-3 md:py-2 md:block">
-            <Link href={'/'} className="font-cormorant text-[1.6rem] italic text-sacred-cream hover:text-sacred-gold transition-colors cursor-pointer">
+            <Link href={'/'} className="font-cormorant text-[1.85rem] italic text-sacred-cream hover:text-sacred-gold transition-colors cursor-pointer">
               {t('headerTitle')}
             </Link>
             <div className="md:hidden">
@@ -88,7 +88,7 @@ const Header = () => {
               navbar ? 'block bg-sacred-dark/95' : 'hidden'
             }`}
           >
-            <ul className="justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[0.95rem] font-lato font-light tracking-wide items-center">
+            <ul className="justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[1.15rem] font-lato font-light tracking-wide items-center">
               <li>
                 <Link href={'#about'} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
                   {t('headerAbout')}

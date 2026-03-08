@@ -15,10 +15,10 @@ const WeLoveSection = () => {
           <div className='bg-sacred-gold h-[1px] w-[200px] my-6'></div>
         </div>
         <div className='mx-4 lg:mx-[20%]'>
-          <p className='font-lato text-[1rem] lg:text-[1.1rem] text-sacred-dark/80 leading-relaxed'>{t('home01p1')}</p>
-          <p className='font-lato text-[1rem] lg:text-[1.1rem] text-sacred-dark/80 leading-relaxed'>{t('home01p2')}</p>
-          <p className='font-lato text-[1rem] lg:text-[1.1rem] text-sacred-dark/80 leading-relaxed'>{t('home01p3')}</p>
-          <p className='font-lato text-[1rem] lg:text-[1.1rem] text-sacred-dark/80 leading-relaxed'>{t('home01p4')}</p>
+          <p className='font-lato text-[1.15rem] lg:text-[1.25rem] text-sacred-dark/80 leading-relaxed'>{t('home01p1')}</p>
+          <p className='font-lato text-[1.15rem] lg:text-[1.25rem] text-sacred-dark/80 leading-relaxed'>{t('home01p2')}</p>
+          <p className='font-lato text-[1.15rem] lg:text-[1.25rem] text-sacred-dark/80 leading-relaxed'>{t('home01p3')}</p>
+          <p className='font-lato text-[1.15rem] lg:text-[1.25rem] text-sacred-dark/80 leading-relaxed'>{t('home01p4')}</p>
         </div>
       </div>
     </>

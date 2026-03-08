@@ -44,13 +44,13 @@ const HomeUpcomingSection = async () => {
               event.upcoming === true && (
                 <div key={event.id}>
                   <h3 className="font-cormorant text-[1.3rem] lg:text-[1.6rem] font-semibold text-sacred-terracotta text-center mt-4">{event.title}</h3>
-                  <p className="font-lato text-[0.9rem] text-sacred-dark/70 text-center leading-relaxed mt-2 whitespace-break-spaces lg:whitespace-pre">
+                  <p className="font-lato text-[1.05rem] text-sacred-dark/70 text-center leading-relaxed mt-2 whitespace-break-spaces lg:whitespace-pre">
                     {event.text}
                   </p>
                   {event.link && (
                     <div className="flex justify-center">
                       <Link
-                        className="border border-sacred-terracotta text-sacred-terracotta hover:bg-sacred-terracotta hover:text-white rounded px-5 py-1.5 text-[0.9rem] font-lato transition-all mt-8 mb-4"
+                        className="border border-sacred-terracotta text-sacred-terracotta hover:bg-sacred-terracotta hover:text-white rounded px-5 py-1.5 text-[1.05rem] font-lato transition-all mt-8 mb-4"
                         href={event.link}
                         target="_blank"
                       >

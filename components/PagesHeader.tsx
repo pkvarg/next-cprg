@@ -45,7 +45,7 @@ const PagesHeader = () => {
       <div className="justify-between px-4 mx-auto md:items-center md:flex md:px-8">
         <div className="mb-0 lg:mb-2">
           <div className="flex items-center justify-between py-3 md:py-2 md:block">
-            <Link className="font-cormorant text-[1.4rem] italic text-sacred-cream hover:text-sacred-gold transition-colors" href={'/'}>
+            <Link className="font-cormorant text-[1.65rem] italic text-sacred-cream hover:text-sacred-gold transition-colors" href={'/'}>
               {t('headerPagesHome')}
             </Link>
             <div className="md:hidden">
@@ -92,7 +92,7 @@ const PagesHeader = () => {
               navbar ? 'block bg-sacred-dark/95' : 'hidden'
             }`}
           >
-            <ul className="justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[0.95rem] font-lato tracking-wide items-center">
+            <ul className="justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[1.15rem] font-lato tracking-wide items-center">
               <div className="group relative cursor-pointer">
                 <div className="flex items-center justify-between">
                   <p className="text-sacred-cream/80 hover:text-sacred-gold transition-colors">{t('headerGallery')}</p>
