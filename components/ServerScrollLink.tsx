@@ -11,7 +11,7 @@ const ServerScrollLink: React.FC<ServerScrollLinkProps> = ({ id, title }) => {
   const { locale } = useParams()
   return (
     <Link href={`/blog/#${id}`}>
-      <li className="text-center lg:text-start">{title}</li>
+      <li className="font-lato text-[1rem] text-sacred-cream/80 hover:text-sacred-gold transition-colors list-none text-center lg:text-start">{title}</li>
     </Link>
   )
 }

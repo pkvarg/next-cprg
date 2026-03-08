@@ -35,25 +35,22 @@ const HomeUpcomingSection = async () => {
 
   return events.length > 0 ? (
     <>
-      <div className="bg-white h-8 lg:scroll-mt-14" id="events"></div>
-      <div className="bg-white pt-4 lg:pt-8 pb-6 lg:pb-16 px-4 lg:px-[20%] text-[#80422C]">
-        {/* <h1 className='text-center text-[35px] lg:text-[45px] uppercase mt-8'>
-            {t('home03title')}
-          </h1> */}
-        <div className="flex flex-col items-center justify-center text-[20px]">
-          <h2 className="text-[20px]">{t('home03sub')}</h2>
+      <div className="bg-sacred-cream-dark h-8 lg:scroll-mt-14" id="events"></div>
+      <div className="bg-sacred-cream-dark text-sacred-terracotta pt-8 lg:pt-16 pb-12 lg:pb-20 px-4 lg:px-[20%]">
+        <div className="flex flex-col items-center justify-center">
+          <h2 className="font-cormorant text-[1.4rem] lg:text-[1.8rem] italic text-sacred-gold text-center mb-6">{t('home03sub')}</h2>
           {events.map(
             (event) =>
               event.upcoming === true && (
                 <div key={event.id}>
-                  <h3 className="text-[18.5px] text-center mt-2 mx-4 lg:mx-0">{event.title}</h3>
-                  <p className="mt-2 whitespace-break-spaces lg:whitespace-pre text-center text-[17.5px]">
+                  <h3 className="font-cormorant text-[1.3rem] lg:text-[1.6rem] font-semibold text-sacred-terracotta text-center mt-4">{event.title}</h3>
+                  <p className="font-lato text-[0.9rem] text-sacred-dark/70 text-center leading-relaxed mt-2 whitespace-break-spaces lg:whitespace-pre">
                     {event.text}
                   </p>
                   {event.link && (
                     <div className="flex justify-center">
                       <Link
-                        className="mt-8 mb-4 border border-[#733b28;] rounded-2xl px-4 pt-1 hover:bg-[#733b28;] hover:text-white"
+                        className="border border-sacred-terracotta text-sacred-terracotta hover:bg-sacred-terracotta hover:text-white rounded px-5 py-1.5 text-[0.9rem] font-lato transition-all mt-8 mb-4"
                         href={event.link}
                         target="_blank"
                       >
@@ -70,9 +67,9 @@ const HomeUpcomingSection = async () => {
   ) : (
     <>
       {' '}
-      <div className="bg-white h-0 lg:scroll-mt-16" id="events"></div>
-      <div className="bg-white px-4 lg:px-[20%] text-[#80422C] py-8">
-        <h1 className="text-center">
+      <div className="bg-sacred-cream-dark h-0 lg:scroll-mt-16" id="events"></div>
+      <div className="bg-sacred-cream-dark px-4 lg:px-[20%] text-sacred-terracotta py-8">
+        <h1 className="text-center font-lato">
           {locale === 'en' ? 'No upcoming events' : 'Žádné blížící se události'}
         </h1>
       </div>

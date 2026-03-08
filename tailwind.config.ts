@@ -16,6 +16,22 @@ const config: Config = {
       spacing: {
         '9/16': '56.25%', // 16:9 aspect ratio
       },
+      colors: {
+        sacred: {
+          dark: '#1c1917',
+          deep: '#2d1f1a',
+          terracotta: '#7a3325',
+          gold: '#c9a227',
+          'gold-light': '#e8c460',
+          cream: '#faf7f2',
+          'cream-dark': '#f0ebe1',
+          muted: '#9e8a7a',
+        },
+      },
+      fontFamily: {
+        cormorant: ['Cormorant Garamond', 'Georgia', 'serif'],
+        lato: ['Lato', 'sans-serif'],
+      },
     },
   },
   plugins: [],

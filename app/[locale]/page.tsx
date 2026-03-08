@@ -15,14 +15,15 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className='hero h-[90vh] lg:h-[110vh] text-[35px] lg:text-[45px] text-white -mt-[25%] lg:-mt-[8%] font-extralight'>
-        <h1 className='text-center pt-[50%] lg:pt-[20%] leading-[50px] lg:leading-[75px]'>
+      <main className='hero h-screen flex flex-col items-center justify-center'>
+        <h1 className='font-cormorant text-[3rem] lg:text-[5rem] text-sacred-cream font-semibold italic text-center leading-tight tracking-wide'>
           {t('heroTitle1')} <br className='flex lg:hidden' /> {t('heroTitle2')}
         </h1>
 
-        <p className='text-center text-[15px] lg:text-[20px] mx-2 mt-4 lg:-mt-8'>
-          <br /> {t('heroVerse1')} <br /> {t('heroVerse2')} <br />
-          <span className='text-[18px] text-center'> {t('heroRef')}</span>
+        <p className='font-lato text-[1rem] lg:text-[1.1rem] text-sacred-cream/80 text-center mt-6 max-w-xl mx-auto leading-relaxed font-light'>
+          {t('heroVerse1')} {t('heroVerse2')}
+          <br />
+          <span className='text-sacred-gold text-[0.85rem]'>{t('heroRef')}</span>
         </p>
       </main>
 

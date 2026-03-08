@@ -67,10 +67,10 @@ const DownloadPage = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-sacred-dark flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">{t('loading')}</p>
+          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-sacred-gold mx-auto mb-4"></div>
+          <p className="text-sacred-cream/60 font-lato">{t('loading')}</p>
         </div>
       </div>
     )
@@ -78,12 +78,12 @@ const DownloadPage = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-sacred-dark flex items-center justify-center">
         <div className="text-center max-w-md mx-auto p-6">
-          <AlertCircle className="h-16 w-16 text-red-500 mx-auto mb-4" />
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">{t('errorTitle')}</h2>
-          <p className="text-gray-600 mb-4">{error}</p>
-          <p className="text-sm text-gray-500">
+          <AlertCircle className="h-12 w-12 text-sacred-gold mx-auto mb-4" />
+          <h2 className="font-cormorant text-[1.5rem] italic text-sacred-cream mb-2">{t('errorTitle')}</h2>
+          <p className="text-sacred-cream/60 font-lato mb-4">{error}</p>
+          <p className="text-sacred-muted font-lato text-[0.85rem]">
             {t('errorInstruction', { filename: PDF_FILENAME })}
           </p>
         </div>
@@ -94,59 +94,57 @@ const DownloadPage = () => {
   return (
     <div className="podcastpage min-h-screen overflow-x-hidden">
       <PagesHeader />
-      <h1 className="text-center text-[30px] text-white">{t('pageTitle')}</h1>
-      <div className="py-8">
-        <div className="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-8">
-            <FileText className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-            <h1 className="text-3xl font-bold text-white mb-2">{PDF_TITLE}</h1>
-            <p className="text-gray-200 max-w-2xl text-xl mx-auto">{PDF_DESCRIPTION}</p>
-          </div>
+      <h1 className="font-cormorant text-[2rem] italic text-sacred-gold text-center mt-8">{t('pageTitle')}</h1>
+      <div className="max-w-3xl mx-auto px-4 py-8">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <FileText className="h-12 w-12 text-sacred-gold mx-auto mb-4" />
+          <h1 className="font-cormorant text-[2rem] italic text-sacred-cream text-center mb-2">{PDF_TITLE}</h1>
+          <p className="font-lato text-sacred-cream/70 text-[1rem] text-center max-w-xl mx-auto">{PDF_DESCRIPTION}</p>
+        </div>
 
-          {/* PDF Preview and Download Section */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-1 lg:p-6">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-xl font-semibold text-gray-900">{t('preview')}</h2>
-                <button
-                  onClick={handleDownload}
-                  className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 cursor-pointer"
+        {/* PDF Preview and Download Section */}
+        <div className="bg-sacred-deep rounded-lg border border-sacred-gold/20 overflow-hidden">
+          <div className="p-4 lg:p-6">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="font-cormorant text-[1.3rem] text-sacred-cream">{t('preview')}</h2>
+              <button
+                onClick={handleDownload}
+                className="inline-flex items-center px-5 py-2 bg-sacred-terracotta text-sacred-cream font-lato text-[0.9rem] tracking-wider rounded hover:bg-sacred-gold hover:text-sacred-dark transition-colors cursor-pointer"
+              >
+                <Download className="h-5 w-5 mr-2" />
+                {t('downloadButton')}
+              </button>
+            </div>
+
+            {/* PDF Preview */}
+            <div className="bg-sacred-dark rounded border border-sacred-gold/10 p-2">
+              <div className="w-full" style={{ height: '600px' }}>
+                <iframe
+                  src={`${pdfUrl}#page=1&toolbar=0&navpanes=0&scrollbar=0`}
+                  className="w-full h-full border-0 rounded"
+                  title="PDF Preview"
+                  onError={() => setError(t('errorPreview'))}
                 >
-                  <Download className="h-5 w-5 mr-2" />
-                  {t('downloadButton')}
-                </button>
+                  <p className="text-center text-sacred-cream/60 mt-8">
+                    {t('browserNotSupported')}{' '}
+                    <button onClick={handleDownload} className="text-sacred-gold hover:underline">
+                      {t('clickToDownload')}
+                    </button>
+                  </p>
+                </iframe>
               </div>
+            </div>
 
-              {/* PDF Preview */}
-              <div className="lg:border lg:rounded-lg lg:bg-gray-100 lg:p-4">
-                <div className="w-full" style={{ height: '600px' }}>
-                  <iframe
-                    src={`${pdfUrl}#page=1&toolbar=0&navpanes=0&scrollbar=0`}
-                    className="w-full h-full border-0 rounded"
-                    title="PDF Preview"
-                    onError={() => setError(t('errorPreview'))}
-                  >
-                    <p className="text-center text-gray-500 mt-8">
-                      {t('browserNotSupported')}{' '}
-                      <button onClick={handleDownload} className="text-blue-600 hover:underline">
-                        {t('clickToDownload')}
-                      </button>
-                    </p>
-                  </iframe>
+            {/* Download Info */}
+            <div className="mt-6 p-4 bg-sacred-deep rounded border border-sacred-gold/20">
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <Download className="h-5 w-5 text-sacred-gold mt-0.5" />
                 </div>
-              </div>
-
-              {/* Download Info */}
-              <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <Download className="h-5 w-5 text-blue-600 mt-0.5" />
-                  </div>
-                  <div className="ml-3">
-                    <h3 className="text-md font-medium text-blue-900">{t('downloadInfoTitle')}</h3>
-                    <p className="text-md text-blue-700 mt-1">{t('downloadInfoDescription')}</p>
-                  </div>
+                <div className="ml-3">
+                  <h3 className="font-cormorant text-[1.1rem] text-sacred-gold">{t('downloadInfoTitle')}</h3>
+                  <p className="font-lato text-sacred-cream/70 text-[0.9rem] mt-1">{t('downloadInfoDescription')}</p>
                 </div>
               </div>
             </div>

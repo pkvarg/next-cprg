@@ -42,7 +42,7 @@ const PodcastDetailPlayer = ({
 
   return (
     <div className='mt-6 '>
-      <div className='flex flex-col lg:flex-row gap-8 justify-center lg:justify-start items-center glassmorphism-audio rounded-xl  lg:w-[50%] lg:px-16 py-4'>
+      <div className='flex flex-col lg:flex-row gap-8 justify-center lg:justify-start items-center bg-sacred-deep border border-sacred-gold/20 rounded-xl lg:w-[50%] lg:px-16 py-4'>
         <div className='flex flex-col gap-4 lg:gap-2 items-center'>
           <Image
             src={'/player_pics/headphone.svg'}
@@ -53,7 +53,7 @@ const PodcastDetailPlayer = ({
           />
           <Button
             onClick={handlePlay}
-            className='text-[25px] w-full max-w-[250px] bg-[#9D7739] text-white-1'
+            className='text-[25px] w-full max-w-[250px] bg-sacred-terracotta hover:bg-sacred-gold hover:text-sacred-dark transition-colors text-white-1'
           >
             <Image
               src='/player_pics/Play.svg'
@@ -66,11 +66,11 @@ const PodcastDetailPlayer = ({
         </div>
 
         <div className='flex flex-col lg:gap-5 mx-4 lg:mx-0'>
-          <h1 className='text-[22.5px] tracking-[-0.32px] text-white'>
+          <h1 className='font-cormorant text-[1.4rem] italic text-sacred-cream'>
             {title}
           </h1>
 
-          <p className='text-white text-[17.5px] lg:text-justify'>
+          <p className='font-lato text-sacred-cream/75 text-[0.95rem] leading-relaxed lg:text-justify'>
             {description}
           </p>
         </div>

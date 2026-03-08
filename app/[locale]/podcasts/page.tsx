@@ -31,18 +31,18 @@ const Podcasts = async () => {
     <div className='podcastpage min-h-screen overflow-x-hidden'>
       <PagesHeader />
 
-      <div className='text-white text-center text-[25px] mt-8'>
-        <h1>{locale === 'en' ? 'Podcasts' : 'Podcasty'}</h1>
+      <div className='text-center mt-12 mb-2'>
+        <h1 className='font-cormorant text-[2.5rem] italic text-sacred-gold'>{locale === 'en' ? 'Podcasts' : 'Podcasty'}</h1>
       </div>
 
       {podcasts.length === 0 ? (
-        <p className='text-[20px] text-red-500 text-center h-screen mt-16'>
-          <span className='bg-white p-2'>
+        <p className='text-sacred-cream/60 font-lato text-center h-screen mt-16'>
+          <span className='bg-sacred-deep p-2 rounded'>
             No podcasts found in this language!
           </span>
         </p>
       ) : (
-        <section className='flex lg:w-full flex-col mt-8 pb-16 mx-4 lg:mx-[20%] text-white'>
+        <section className='flex lg:w-full flex-col mt-8 pb-16 mx-4 lg:mx-[20%]'>
           {podcasts.length > 0 &&
             podcasts.map((podcast) => (
               <PodcastDetailPlayer

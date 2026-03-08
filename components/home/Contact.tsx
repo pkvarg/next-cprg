@@ -315,9 +315,9 @@ const Contact = () => {
 
   return (
     <>
-      <div className="bg-[#80422C] h-8 lg:scroll-mt-14" id="contact"></div>
-      <div className="bg-[#80422C] pt-8 lg:pt-16 pb-10 text-[25px] text-white">
-        <h1 className="text-[20px] lg:text-[25px] text-white text-center lg:pt-0 py-4">
+      <div className="bg-sacred-dark h-8 lg:scroll-mt-14" id="contact"></div>
+      <div className="bg-sacred-dark pt-12 lg:pt-20 pb-12 text-sacred-cream">
+        <h1 className="font-cormorant text-[1.8rem] lg:text-[2.2rem] italic text-sacred-gold text-center mb-8">
           {t('contactTitle')}
         </h1>
         <div className="mx-4 md:mx-6 lg:mx-0 flex lg:flex-row flex-col lg:justify-center items-center lg:gap-[10%] ">
@@ -328,9 +328,9 @@ const Contact = () => {
               <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-[2.5px]">
                 <div className="text-[18px]">
                   <div className="flex flex-col">
-                    <label className="form-label mt-[2.5%] text-[20px]">{t('contactName')}</label>
+                    <label className="text-sacred-cream/70 text-[0.95rem] font-lato mt-[2.5%]">{t('contactName')}</label>
                     <input
-                      className="form-control rounded-xl"
+                      className="form-control contact-input"
                       type="text"
                       name="user_name"
                       value={name}
@@ -338,18 +338,18 @@ const Contact = () => {
                       required
                     />
 
-                    <label className="form-label mt-[2.5%] text-[20px]">{t('contactEmail')}</label>
+                    <label className="text-sacred-cream/70 text-[0.95rem] font-lato mt-[2.5%]">{t('contactEmail')}</label>
                     <input
-                      className="form-control rounded-xl"
+                      className="form-control contact-input"
                       type="email"
                       name="user_email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
                     />
-                    <label className="form-label mt-[2.5%] text-[20px]"> {t('contactPhone')}</label>
+                    <label className="text-sacred-cream/70 text-[0.95rem] font-lato mt-[2.5%]"> {t('contactPhone')}</label>
                     <input
-                      className="form-control rounded-xl"
+                      className="form-control contact-input"
                       type="text"
                       name="user_phone"
                       value={phone}
@@ -372,9 +372,9 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <label className="form-label mt-[2.5%] text-[20px]">{t('contactMessage')}</label>
+                  <label className="text-sacred-cream/70 text-[0.95rem] font-lato mt-[2.5%]">{t('contactMessage')}</label>
                   <textarea
-                    className="form-control rounded-xl text-[#2e2236] text-[20px] pl-[10px]"
+                    className="form-control contact-input"
                     rows={5}
                     name="message"
                     value={mailMessage}
@@ -394,7 +394,7 @@ const Contact = () => {
                     />
 
                     <label
-                      className="form-check-label text-[18px] lg:text-[18px] ml-[15px] mt-[3px]"
+                      className="form-check-label text-sacred-cream/60 text-[0.85rem] leading-6 ml-[15px] mt-[3px]"
                       htmlFor="flexCheckDefault"
                     >
                       {t('contactAgree')}{' '}
@@ -402,7 +402,7 @@ const Contact = () => {
                         {t('contactGdpr')}{' '}
                       </button>
                       {showGdpr && (
-                        <p className="w-[300px] lg:w-[240px] text-[18px] text-left mt-2 leading-6">
+                        <p className="w-[300px] lg:w-[240px] text-sacred-cream/60 text-[0.85rem] text-left mt-2 leading-6">
                           {t('gdpr1')}
                         </p>
                       )}
@@ -422,7 +422,7 @@ const Contact = () => {
                   onChange={(e) => setPasswordGroupTwo(e.target.value)}
                 />
                 <button
-                  className="text-[20px] bg-violet mt-10 pt-[2.5px] rounded-xl border border-white hover:text-[#2e2236] hover:bg-white"
+                  className="w-full mt-8 py-3 bg-sacred-terracotta text-sacred-cream font-lato tracking-widest uppercase text-[0.9rem] hover:bg-sacred-gold hover:text-sacred-dark transition-all rounded"
                   type="submit"
                   value="Send"
                 >
@@ -433,28 +433,28 @@ const Contact = () => {
             <div></div>
           </div>
           <div className="lg:w-[30%] text-[17.5px]">
-            <h1 className="text-[20px] pb-4 mt-16 lg:mt-0"> {t('contactRightTitle')}</h1>
-            <p>
+            <h1 className="font-cormorant text-[1.3rem] italic text-sacred-gold mb-4 mt-16 lg:mt-0"> {t('contactRightTitle')}</h1>
+            <p className="text-sacred-cream/75 text-[1rem] font-lato font-light leading-relaxed">
               {t('contactRightTue')}
               <span className="text-[15.5px]">{t('contactRightTueDesc')}</span>
             </p>
-            <p>
+            <p className="text-sacred-cream/75 text-[1rem] font-lato font-light leading-relaxed">
               {t('contactRightThu')}
 
               <span className="text-[15.5px]">{t('contactRightThuDesc')}</span>
             </p>
-            <p className="mb-4">
+            <p className="text-sacred-cream/75 text-[1rem] font-lato font-light leading-relaxed mb-4">
               {t('contactRightSun')}
 
               <span className="text-[15.5px]">{t('contactRightSunDesc')}</span>
             </p>
 
-            <Link href={`/meetings`} className="underline text-[18px]">
+            <Link href={`/${locale}/meetings`} className="underline text-sacred-cream/60 hover:text-sacred-gold text-[1rem]">
               {t('contactRightLink')}
             </Link>
 
             <p className="py-4 text-[17.5px]">
-              <a href="mailto:info@cirkevvpraze.cz">Email: info@cirkevvpraze.cz</a>
+              <a href="mailto:info@cirkevvpraze.cz" className="text-sacred-gold hover:text-sacred-gold-light">Email: info@cirkevvpraze.cz</a>
             </p>
 
             {/* <h1 className='mt-14 text-center'>{t('contactInvite01')}</h1>

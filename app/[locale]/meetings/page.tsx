@@ -10,33 +10,35 @@ const Meetings = () => {
   return (
     <>
       <PagesHeader />
-      <div className='text-white px-4 lg:px-[10%] text-[20px] flex flex-col gap-2 pb-8'>
-        <h1 className='text-center text-[25px] my-8'>{t('meetingsTitle')}</h1>
-        <p className='leading-[25px]'>{t('meetingsP1')}</p>
-        <p className='italic text-[18.5px]'>
-          {t('meetingsP1ver1')}
+      <div className='bg-sacred-dark min-h-screen'>
+        <div className='text-sacred-cream px-4 lg:px-[10%] text-[1rem] flex flex-col gap-4 pb-12 max-w-3xl mx-auto'>
+          <h1 className='font-cormorant text-[2rem] italic text-sacred-gold text-center my-10'>{t('meetingsTitle')}</h1>
+          <p className='font-lato text-sacred-cream/80 leading-relaxed text-[1rem]'>{t('meetingsP1')}</p>
+          <p className='font-lato italic text-sacred-cream/70 text-[1rem] leading-relaxed'>
+            {t('meetingsP1ver1')}
 
-          <span className='text-[15px]'> {t('meetingsP1ver1Ref')}</span>
-        </p>
-        <p className='italic text-[18.5px]'>
-          {t('meetingsP1ver2')}
-          <span className='text-[15px]'> {t('meetingsP1ver2Ref')}</span>
-        </p>
+            <span className='text-sacred-gold/60 text-[0.85rem]'> {t('meetingsP1ver1Ref')}</span>
+          </p>
+          <p className='font-lato italic text-sacred-cream/70 text-[1rem] leading-relaxed'>
+            {t('meetingsP1ver2')}
+            <span className='text-sacred-gold/60 text-[0.85rem]'> {t('meetingsP1ver2Ref')}</span>
+          </p>
 
-        <h2> {t('meetingsP2')}</h2>
-        <p className='text-[18.5px]'>{t('meetingsP3')}</p>
-        <p className='italic text-[18.5px]'>
-          {t('meetingsP3ver')}
+          <h2 className='font-cormorant text-[1.4rem] text-sacred-cream font-semibold mt-4'> {t('meetingsP2')}</h2>
+          <p className='font-lato text-sacred-cream/80 leading-relaxed text-[1rem]'>{t('meetingsP3')}</p>
+          <p className='font-lato italic text-sacred-cream/70 text-[1rem] leading-relaxed'>
+            {t('meetingsP3ver')}
 
-          <span className='text-[15px]'> {t('meetingsP3verRef')}</span>
-        </p>
-        <p> {t('meetingsP4')}</p>
-        <p className='text-[18.5px]'>{t('meetingsP5')}</p>
-        <p className='italic text-[18.5px]'>
-          {t('meetingsP5ver')}
+            <span className='text-sacred-gold/60 text-[0.85rem]'> {t('meetingsP3verRef')}</span>
+          </p>
+          <p className='font-lato text-sacred-cream/80 leading-relaxed text-[1rem]'> {t('meetingsP4')}</p>
+          <p className='font-lato text-sacred-cream/80 leading-relaxed text-[1rem]'>{t('meetingsP5')}</p>
+          <p className='font-lato italic text-sacred-cream/70 text-[1rem] leading-relaxed'>
+            {t('meetingsP5ver')}
 
-          <span className='text-[15px]'> {t('meetingsP5verRef')}</span>
-        </p>
+            <span className='text-sacred-gold/60 text-[0.85rem]'> {t('meetingsP5verRef')}</span>
+          </p>
+        </div>
       </div>
       <Footer />
     </>

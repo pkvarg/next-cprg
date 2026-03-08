@@ -34,19 +34,19 @@ const Header = () => {
       id="navbar"
       className={
         isSticky
-          ? 'sticky top-0  w-full text-white nav-font bg-[#733b28] z-9999'
-          : 'top-0  w-full text-white nav-font'
+          ? 'sticky top-0 w-full nav-font bg-sacred-dark/95 backdrop-blur-sm border-b border-sacred-gold/20 z-9999'
+          : 'top-0 w-full nav-font'
       }
     >
       <div className="justify-between px-4 mx-auto md:items-center md:flex md:px-8">
         <div className="mb-0 lg:mb-2">
           <div className="flex items-center justify-between py-3 md:py-2 md:block">
-            <Link href={'/'} className="text-[25px] font-normal mt-[5px] cursor-pointer">
+            <Link href={'/'} className="font-cormorant text-[1.6rem] italic text-sacred-cream hover:text-sacred-gold transition-colors cursor-pointer">
               {t('headerTitle')}
             </Link>
             <div className="md:hidden">
               <button
-                className="p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border"
+                className="p-2 text-sacred-cream rounded-md outline-none focus:border-gray-400 focus:border"
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (
@@ -85,52 +85,52 @@ const Header = () => {
         <div>
           <div
             className={`flex-1 justify-self-center h-[80vh] lg:h-auto pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? 'block' : 'hidden'
+              navbar ? 'block bg-sacred-dark/95' : 'hidden'
             }`}
           >
-            <ul className="justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[20px] lg:text-[20px] items-center">
+            <ul className="justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[0.95rem] font-lato font-light tracking-wide items-center">
               <li>
-                <Link href={'#about'} className="hover:text-[#ffff00] cursor-pointer">
+                <Link href={'#about'} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
                   {t('headerAbout')}
                 </Link>
               </li>
               <li>
-                <Link href={`/blog`} className="hover:text-[#ffff00] cursor-pointer">
+                <Link href={`/blog`} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
                   {t('headerBlog')}
                 </Link>
               </li>
               <li>
-                <Link href={'#events'} className="hover:text-[#ffff00] cursor-pointer">
+                <Link href={'#events'} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
                   {t('headerEvents')}
                 </Link>
               </li>
 
-              <div className="group relative  cursor-pointer">
+              <div className="group relative cursor-pointer">
                 <div className="flex items-center justify-between">
-                  <p className="hover:text-[#ffff00] cursor-pointer">{t('headerGallery')}</p>
+                  <p className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">{t('headerGallery')}</p>
                 </div>
-                <div className="invisible absolute z-50 flex w-max flex-col px-4 py-1 text-white shadow-xl group-hover:visible group-hover:bg-[#0f1b0a]">
+                <div className="invisible absolute z-50 flex w-max flex-col px-4 py-1 bg-sacred-dark border border-sacred-gold/20 rounded shadow-lg group-hover:visible">
                   {/* <Link
                     href={`/gallery`}
                     className='cursor-pointer hover:text-red-600'
                   >
                     {t('headerPhotos')}
                   </Link> */}
-                  <Link href={`/podcasts`} className="hover:text-[#ffff00] cursor-pointer">
+                  <Link href={`/podcasts`} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
                     Audio
                   </Link>
-                  <Link href={`/video`} className="hover:text-[#ffff00] cursor-pointer">
+                  <Link href={`/video`} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
                     Video
                   </Link>
 
-                  <Link href={'/download'} className="hover:text-[#ffff00] cursor-pointer">
+                  <Link href={'/download'} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
                     {t('headerDownload')}
                   </Link>
                 </div>
               </div>
 
               <li>
-                <Link href={'#contact'} className="hover:text-[#ffff00] cursor-pointer">
+                <Link href={'#contact'} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
                   {t('headerContact')}
                 </Link>
               </li>

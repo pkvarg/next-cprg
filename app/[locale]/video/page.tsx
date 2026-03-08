@@ -25,23 +25,23 @@ const VideoPage = async () => {
     <div className='podcastpage min-h-screen overflow-x-hidden'>
       <PagesHeader />
 
-      <div className='text-white text-center text-[25px] mt-8'>
-        <h1>{locale === 'en' ? 'Videos' : 'Video'}</h1>
+      <div className='text-center mt-12 mb-2'>
+        <h1 className='font-cormorant text-[2.5rem] italic text-sacred-gold'>{locale === 'en' ? 'Videos' : 'Video'}</h1>
       </div>
 
       {videos.length === 0 ? (
-        <p className='text-[20px] text-red-500 text-center h-screen mt-8'>
-          <span className='bg-white p-2'>
+        <p className='text-sacred-cream/60 font-lato text-center h-screen mt-8'>
+          <span className='bg-sacred-deep p-2 rounded'>
             No videos found in this language!
           </span>
         </p>
       ) : (
-        <div className='container mx-auto mt-16 pb-16 px-4 text-white'>
+        <div className='container mx-auto mt-12 pb-16 px-4'>
           <section className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8'>
             {videos.length > 0 &&
               videos.map((video) => (
                 <div
-                  className='flex justify-center items-center'
+                  className='flex justify-center items-center bg-sacred-deep rounded-lg overflow-hidden border border-sacred-gold/10'
                   key={video.id}
                 >
                   <YouTubeEmbed url={video.url} />
