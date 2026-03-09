@@ -25,13 +25,13 @@ const DeleteBlogButton: React.FC<Blog> = (blogId) => {
   return (
     <>
       <button
-        className='text-red-500 text-[18px]'
+        className='px-3 py-1.5 text-red-400/70 hover:text-red-400 border border-red-400/20 hover:border-red-400/40 rounded-lg transition-all duration-200 text-sm font-lato'
         onClick={(e) => deleteBlog(e, blogId.blogId)}
       >
         Delete Blog
       </button>
       {message && (
-        <p className='text-green-600 text-[15px] bg-white'>{message}</p>
+        <p className='text-green-400 text-sm bg-green-500/10 border border-green-500/20 rounded-lg px-3 py-1.5'>{message}</p>
       )}
     </>
   )

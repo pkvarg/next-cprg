@@ -28,6 +28,10 @@ const nextConfig = {
         port: '3013',
         pathname: '/api/upload/cprg/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+      },
     ],
   },
 }

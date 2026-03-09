@@ -6,18 +6,17 @@ import Counter from '@/components/admin/Counter'
 
 const admin = async () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-sacred-dark">
       <AdminNavbar />
 
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-3xl"></div>
         <div className="relative z-10 flex justify-center items-center flex-col gap-6 pt-8 pb-12">
           <div className="text-center space-y-4">
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-cormorant italic text-sacred-gold">
               Admin Dashboard
             </h1>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+            <p className="text-xl text-sacred-cream/70 max-w-2xl mx-auto font-lato">
               Manage your content with style and efficiency
             </p>
           </div>

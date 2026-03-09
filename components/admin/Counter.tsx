@@ -40,33 +40,21 @@ const Counter = () => {
       name: 'Visitors',
       value: countVisitors,
       icon: Users,
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'from-blue-500/20 to-cyan-500/20',
-      borderColor: 'border-blue-500/30',
     },
     {
       name: 'Bots',
       value: countBots,
       icon: Bot,
-      color: 'from-purple-500 to-pink-500',
-      bgColor: 'from-purple-500/20 to-pink-500/20',
-      borderColor: 'border-purple-500/30',
     },
     {
       name: 'Emails',
       value: countEmails,
       icon: Mail,
-      color: 'from-green-500 to-emerald-500',
-      bgColor: 'from-green-500/20 to-emerald-500/20',
-      borderColor: 'border-green-500/30',
     },
     {
       name: 'Analytics',
       value: null,
       icon: TrendingUp,
-      color: 'from-orange-500 to-red-500',
-      bgColor: 'from-orange-500/20 to-red-500/20',
-      borderColor: 'border-orange-500/30',
       isLink: true,
     },
   ]
@@ -76,7 +64,7 @@ const Counter = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {[...Array(4)].map((_, i) => (
           <div key={i} className="animate-pulse">
-            <div className="bg-slate-800/50 rounded-xl h-32 border border-slate-700/50"></div>
+            <div className="bg-sacred-deep rounded-xl h-32 border border-sacred-gold/20"></div>
           </div>
         ))}
       </div>
@@ -89,28 +77,23 @@ const Counter = () => {
         const Icon = stat.icon
         const CardContent = (
           <div
-            className={`relative overflow-hidden rounded-xl bg-gradient-to-br ${stat.bgColor} backdrop-blur-sm border ${stat.borderColor} p-6 hover:scale-105 transition-transform duration-200`}
+            className="relative overflow-hidden rounded-xl bg-sacred-deep border border-sacred-gold/20 p-6 hover:border-sacred-gold/40 hover:scale-105 transition-all duration-200"
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-slate-300 text-sm font-medium">{stat.name}</p>
+                <p className="text-sacred-muted text-sm font-medium font-lato">{stat.name}</p>
                 {stat.value !== null ? (
-                  <p
-                    className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}
-                  >
+                  <p className="text-3xl font-bold text-sacred-gold">
                     {stat.value.toLocaleString()}
                   </p>
                 ) : (
-                  <p className="text-slate-300 text-sm">View Dashboard</p>
+                  <p className="text-sacred-cream/70 text-sm font-lato">View Dashboard</p>
                 )}
               </div>
-              <div className={`p-3 rounded-lg bg-gradient-to-r ${stat.color}`}>
-                <Icon className="w-6 h-6 text-white" />
+              <div className="p-3 rounded-lg bg-sacred-gold/20 border border-sacred-gold/30">
+                <Icon className="w-6 h-6 text-sacred-gold" />
               </div>
             </div>
-
-            {/* Animated background effect */}
-            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-32 h-32 rounded-full bg-gradient-to-r from-white/5 to-white/10 blur-xl"></div>
           </div>
         )
 

@@ -13,10 +13,9 @@ const RefreshButton = () => {
 
   return (
     <button
-      className='cursor-pointer text-yellow-500 ml-2 lg:ml-12'
+      className='cursor-pointer px-4 py-2 text-sacred-gold hover:text-sacred-gold-light border border-sacred-gold/20 hover:border-sacred-gold/40 rounded-lg transition-all duration-200 font-lato text-sm'
       onClick={handleRefresh}
     >
-      {' '}
       {t('refreshAdmin')}
     </button>
   )

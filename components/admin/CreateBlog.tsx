@@ -44,7 +44,7 @@ const CreateBlogForm: React.FC = () => {
 
     // Validate file type - accept image files
     if (!selectedFile.type.startsWith('image/')) {
-      setError('Prosím, nahrajte obrázok')
+      setError('Prosim, nahrajte obrazok')
       return
     }
 
@@ -57,7 +57,7 @@ const CreateBlogForm: React.FC = () => {
   const uploadFile = async (): Promise<string> => {
     return new Promise(async (resolve, reject) => {
       if (!file) {
-        setError('Žiadny súbor na nahratie')
+        setError('Ziadny subor na nahratie')
         reject(new Error('No file selected'))
         return
       }
@@ -80,11 +80,11 @@ const CreateBlogForm: React.FC = () => {
         })
 
         if (!response.ok) {
-          throw new Error('Nepodarilo sa nahrať súbor')
+          throw new Error('Nepodarilo sa nahrat subor')
         }
 
         const data = await response.json()
-        setSuccessMessage('Súbor bol úspešne nahraný!')
+        setSuccessMessage('Subor bol uspesne nahrany!')
         setUploadedFileUrl(data.imageUrl)
         setMedia(data.imageUrl)
 
@@ -96,8 +96,8 @@ const CreateBlogForm: React.FC = () => {
 
         resolve(data.imageUrl)
       } catch (err) {
-        console.error('Chyba pri nahrávaní súboru:', err)
-        const errorMessage = err instanceof Error ? err.message : 'Nastala neznáma chyba'
+        console.error('Chyba pri nahravani suboru:', err)
+        const errorMessage = err instanceof Error ? err.message : 'Nastala neznama chyba'
         setError(errorMessage)
         reject(new Error(errorMessage))
       } finally {
@@ -155,20 +155,20 @@ const CreateBlogForm: React.FC = () => {
       })
     } catch (error) {
       console.error('Error in form submission:', error)
-      setError('Chyba pri odosielaní formulára')
+      setError('Chyba pri odosielani formulara')
     }
   }
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-      <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 overflow-hidden">
+      <div className="bg-sacred-deep rounded-2xl border border-sacred-gold/20 overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-b border-slate-700/50 p-6">
+        <div className="bg-sacred-gold/10 border-b border-sacred-gold/20 p-6">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500">
-              <FileText className="w-6 h-6 text-white" />
+            <div className="p-2 rounded-lg bg-sacred-gold/20 border border-sacred-gold/30">
+              <FileText className="w-6 h-6 text-sacred-gold" />
             </div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-cormorant italic text-sacred-gold">
               Create New Blog
             </h1>
           </div>
@@ -178,7 +178,7 @@ const CreateBlogForm: React.FC = () => {
         <form onSubmit={handleSubmit} className="p-6 space-y-8">
           {/* Title Input */}
           <div className="space-y-2">
-            <label className="flex items-center gap-2 text-slate-300 font-medium">
+            <label className="flex items-center gap-2 text-sacred-cream/80 font-medium font-lato">
               <FileText size={18} />
               Title
             </label>
@@ -189,13 +189,13 @@ const CreateBlogForm: React.FC = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               required
-              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-200"
+              className="w-full px-4 py-3 bg-sacred-dark border border-sacred-gold/20 rounded-lg text-sacred-cream placeholder-sacred-muted focus:border-sacred-gold/50 focus:ring-2 focus:ring-sacred-gold/20 focus:outline-none transition-all duration-200"
             />
           </div>
 
           {/* Category Select */}
           <div className="space-y-2">
-            <label className="flex items-center gap-2 text-slate-300 font-medium">
+            <label className="flex items-center gap-2 text-sacred-cream/80 font-medium font-lato">
               <Tag size={18} />
               Category
             </label>
@@ -204,17 +204,17 @@ const CreateBlogForm: React.FC = () => {
               name="category"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-200"
+              className="w-full px-4 py-3 bg-sacred-dark border border-sacred-gold/20 rounded-lg text-sacred-cream focus:border-sacred-gold/50 focus:ring-2 focus:ring-sacred-gold/20 focus:outline-none transition-all duration-200"
             >
-              <option value="announcements">📢 Announcement</option>
-              <option value="events">🎉 Event</option>
-              <option value="blogs">📝 Blog</option>
+              <option value="announcements">Announcement</option>
+              <option value="events">Event</option>
+              <option value="blogs">Blog</option>
             </select>
           </div>
 
           {/* Image Upload Section */}
           <div className="space-y-4">
-            <label className="flex items-center gap-2 text-slate-300 font-medium">
+            <label className="flex items-center gap-2 text-sacred-cream/80 font-medium font-lato">
               <ImageIcon size={18} />
               Featured Image
             </label>
@@ -233,15 +233,15 @@ const CreateBlogForm: React.FC = () => {
               <button
                 type="button"
                 onClick={() => fileInputRef.current?.click()}
-                className="w-full p-8 border-2 border-dashed border-slate-600/50 rounded-lg bg-slate-800/30 hover:bg-slate-800/50 hover:border-blue-500/50 transition-all duration-200 group"
+                className="w-full p-8 border-2 border-dashed border-sacred-gold/20 rounded-lg bg-sacred-dark/50 hover:bg-sacred-dark hover:border-sacred-gold/40 transition-all duration-200 group"
               >
                 <div className="flex flex-col items-center gap-3">
-                  <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-200">
-                    <Upload className="w-8 h-8 text-blue-400" />
+                  <div className="p-3 rounded-lg bg-sacred-gold/10 group-hover:bg-sacred-gold/20 transition-all duration-200 border border-sacred-gold/20">
+                    <Upload className="w-8 h-8 text-sacred-gold" />
                   </div>
                   <div className="text-center">
-                    <p className="text-white font-medium">Click to upload image</p>
-                    <p className="text-slate-400 text-sm">PNG, JPG, WEBP up to 10MB</p>
+                    <p className="text-sacred-cream font-medium font-lato">Click to upload image</p>
+                    <p className="text-sacred-muted text-sm font-lato">PNG, JPG, WEBP up to 10MB</p>
                   </div>
                 </div>
               </button>
@@ -249,30 +249,30 @@ const CreateBlogForm: React.FC = () => {
 
             {/* File Upload Section */}
             {file && (
-              <div className="p-4 bg-slate-800/50 border border-slate-600/50 rounded-lg">
+              <div className="p-4 bg-sacred-dark border border-sacred-gold/20 rounded-lg">
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
-                    <ImageIcon size={18} className="text-blue-400" />
-                    <span className="text-white font-medium">Selected File:</span>
+                    <ImageIcon size={18} className="text-sacred-gold" />
+                    <span className="text-sacred-cream font-medium font-lato">Selected File:</span>
                   </div>
                   <button
                     type="button"
                     onClick={resetUpload}
-                    className="p-1 hover:bg-slate-700/50 rounded transition-colors"
+                    className="p-1 hover:bg-sacred-gold/10 rounded transition-colors"
                   >
-                    <X size={16} className="text-slate-400" />
+                    <X size={16} className="text-sacred-muted" />
                   </button>
                 </div>
-                <p className="text-slate-300 mb-3 truncate">{file.name}</p>
+                <p className="text-sacred-cream/80 mb-3 truncate font-lato">{file.name}</p>
                 <button
                   type="button"
                   onClick={uploadFile}
                   disabled={loading || !file}
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium hover:from-blue-600 hover:to-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                  className="flex items-center gap-2 px-4 py-2 bg-sacred-gold text-sacred-dark rounded-lg font-medium font-lato hover:bg-sacred-gold-light disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
                 >
                   {loading ? (
                     <>
-                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      <div className="w-4 h-4 border-2 border-sacred-dark/30 border-t-sacred-dark rounded-full animate-spin" />
                       Uploading...
                     </>
                   ) : (
@@ -287,24 +287,24 @@ const CreateBlogForm: React.FC = () => {
 
             {/* Success/Error Messages */}
             {successMessage && (
-              <div className="flex items-center gap-2 p-3 bg-green-500/20 border border-green-500/30 rounded-lg text-green-400">
+              <div className="flex items-center gap-2 p-3 bg-green-500/10 border border-green-500/20 rounded-lg text-green-400">
                 <Check size={18} />
-                <span>{successMessage}</span>
+                <span className="font-lato">{successMessage}</span>
               </div>
             )}
 
             {error && (
-              <div className="flex items-center gap-2 p-3 bg-red-500/20 border border-red-500/30 rounded-lg text-red-400">
+              <div className="flex items-center gap-2 p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400">
                 <AlertCircle size={18} />
-                <span>{error}</span>
+                <span className="font-lato">{error}</span>
               </div>
             )}
 
             {/* Uploaded File URL */}
             {uploadedFileUrl && (
-              <div className="p-3 bg-slate-800/50 border border-slate-600/50 rounded-lg">
-                <p className="text-slate-400 text-sm mb-2">Uploaded file URL:</p>
-                <div className="p-2 bg-slate-900/50 border border-slate-700/50 rounded text-slate-300 text-sm break-all">
+              <div className="p-3 bg-sacred-dark border border-sacred-gold/20 rounded-lg">
+                <p className="text-sacred-muted text-sm mb-2 font-lato">Uploaded file URL:</p>
+                <div className="p-2 bg-sacred-dark border border-sacred-gold/10 rounded text-sacred-cream/80 text-sm break-all font-mono">
                   {uploadedFileUrl}
                 </div>
               </div>
@@ -312,7 +312,7 @@ const CreateBlogForm: React.FC = () => {
 
             {/* Image Preview */}
             {media && (
-              <div className="relative overflow-hidden rounded-lg border border-slate-600/50">
+              <div className="relative overflow-hidden rounded-lg border border-sacred-gold/20">
                 <Image
                   src={media}
                   alt={title || 'Uploaded image'}
@@ -324,8 +324,8 @@ const CreateBlogForm: React.FC = () => {
             )}
 
             {!media && !file && (
-              <div className="flex items-center justify-center h-32 bg-slate-800/30 border border-slate-700/50 rounded-lg">
-                <span className="text-slate-400">No image selected</span>
+              <div className="flex items-center justify-center h-32 bg-sacred-dark/50 border border-sacred-gold/10 rounded-lg">
+                <span className="text-sacred-muted font-lato">No image selected</span>
               </div>
             )}
           </div>
@@ -333,34 +333,34 @@ const CreateBlogForm: React.FC = () => {
           {/* Options */}
           <div className="space-y-4">
             {category !== 'announcements' && (
-              <label className="flex items-center gap-3 p-4 bg-slate-800/30 border border-slate-600/50 rounded-lg hover:bg-slate-800/50 transition-colors cursor-pointer">
+              <label className="flex items-center gap-3 p-4 bg-sacred-dark/50 border border-sacred-gold/20 rounded-lg hover:bg-sacred-dark transition-colors cursor-pointer">
                 <input
                   name="upcoming"
                   type="checkbox"
                   checked={upcoming}
                   onChange={(e) => setUpcoming(e.target.checked)}
-                  className="w-5 h-5 text-blue-500 bg-slate-700 border-slate-600 rounded focus:ring-blue-500/20"
+                  className="w-5 h-5 accent-sacred-gold bg-sacred-dark border-sacred-gold/30 rounded"
                 />
                 <div className="flex items-center gap-2">
-                  <Sparkles size={18} className="text-yellow-400" />
-                  <span className="text-white font-medium">
+                  <Sparkles size={18} className="text-sacred-gold" />
+                  <span className="text-sacred-cream font-medium font-lato">
                     {category === 'blogs' ? 'Mark as Newest Blog' : 'Mark as Upcoming Event'}
                   </span>
                 </div>
               </label>
             )}
 
-            <label className="flex items-center gap-3 p-4 bg-slate-800/30 border border-slate-600/50 rounded-lg hover:bg-slate-800/50 transition-colors cursor-pointer">
+            <label className="flex items-center gap-3 p-4 bg-sacred-dark/50 border border-sacred-gold/20 rounded-lg hover:bg-sacred-dark transition-colors cursor-pointer">
               <input
                 name="english"
                 type="checkbox"
                 checked={english}
                 onChange={(e) => setEnglish(e.target.checked)}
-                className="w-5 h-5 text-blue-500 bg-slate-700 border-slate-600 rounded focus:ring-blue-500/20"
+                className="w-5 h-5 accent-sacred-gold bg-sacred-dark border-sacred-gold/30 rounded"
               />
               <div className="flex items-center gap-2">
-                <Globe size={18} className="text-blue-400" />
-                <span className="text-white font-medium">Display on English webpage</span>
+                <Globe size={18} className="text-sacred-gold" />
+                <span className="text-sacred-cream font-medium font-lato">Display on English webpage</span>
               </div>
             </label>
           </div>
@@ -368,7 +368,7 @@ const CreateBlogForm: React.FC = () => {
           {/* Link Input for Events */}
           {category === 'events' && (
             <div className="space-y-2">
-              <label className="flex items-center gap-2 text-slate-300 font-medium">
+              <label className="flex items-center gap-2 text-sacred-cream/80 font-medium font-lato">
                 <LinkIcon size={18} />
                 External Link
               </label>
@@ -378,14 +378,14 @@ const CreateBlogForm: React.FC = () => {
                 placeholder="https://example.com"
                 value={link}
                 onChange={(e) => setLink(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-200"
+                className="w-full px-4 py-3 bg-sacred-dark border border-sacred-gold/20 rounded-lg text-sacred-cream placeholder-sacred-muted focus:border-sacred-gold/50 focus:ring-2 focus:ring-sacred-gold/20 focus:outline-none transition-all duration-200"
               />
             </div>
           )}
 
           {/* Content Textarea */}
           <div className="space-y-2">
-            <label className="flex items-center gap-2 text-slate-300 font-medium">
+            <label className="flex items-center gap-2 text-sacred-cream/80 font-medium font-lato">
               <FileText size={18} />
               Content
             </label>
@@ -395,14 +395,14 @@ const CreateBlogForm: React.FC = () => {
               onChange={(e) => setText(e.target.value)}
               placeholder="Write your blog content here..."
               rows={8}
-              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 focus:outline-none transition-all duration-200 resize-none"
+              className="w-full px-4 py-3 bg-sacred-dark border border-sacred-gold/20 rounded-lg text-sacred-cream placeholder-sacred-muted focus:border-sacred-gold/50 focus:ring-2 focus:ring-sacred-gold/20 focus:outline-none transition-all duration-200 resize-none"
             />
           </div>
 
           {/* Submit Message */}
           {message && (
-            <div className="p-4 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">
-              <p className="text-yellow-400 font-medium text-center">{message}</p>
+            <div className="p-4 bg-sacred-gold/10 border border-sacred-gold/20 rounded-lg">
+              <p className="text-sacred-gold font-medium text-center font-lato">{message}</p>
             </div>
           )}
 
@@ -410,11 +410,11 @@ const CreateBlogForm: React.FC = () => {
           <button
             type="submit"
             disabled={isPending || loading}
-            className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-lg hover:from-blue-600 hover:to-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 text-lg"
+            className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-sacred-gold text-sacred-dark font-bold rounded-lg hover:bg-sacred-gold-light disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 text-lg font-lato"
           >
             {isPending ? (
               <>
-                <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                <div className="w-5 h-5 border-2 border-sacred-dark/30 border-t-sacred-dark rounded-full animate-spin" />
                 Creating Blog...
               </>
             ) : (

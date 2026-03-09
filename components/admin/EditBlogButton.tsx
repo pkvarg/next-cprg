@@ -10,7 +10,7 @@ const EditBlogButton: React.FC<Link> = (link) => {
   const router = useRouter()
   return (
     <button
-      className='text-yellow-400 text-[18px]'
+      className='px-3 py-1.5 text-sacred-gold/70 hover:text-sacred-gold border border-sacred-gold/20 hover:border-sacred-gold/40 rounded-lg transition-all duration-200 text-sm font-lato'
       onClick={() => {
         router.push(link.link)
       }}

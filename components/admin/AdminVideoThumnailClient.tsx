@@ -29,7 +29,8 @@ export const VideoThumbnail: React.FC<VideoThumbnailProps> = ({ src, alt, title 
       <Image
         src={src}
         alt={alt}
-        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        fill
+        className="object-cover group-hover:scale-105 transition-transform duration-300"
         onError={() => setImageError(true)}
       />
       <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
