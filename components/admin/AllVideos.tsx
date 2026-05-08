@@ -47,11 +47,16 @@ export default async function AllVideos() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
       <div className="flex items-center justify-between mb-8">
-        <h1 className="text-4xl font-cormorant italic text-sacred-gold">
-          All Videos
-        </h1>
+        <div>
+          <p className="font-cormorant italic text-[0.85rem] uppercase tracking-[0.3em] text-sacred-gold mb-2">
+            Library
+          </p>
+          <h1 className="font-cormorant text-3xl md:text-4xl font-semibold italic text-sacred-cream">
+            All Videos
+          </h1>
+        </div>
         <RefreshButton />
       </div>
 
@@ -63,9 +68,8 @@ export default async function AllVideos() {
           return (
             <div
               key={video.id}
-              className="group relative bg-sacred-deep rounded-xl border border-sacred-gold/20 overflow-hidden hover:border-sacred-gold/40 transition-all duration-300"
+              className="group relative bg-sacred-deep rounded-sm border border-sacred-gold/20 overflow-hidden hover:border-sacred-gold/50 transition-all duration-300"
             >
-              {/* Video Thumbnail/Preview */}
               <div className="relative h-48 overflow-hidden bg-sacred-dark">
                 <VideoThumbnail
                   src={thumbnail || ''}
@@ -73,16 +77,15 @@ export default async function AllVideos() {
                   title={video.title || 'title'}
                 />
 
-                {/* Badges */}
                 <div className="absolute top-4 left-4 flex gap-2">
                   {isYouTube && (
-                    <span className="px-2 py-1 bg-sacred-gold/20 text-sacred-gold text-xs font-medium rounded-full flex items-center gap-1 border border-sacred-gold/30">
+                    <span className="px-2 py-1 bg-sacred-gold/90 text-sacred-dark text-[0.65rem] font-cormorant italic uppercase tracking-wider rounded-sm flex items-center gap-1">
                       <Youtube size={12} />
                       YouTube
                     </span>
                   )}
                   {video.english && (
-                    <span className="px-2 py-1 bg-sacred-gold/20 text-sacred-gold text-xs font-medium rounded-full flex items-center gap-1 border border-sacred-gold/30">
+                    <span className="px-2 py-1 bg-sacred-gold/90 text-sacred-dark text-[0.65rem] font-cormorant italic uppercase tracking-wider rounded-sm flex items-center gap-1">
                       <Globe size={12} />
                       EN
                     </span>
@@ -125,7 +128,7 @@ export default async function AllVideos() {
                   href={video.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full px-4 py-2 bg-sacred-gold text-sacred-dark rounded-lg font-medium font-lato hover:bg-sacred-gold-light transition-all duration-200"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-2 bg-sacred-gold text-sacred-dark rounded-sm font-cormorant font-semibold italic uppercase tracking-[0.15em] text-xs hover:bg-sacred-gold-light transition-all duration-200"
                 >
                   <Play size={16} />
                   Watch Video

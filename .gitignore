@@ -36,3 +36,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+scripts/migrate-pg-to-mongo.mjs
+scripts/verify-mongo.mjs

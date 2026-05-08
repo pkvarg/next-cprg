@@ -195,9 +195,9 @@ const EditPodcast = () => {
 
   if (!podcast) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="min-h-screen bg-sacred-dark flex items-center justify-center">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-purple-500/30 border-t-purple-500 rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-16 h-16 border-4 border-sacred-terracotta/30 border-t-purple-500 rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-white text-xl">Loading podcast...</p>
         </div>
       </div>
@@ -205,56 +205,56 @@ const EditPodcast = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-sacred-dark">
       <AudioBack />
 
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-sacred-gold/5 to-sacred-terracotta/5"></div>
         <div className="relative z-10 flex justify-center items-center flex-col gap-6 pt-8 pb-12">
           <div className="text-center space-y-4">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500">
+              <div className="p-3 rounded-lg bg-gradient-to-r from-sacred-gold-light to-sacred-terracotta">
                 <Edit3 className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl font-bold text-sacred-gold">
                 Edit Podcast
               </h1>
             </div>
-            <p className="text-xl text-slate-300">Update your podcast content</p>
+            <p className="text-xl text-sacred-cream/70">Update your podcast content</p>
           </div>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 mt-16">
-        <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 overflow-hidden">
+        <div className="bg-sacred-deep/60 backdrop-blur-sm border border-sacred-gold/20 rounded-2xl border border-sacred-gold/20 overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-b border-slate-700/50 p-6">
+          <div className="bg-gradient-to-r from-sacred-terracotta/10 to-sacred-terracotta/15 border-b border-sacred-gold/20 p-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500">
+                <div className="p-2 rounded-lg bg-gradient-to-r from-sacred-gold-light to-sacred-terracotta">
                   <Headphones className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold text-white">{podcast.title}</h2>
-                  <p className="text-slate-300 text-sm">Podcast ID: {podcast.id}</p>
+                  <p className="text-sacred-cream/70 text-sm">Podcast ID: {podcast.id}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <span
                   className={`px-3 py-1 rounded-full text-xs font-medium ${
                     podcast.category === 'gospel'
-                      ? 'bg-purple-500/20 text-purple-400'
+                      ? 'bg-purple-500/20 text-sacred-terracotta'
                       : podcast.category === 'messages'
-                      ? 'bg-pink-500/20 text-pink-400'
-                      : 'bg-orange-500/20 text-orange-400'
+                      ? 'bg-pink-500/20 text-sacred-terracotta'
+                      : 'bg-orange-500/20 text-sacred-terracotta'
                   }`}
                 >
                   {podcast.category}
                 </span>
                 {podcast.english && (
-                  <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-medium rounded-full flex items-center gap-1">
+                  <span className="px-3 py-1 bg-sacred-gold text-white text-xs font-medium rounded-full flex items-center gap-1">
                     <Globe size={12} />
                     EN
                   </span>
@@ -269,7 +269,7 @@ const EditPodcast = () => {
 
             {/* Title Input */}
             <div className="space-y-2">
-              <label className="flex items-center gap-2 text-slate-300 font-medium">
+              <label className="flex items-center gap-2 text-sacred-cream/70 font-medium">
                 <FileText size={18} />
                 Title
               </label>
@@ -279,13 +279,13 @@ const EditPodcast = () => {
                 value={title}
                 placeholder="Enter podcast title..."
                 onChange={(e) => setTitle(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 focus:outline-none transition-all duration-200"
+                className="w-full px-4 py-3 bg-sacred-deep/50 border border-sacred-gold/20 rounded-lg text-white placeholder-sacred-cream/40 focus:border-sacred-gold/50 focus:ring-2 focus:ring-sacred-gold/20 focus:outline-none transition-all duration-200"
               />
             </div>
 
             {/* Category Select */}
             <div className="space-y-2">
-              <label className="flex items-center gap-2 text-slate-300 font-medium">
+              <label className="flex items-center gap-2 text-sacred-cream/70 font-medium">
                 <Tag size={18} />
                 Category
               </label>
@@ -294,7 +294,7 @@ const EditPodcast = () => {
                 name="category"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 focus:outline-none transition-all duration-200"
+                className="w-full px-4 py-3 bg-sacred-deep/50 border border-sacred-gold/20 rounded-lg text-white focus:border-sacred-gold/50 focus:ring-2 focus:ring-sacred-gold/20 focus:outline-none transition-all duration-200"
               >
                 <option value="gospel">⛪ Gospel</option>
                 <option value="messages">📖 Message</option>
@@ -304,7 +304,7 @@ const EditPodcast = () => {
 
             {/* Audio Upload Section */}
             <div className="space-y-4">
-              <label className="flex items-center gap-2 text-slate-300 font-medium">
+              <label className="flex items-center gap-2 text-sacred-cream/70 font-medium">
                 <Music size={18} />
                 Audio File
               </label>
@@ -312,16 +312,16 @@ const EditPodcast = () => {
               {/* Current Audio Display */}
               {audioUrl && (
                 <div className="relative">
-                  <div className="p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-lg mb-4">
+                  <div className="p-4 bg-gradient-to-r from-sacred-terracotta/10 to-sacred-gold-light/10 border border-sacred-terracotta/20 rounded-lg mb-4">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center gap-3">
-                        <Play size={18} className="text-purple-400" />
+                        <Play size={18} className="text-sacred-terracotta" />
                         <span className="text-white font-medium">Current Audio</span>
                       </div>
                       <button
                         type="button"
                         onClick={removeFile}
-                        className="p-2 bg-red-500/80 backdrop-blur-sm text-white rounded-lg hover:bg-red-600/80 transition-colors"
+                        className="p-2 bg-sacred-gold/80 backdrop-blur-sm text-white rounded-lg hover:bg-sacred-terracotta/80 transition-colors"
                       >
                         <Trash2 size={16} />
                       </button>
@@ -330,7 +330,7 @@ const EditPodcast = () => {
                       <source src={audioUrl} type="audio/mpeg" />
                       Your browser does not support the audio element.
                     </audio>
-                    <p className="text-slate-400 text-sm break-all">{audioUrl}</p>
+                    <p className="text-sacred-cream/60 text-sm break-all">{audioUrl}</p>
                   </div>
                 </div>
               )}
@@ -349,17 +349,17 @@ const EditPodcast = () => {
                 <button
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
-                  className="w-full p-8 border-2 border-dashed border-slate-600/50 rounded-lg bg-slate-800/30 hover:bg-slate-800/50 hover:border-purple-500/50 transition-all duration-200 group"
+                  className="w-full p-8 border-2 border-dashed border-sacred-gold/20 rounded-lg bg-sacred-deep/30 hover:bg-sacred-deep/50 hover:border-purple-500/50 transition-all duration-200 group"
                 >
                   <div className="flex flex-col items-center gap-3">
-                    <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500/20 to-pink-500/20 group-hover:from-purple-500/30 group-hover:to-pink-500/30 transition-all duration-200">
-                      <Volume2 className="w-8 h-8 text-purple-400" />
+                    <div className="p-3 rounded-lg bg-gradient-to-r from-sacred-terracotta/10 to-sacred-terracotta/15 group-hover:from-sacred-terracotta/20 group-hover:to-sacred-terracotta/25 transition-all duration-200">
+                      <Volume2 className="w-8 h-8 text-sacred-terracotta" />
                     </div>
                     <div className="text-center">
                       <p className="text-white font-medium">
                         {audioUrl ? 'Change audio file' : 'Click to upload audio'}
                       </p>
-                      <p className="text-slate-400 text-sm">MP3, WAV, M4A up to 100MB</p>
+                      <p className="text-sacred-cream/60 text-sm">MP3, WAV, M4A up to 100MB</p>
                     </div>
                   </div>
                 </button>
@@ -367,26 +367,26 @@ const EditPodcast = () => {
 
               {/* File Upload Section */}
               {file && (
-                <div className="p-4 bg-slate-800/50 border border-slate-600/50 rounded-lg">
+                <div className="p-4 bg-sacred-deep/50 border border-sacred-gold/20 rounded-lg">
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2">
-                      <Music size={18} className="text-purple-400" />
+                      <Music size={18} className="text-sacred-terracotta" />
                       <span className="text-white font-medium">Selected File:</span>
                     </div>
                     <button
                       type="button"
                       onClick={resetUpload}
-                      className="p-1 hover:bg-slate-700/50 rounded transition-colors"
+                      className="p-1 hover:bg-sacred-deep/50 rounded transition-colors"
                     >
-                      <X size={16} className="text-slate-400" />
+                      <X size={16} className="text-sacred-cream/60" />
                     </button>
                   </div>
-                  <p className="text-slate-300 mb-3 truncate">{file.name}</p>
+                  <p className="text-sacred-cream/70 mb-3 truncate">{file.name}</p>
                   <button
                     type="button"
                     onClick={uploadFile}
                     disabled={loading || !file}
-                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-sacred-gold-light to-sacred-terracotta text-white rounded-lg font-medium hover:from-sacred-terracotta hover:to-sacred-gold-light disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
                   >
                     {loading ? (
                       <>
@@ -405,14 +405,14 @@ const EditPodcast = () => {
 
               {/* Success/Error Messages */}
               {successMessage && (
-                <div className="flex items-center gap-2 p-3 bg-green-500/20 border border-green-500/30 rounded-lg text-green-400">
+                <div className="flex items-center gap-2 p-3 bg-sacred-gold/20 border border-sacred-gold/30 rounded-lg text-sacred-gold-light">
                   <Check size={18} />
                   <span>{successMessage}</span>
                 </div>
               )}
 
               {error && (
-                <div className="flex items-center gap-2 p-3 bg-red-500/20 border border-red-500/30 rounded-lg text-red-400">
+                <div className="flex items-center gap-2 p-3 bg-rose-500/20 border border-rose-500/30 rounded-lg text-rose-400">
                   <AlertCircle size={18} />
                   <span>{error}</span>
                 </div>
@@ -420,9 +420,9 @@ const EditPodcast = () => {
 
               {/* Uploaded File URL */}
               {uploadedFileUrl && (
-                <div className="p-3 bg-slate-800/50 border border-slate-600/50 rounded-lg">
-                  <p className="text-slate-400 text-sm mb-2">Uploaded audio URL:</p>
-                  <div className="p-2 bg-slate-900/50 border border-slate-700/50 rounded text-slate-300 text-sm break-all">
+                <div className="p-3 bg-sacred-deep/50 border border-sacred-gold/20 rounded-lg">
+                  <p className="text-sacred-cream/60 text-sm mb-2">Uploaded audio URL:</p>
+                  <div className="p-2 bg-sacred-deep/50 border border-sacred-gold/20 rounded text-sacred-cream/70 text-sm break-all">
                     {uploadedFileUrl}
                   </div>
                 </div>
@@ -431,16 +431,16 @@ const EditPodcast = () => {
 
             {/* English Option */}
             <div className="space-y-4">
-              <label className="flex items-center gap-3 p-4 bg-slate-800/30 border border-slate-600/50 rounded-lg hover:bg-slate-800/50 transition-colors cursor-pointer">
+              <label className="flex items-center gap-3 p-4 bg-sacred-deep/30 border border-sacred-gold/20 rounded-lg hover:bg-sacred-deep/50 transition-colors cursor-pointer">
                 <input
                   name="english"
                   type="checkbox"
                   checked={english}
                   onChange={(e) => setEnglish(e.target.checked)}
-                  className="w-5 h-5 text-purple-500 bg-slate-700 border-slate-600 rounded focus:ring-purple-500/20"
+                  className="w-5 h-5 text-sacred-gold bg-sacred-deep border-sacred-gold/20 rounded focus:ring-sacred-gold/20"
                 />
                 <div className="flex items-center gap-2">
-                  <Globe size={18} className="text-blue-400" />
+                  <Globe size={18} className="text-sacred-gold" />
                   <span className="text-white font-medium">Display on English webpage</span>
                 </div>
               </label>
@@ -448,7 +448,7 @@ const EditPodcast = () => {
 
             {/* Description Textarea */}
             <div className="space-y-2">
-              <label className="flex items-center gap-2 text-slate-300 font-medium">
+              <label className="flex items-center gap-2 text-sacred-cream/70 font-medium">
                 <FileText size={18} />
                 Description
               </label>
@@ -458,14 +458,14 @@ const EditPodcast = () => {
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Write your podcast description here..."
                 rows={6}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 focus:outline-none transition-all duration-200 resize-none"
+                className="w-full px-4 py-3 bg-sacred-deep/50 border border-sacred-gold/20 rounded-lg text-white placeholder-sacred-cream/40 focus:border-sacred-gold/50 focus:ring-2 focus:ring-sacred-gold/20 focus:outline-none transition-all duration-200 resize-none"
               />
             </div>
 
             {/* Submit Message */}
             {message && (
-              <div className="p-4 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">
-                <p className="text-yellow-400 font-medium text-center">{message}</p>
+              <div className="p-4 bg-sacred-gold/15 border border-sacred-gold/30 rounded-lg">
+                <p className="text-sacred-gold-light font-medium text-center">{message}</p>
               </div>
             )}
 
@@ -474,7 +474,7 @@ const EditPodcast = () => {
               <button
                 type="submit"
                 disabled={isPending || loading}
-                className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-pink-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 text-lg"
+                className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-sacred-gold-light to-sacred-terracotta text-white font-bold rounded-lg hover:from-sacred-terracotta hover:to-sacred-gold-light disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 text-lg"
               >
                 {isPending ? (
                   <>
@@ -491,7 +491,7 @@ const EditPodcast = () => {
             </div>
 
             {/* Delete Button */}
-            <div className="pt-6 border-t border-slate-700/50">
+            <div className="pt-6 border-t border-sacred-gold/20">
               <DeletePodcastButton podcastId={podcast.id} />
             </div>
           </form>

@@ -1,47 +1,33 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
 import createIntlMiddleware from 'next-intl/middleware'
-import { isValidPassword } from './lib/isValidPassword'
+import { verifySessionToken, SESSION_COOKIE } from './lib/session'
 
-// Create the internationalization middleware
 const intlMiddleware = createIntlMiddleware({
   locales: ['en', 'cz'],
   defaultLocale: 'cz',
 })
 
+const ADMIN_PATH = /^\/(en|cz)?\/admin(\/|$)/
+const LOGIN_PATH = /^\/(en|cz)\/admin\/login(\/|$)/
+
 export async function middleware(req: NextRequest) {
-  // Check if the request is for the admin route
-  if (req.nextUrl.pathname.match(/^\/(en|cz)?\/admin/)) {
-    if (!(await isAuthenticated(req))) {
-      return new NextResponse('Unauthorized', {
-        status: 401,
-        headers: { 'WWW-Authenticate': 'Basic' },
-      })
+  const { pathname, search } = req.nextUrl
+
+  if (ADMIN_PATH.test(pathname) && !LOGIN_PATH.test(pathname)) {
+    const token = req.cookies.get(SESSION_COOKIE)?.value
+    const session = await verifySessionToken(token)
+    if (!session) {
+      const localeMatch = pathname.match(/^\/(en|cz)\b/)
+      const locale = localeMatch?.[1] ?? 'cz'
+      const loginUrl = req.nextUrl.clone()
+      loginUrl.pathname = `/${locale}/admin/login`
+      loginUrl.search = `?next=${encodeURIComponent(pathname + search)}`
+      return NextResponse.redirect(loginUrl)
     }
   }
 
-  // Apply internationalization middleware
   return intlMiddleware(req)
-}
-
-async function isAuthenticated(req: NextRequest) {
-  const authHeader =
-    req.headers.get('authorization') || req.headers.get('Authorization')
-
-  if (authHeader == null) return false
-
-  const [username, password] = Buffer.from(authHeader.split(' ')[1], 'base64')
-    .toString()
-    .split(':')
-
-  return (
-    username === process.env.ADMIN_USERNAME ||
-    username === process.env.ADMIN_USERNAME_A ||
-    (username === process.env.ADMIN_USERNAME_B &&
-      (await isValidPassword(
-        password,
-        process.env.HASHED_ADMIN_PASSWORD_A as string
-      )))
-  )
 }
 
 export const config = {

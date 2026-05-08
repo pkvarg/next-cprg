@@ -10,7 +10,7 @@ const EditVideoButton: React.FC<Link> = (link) => {
   const router = useRouter()
   return (
     <button
-      className='text-yellow-400 text-[18px]'
+      className='text-sacred-gold-light text-[18px]'
       onClick={() => {
         router.push(link.link)
       }}

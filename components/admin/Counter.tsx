@@ -64,7 +64,7 @@ const Counter = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {[...Array(4)].map((_, i) => (
           <div key={i} className="animate-pulse">
-            <div className="bg-sacred-deep rounded-xl h-32 border border-sacred-gold/20"></div>
+            <div className="bg-sacred-deep rounded-sm h-32 border border-sacred-gold/20"></div>
           </div>
         ))}
       </div>
@@ -73,24 +73,24 @@ const Counter = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-      {stats.map((stat, index) => {
+      {stats.map((stat) => {
         const Icon = stat.icon
         const CardContent = (
-          <div
-            className="relative overflow-hidden rounded-xl bg-sacred-deep border border-sacred-gold/20 p-6 hover:border-sacred-gold/40 hover:scale-105 transition-all duration-200"
-          >
+          <div className="relative overflow-hidden rounded-sm bg-sacred-deep border border-sacred-gold/20 p-6 hover:border-sacred-gold/40 hover:scale-[1.02] transition-all duration-200">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sacred-muted text-sm font-medium font-lato">{stat.name}</p>
+                <p className="font-cormorant italic text-[0.8rem] uppercase tracking-[0.25em] text-sacred-muted">
+                  {stat.name}
+                </p>
                 {stat.value !== null ? (
-                  <p className="text-3xl font-bold text-sacred-gold">
+                  <p className="font-cormorant text-3xl font-semibold mt-1 text-sacred-gold">
                     {stat.value.toLocaleString()}
                   </p>
                 ) : (
-                  <p className="text-sacred-cream/70 text-sm font-lato">View Dashboard</p>
+                  <p className="text-sacred-cream/70 text-sm font-lato mt-1">View Dashboard</p>
                 )}
               </div>
-              <div className="p-3 rounded-lg bg-sacred-gold/20 border border-sacred-gold/30">
+              <div className="p-3 rounded-sm bg-sacred-gold/15 border border-sacred-gold/30">
                 <Icon className="w-6 h-6 text-sacred-gold" />
               </div>
             </div>

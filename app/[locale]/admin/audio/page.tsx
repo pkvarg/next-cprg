@@ -6,29 +6,29 @@ import { Headphones } from 'lucide-react'
 
 const Audio = () => {
   return (
-    <div className="min-h-screen bg-sacred-dark">
+    <div className="min-h-screen bg-sacred-dark font-lato">
       <AdminBack />
 
-      {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="relative z-10 flex justify-center items-center flex-col gap-6 pt-8 pb-12">
-          <div className="text-center space-y-4">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="p-3 rounded-lg bg-sacred-gold/20 border border-sacred-gold/30">
-                <Headphones className="w-8 h-8 text-sacred-gold" />
-              </div>
-              <h1 className="text-5xl md:text-6xl font-cormorant italic text-sacred-gold">
-                Audio Management
-              </h1>
+        <div className="absolute inset-0 bg-gradient-to-r from-sacred-gold/5 to-sacred-terracotta/5"></div>
+        <div className="relative z-10 flex flex-col items-center justify-center gap-4 pt-12 pb-12">
+          <p className="font-cormorant italic text-[0.85rem] uppercase tracking-[0.3em] text-sacred-gold">
+            Médiá
+          </p>
+          <div className="flex items-center justify-center gap-3">
+            <div className="p-3 rounded-sm bg-sacred-gold/15 border border-sacred-gold/30">
+              <Headphones className="w-7 h-7 text-sacred-gold" />
             </div>
-            <p className="text-xl text-sacred-cream/70 max-w-2xl mx-auto font-lato">
-              Create and manage your podcast content
-            </p>
+            <h1 className="font-cormorant font-semibold italic text-[2.4rem] md:text-[3rem] text-sacred-cream tracking-wide">
+              Audio
+            </h1>
           </div>
+          <p className="text-sacred-cream/60 max-w-2xl mx-auto text-center">
+            Create and manage your podcast content
+          </p>
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="relative z-10 space-y-12 pb-20">
         <AllPodcasts />
         <CreatePodcastForm />
