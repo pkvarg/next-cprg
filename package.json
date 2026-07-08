@@ -2,10 +2,15 @@
   "name": "next_cprg",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.18.0",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10"
+  },
   "scripts": {
-    "dev": "next dev -p 3006",
+    "dev": "next dev -p 4008",
     "build": "prisma generate && next build",
-    "start": "next start -p 3006",
+    "start": "next start -p 4008",
     "lint": "next lint"
   },
   "dependencies": {
@@ -44,5 +49,8 @@
   "overrides": {
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@prisma/client", "@prisma/engines", "prisma", "sharp"]
   }
 }
