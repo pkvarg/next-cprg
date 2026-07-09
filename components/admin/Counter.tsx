@@ -101,7 +101,7 @@ const Counter = () => {
           return (
             <Link
               key={stat.name}
-              href="https://umami-p00gs00gwcwo00s4k4c4kgg8.pictusweb.com/share/KkcE727xQQoyzTbx/cirkevvpraze.cz"
+              href="https://analytics.pictusweb.com/share/KkcE727xQQoyzTbx/cirkevvpraze.cz"
               target="_blank"
               rel="noopener noreferrer"
             >
