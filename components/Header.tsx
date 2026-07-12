@@ -33,7 +33,7 @@ const Header = () => {
     <nav
       id="navbar"
       className={`fixed top-0 w-full nav-font z-[9999] transition-all duration-300 ${
-        isSticky
+        isSticky || navbar
           ? 'bg-sacred-dark/95 backdrop-blur-sm border-b border-sacred-gold/20'
           : 'bg-transparent'
       }`}
@@ -41,7 +41,10 @@ const Header = () => {
       <div className="justify-between px-4 mx-auto md:items-center md:flex md:px-8">
         <div className="mb-0 lg:mb-2">
           <div className="flex items-center justify-between py-3 md:py-2 md:block">
-            <Link href={'/'} className="font-cormorant text-[1.85rem] italic text-sacred-cream hover:text-sacred-gold transition-colors cursor-pointer">
+            <Link
+              href={'/'}
+              className="font-cormorant text-[1.85rem] italic text-sacred-cream hover:text-sacred-gold transition-colors cursor-pointer"
+            >
               {t('headerTitle')}
             </Link>
             <div className="md:hidden">
@@ -82,32 +85,45 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div>
-          <div
-            className={`flex-1 justify-self-center h-[80vh] lg:h-auto pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? 'block bg-sacred-dark/95' : 'hidden'
-            }`}
-          >
+        <div
+          className={`md:block ${
+            navbar
+              ? 'absolute left-0 top-full w-full bg-sacred-dark/95 backdrop-blur-sm border-b border-sacred-gold/20'
+              : 'hidden'
+          }`}
+        >
+          <div className={`flex-1 justify-self-center pb-3 mt-8 md:pb-0 md:mt-0 px-4 md:px-0`}>
             <ul className="justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-[1.15rem] font-lato font-light tracking-wide items-center">
               <li>
-                <Link href={'#about'} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
+                <Link
+                  href={'#about'}
+                  className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer"
+                >
                   {t('headerAbout')}
                 </Link>
               </li>
               <li>
-                <Link href={`/blog`} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
+                <Link
+                  href={`/blog`}
+                  className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer"
+                >
                   {t('headerBlog')}
                 </Link>
               </li>
               <li>
-                <Link href={'#events'} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
+                <Link
+                  href={'#events'}
+                  className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer"
+                >
                   {t('headerEvents')}
                 </Link>
               </li>
 
               <div className="group relative cursor-pointer">
                 <div className="flex items-center justify-between">
-                  <p className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">{t('headerGallery')}</p>
+                  <p className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
+                    {t('headerGallery')}
+                  </p>
                 </div>
                 <div className="invisible absolute z-50 flex w-max flex-col px-4 py-1 bg-sacred-dark border border-sacred-gold/20 rounded shadow-lg group-hover:visible">
                   {/* <Link
@@ -116,21 +132,33 @@ const Header = () => {
                   >
                     {t('headerPhotos')}
                   </Link> */}
-                  <Link href={`/podcasts`} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
+                  <Link
+                    href={`/podcasts`}
+                    className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer"
+                  >
                     Audio
                   </Link>
-                  <Link href={`/video`} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
+                  <Link
+                    href={`/video`}
+                    className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer"
+                  >
                     Video
                   </Link>
 
-                  <Link href={'/download'} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
+                  <Link
+                    href={'/download'}
+                    className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer"
+                  >
                     {t('headerDownload')}
                   </Link>
                 </div>
               </div>
 
               <li>
-                <Link href={'#contact'} className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer">
+                <Link
+                  href={'#contact'}
+                  className="text-sacred-cream/80 hover:text-sacred-gold transition-colors cursor-pointer"
+                >
                   {t('headerContact')}
                 </Link>
               </li>
