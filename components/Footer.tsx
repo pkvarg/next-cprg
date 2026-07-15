@@ -2,6 +2,7 @@
 import React from 'react'
 import CookieConsent from 'react-cookie-consent'
 import Link from 'next/link'
+import { Link as LocaleLink } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
 //import { updateVisitors } from '@/utils/visitorsCounter'
 
@@ -52,7 +53,7 @@ const Footer = () => {
           background: '#1c1917',
           color: '#faf7f2',
           fontSize: '14px',
-          fontFamily: "'Lato', sans-serif",
+          fontFamily: 'var(--font-lato), sans-serif',
           borderTop: '1px solid rgba(201, 162, 39, 0.25)',
           padding: '16px 28px',
         }}
@@ -60,12 +61,12 @@ const Footer = () => {
           background: '#7a3325',
           color: '#faf7f2',
           fontSize: '13px',
-          fontFamily: "'Lato', sans-serif",
+          fontFamily: 'var(--font-lato), sans-serif',
           letterSpacing: '0.08em',
           textTransform: 'uppercase' as const,
           padding: '8px 20px',
           borderRadius: '4px',
-          border: 'none',
+          border: '1px solid #7a3325',
         }}
         buttonText={t('cookiesButton')}
         expires={365}
@@ -76,12 +77,14 @@ const Footer = () => {
         }}
         declineButtonStyle={{
           background: 'transparent',
-          color: 'rgba(250, 247, 242, 0.5)',
+          color: '#faf7f2',
           fontSize: '13px',
-          fontFamily: "'Lato', sans-serif",
-          padding: '8px 16px',
+          fontFamily: 'var(--font-lato), sans-serif',
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase' as const,
+          padding: '8px 20px',
           borderRadius: '4px',
-          border: '1px solid rgba(250, 247, 242, 0.2)',
+          border: '1px solid rgba(201, 162, 39, 0.5)',
         }}
         declineButtonText={t('cookiesButtonNo')}
         onDecline={() => {
@@ -89,6 +92,9 @@ const Footer = () => {
         }}
       >
         {t('cookiesText')}{' '}
+        <LocaleLink href="/privacy" style={{ color: '#e8c460', textDecoration: 'underline' }}>
+          {t('cookiesLink')}
+        </LocaleLink>
       </CookieConsent>
       <footer className="bg-sacred-dark border-t border-sacred-gold/20 font-light">
         <section className="mx-4 text-sacred-cream/50 text-[0.85rem] font-lato font-light pt-8 lg:pt-4 pb-8">
@@ -97,9 +103,20 @@ const Footer = () => {
             <p> {Date().substring(11, 15)}</p>
             <p>Církev v Praze</p>
           </div>
-          <div className="flex flex-col lg:flex-row gap-0 lg:gap-2 items-center justify-center"></div>
+          <div className="flex flex-col lg:flex-row gap-0 lg:gap-2 items-center justify-center">
+            <LocaleLink
+              href="/privacy"
+              className="text-sacred-muted hover:text-sacred-gold transition-colors text-[0.85rem]"
+            >
+              {t('cookiesLink')}
+            </LocaleLink>
+          </div>
           <div className="flex justify-center mt-0 lg:mt-2">
-            <Link href="https://pictusweb.sk" target="_blank" className="text-sacred-muted hover:text-sacred-gold transition-colors text-[0.85rem]">
+            <Link
+              href="https://pictusweb.sk"
+              target="_blank"
+              className="text-sacred-muted hover:text-sacred-gold transition-colors text-[0.85rem]"
+            >
               &#60;&#47;&#62; PICTUSWEB development
             </Link>
           </div>

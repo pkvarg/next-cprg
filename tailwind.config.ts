@@ -10,8 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       spacing: {
         '9/16': '56.25%', // 16:9 aspect ratio
@@ -29,8 +28,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        cormorant: ['Cormorant Garamond', 'Georgia', 'serif'],
-        lato: ['Lato', 'sans-serif'],
+        cormorant: ['var(--font-cormorant)', 'Georgia', 'serif'],
+        lato: ['var(--font-lato)', 'sans-serif'],
       },
     },
   },

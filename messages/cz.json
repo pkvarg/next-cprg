@@ -67,9 +67,10 @@
     "home03title": "PODUJATIA",
     "home03sub": "BLÍŽÍCÍ SE UDÁLOSTI",
 
-    "cookiesText": "Tato stránka používá anonymní analytiku pro zlepšení uživatelského zážitku. Osobní údaje nejsou shromažďovány.",
-    "cookiesButton": "Pokračovat",
+    "cookiesText": "S vaším souhlasem tato stránka používá anonymní analytiku bez cookies pro zlepšení uživatelského zážitku. Můžete ji přijmout nebo odmítnout — web funguje v obou případech.",
+    "cookiesButton": "Souhlasím",
     "cookiesButtonNo": "Nesouhlasím",
+    "cookiesLink": "Zásady cookies a soukromí",
 
     "back": "Naspäť",
 
@@ -170,5 +171,30 @@
     "downloadInfoDescription": "Klikněte na tlačítko \"Stáhnout PDF\" pro uložení dokumentu do vašeho zařízení. Soubor bude stažen ve formátu PDF.",
     "problemsText": "Máte problémy se stahováním?",
     "contactUs": "Kontaktujte nás"
+  },
+
+  "Privacy": {
+    "title": "Zásady používání cookies a ochrany soukromí",
+    "lastUpdated": "Poslední aktualizace: 15. července 2026",
+    "intro": "Vážíme si vašeho soukromí. Na této stránce vysvětlujeme, jaké údaje zpracováváme, jaké cookies a analytické nástroje používáme a jak můžete spravovat svůj souhlas.",
+
+    "dataTitle": "Jaké údaje zpracováváme",
+    "dataText": "Pokud použijete kontaktní formulář, zpracováváme jméno, e-mailovou adresu a zprávu, které uvedete. Tyto údaje slouží výhradně k odpovědi na váš dotaz a nejsou ukládány do žádné databáze. Vaše údaje neprodáváme ani nepředáváme třetím stranám pro marketingové účely.",
+
+    "cookiesTitle": "Cookies a analytika",
+    "cookiesIntro": "Tento web používá následující technologie:",
+    "necessaryTitle": "Nezbytné (vždy aktivní)",
+    "necessaryText": "CookieConsent — jediná cookie, která uchovává vaše rozhodnutí o cookies, abychom se neptali znovu. Neobsahuje žádné osobní údaje a vyprší po 365 dnech.",
+    "analyticsTitle": "Analytické (pouze s vaším souhlasem)",
+    "analyticsText": "S vaším souhlasem používáme Umami, nástroj šetrný k soukromí provozovaný na naší vlastní infrastruktuře. Měří návštěvnost anonymně, nepoužívá žádné cookies a nesleduje vás napříč weby. Načte se až poté, co udělíte souhlas — pokud jej odmítnete, není nikdy aktivován.",
+
+    "notUsedTitle": "Co nepoužíváme",
+    "notUsedText": "Nepoužíváme marketingové ani reklamní cookies, sledovací cookies třetích stran ani cookies sociálních sítí.",
+
+    "consentTitle": "Správa souhlasu",
+    "consentText": "V cookie liště můžete zvolit „Souhlasím\" nebo „Nesouhlasím\"; obě možnosti jsou rovnocenně dostupné a web plně funguje v obou případech. Pokud chcete své rozhodnutí později změnit, vymažte cookies tohoto webu ve svém prohlížeči a lišta se zobrazí znovu.",
+
+    "rightsTitle": "Vaše práva",
+    "rightsText": "Podle GDPR máte právo na přístup ke svým osobním údajům, na jejich opravu nebo výmaz, na omezení či námitku proti jejich zpracování a právo podat stížnost u Úřadu pro ochranu osobních údajů (uoou.gov.cz). Pro uplatnění těchto práv nás kontaktujte na info@cirkevvpraze.cz."
   }
 }

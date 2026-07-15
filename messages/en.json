@@ -63,9 +63,10 @@
     "home03title": "EVENTS",
     "home03sub": "UPCOMING EVENTS",
 
-    "cookiesText": "This site uses anonymous analytics to improve user experience. No personal data is collected.",
-    "cookiesButton": "Continue",
-    "cookiesButtonNo": "Decline",
+    "cookiesText": "With your consent, this site uses cookieless, anonymous analytics to improve the user experience. You can accept or reject it — the site works either way.",
+    "cookiesButton": "Accept",
+    "cookiesButtonNo": "Reject",
+    "cookiesLink": "Cookie & privacy policy",
 
     "back": "Back",
 
@@ -169,5 +170,30 @@
     "downloadInfoDescription": "Click the \"Download PDF\" button to save the document to your device. The file will be downloaded in PDF format.",
     "problemsText": "Having problems with downloading?",
     "contactUs": "Contact us"
+  },
+
+  "Privacy": {
+    "title": "Cookie & Privacy Policy",
+    "lastUpdated": "Last updated: 15 July 2026",
+    "intro": "We respect your privacy. This page explains what data we process, which cookies and analytics we use, and how you can manage your consent.",
+
+    "dataTitle": "What data we process",
+    "dataText": "If you use the contact form, we process the name, e-mail address and message you provide. These are used solely to reply to your enquiry and are not stored in any database. We do not sell or share your data with third parties for marketing purposes.",
+
+    "cookiesTitle": "Cookies and analytics",
+    "cookiesIntro": "This website uses the following technologies:",
+    "necessaryTitle": "Necessary (always active)",
+    "necessaryText": "CookieConsent — a single cookie that stores your cookie preference so we do not ask again. It contains no personal data and expires after 365 days.",
+    "analyticsTitle": "Analytics (only with your consent)",
+    "analyticsText": "With your consent we use Umami, a privacy-friendly analytics tool hosted on our own infrastructure. It measures visits anonymously, uses no cookies, and does not track you across websites. It is loaded only after you accept — if you reject, it is never activated.",
+
+    "notUsedTitle": "What we do not use",
+    "notUsedText": "We do not use marketing or advertising cookies, third-party tracking cookies, or social-media cookies.",
+
+    "consentTitle": "Managing your consent",
+    "consentText": "You can choose \"Accept\" or \"Reject\" in the cookie banner; both options are equally available and the site works fully either way. To review or change your choice later, clear this site's cookies in your browser and the banner will appear again.",
+
+    "rightsTitle": "Your rights",
+    "rightsText": "Under the GDPR you have the right to access, rectify or erase your personal data, to restrict or object to its processing, and to lodge a complaint with the Czech Data Protection Authority (Úřad pro ochranu osobních údajů, uoou.gov.cz). To exercise these rights, contact us at info@cirkevvpraze.cz."
   }
 }
