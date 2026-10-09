@@ -13,7 +13,6 @@ const Contact = () => {
   const [email, setEmail] = useState('')
   const [mailMessage, setMailMessage] = useState('')
   const [checkBox, setCheckBox] = useState<boolean>(false)
-  const [showGdpr, setShowGdpr] = useState(false)
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
 
@@ -80,11 +79,6 @@ const Contact = () => {
     }
   }
 
-  const toggleShowGdpr = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault()
-    setShowGdpr((prev) => !prev)
-  }
-
   const handleCheckBox = () => {
     setCheckBox((current) => !current)
   }
@@ -100,12 +94,8 @@ const Contact = () => {
         headers: {
           'Content-Type': 'application/json',
         },
+        // Only why the submission was flagged; the form contents stay out of the server log.
         body: JSON.stringify({
-          name,
-          email,
-          phone,
-          message: mailMessage,
-          honeypot,
           detectionType,
           detectionDetails,
           locale,
@@ -226,7 +216,7 @@ const Contact = () => {
       const timeSpent = Date.now() - formStartTime
       await logBotAttempt(
         'honeypot',
-        `Honeypot field filled with value: "${honeypot}"`,
+        'Honeypot field filled',
         timeSpent
       )
       setMessage(t('contactError'))
@@ -383,7 +373,7 @@ const Contact = () => {
                     required
                   ></textarea>
 
-                  <div className="flex flex-row form-check mt-8 items-center">
+                  <div className="flex flex-row form-check mt-8 items-start">
                     <input
                       id="flexCheckDefault"
                       type="checkbox"
@@ -391,22 +381,24 @@ const Contact = () => {
                       //value={checkBox}
                       onChange={handleCheckBox}
                       required
-                      className="rounded-xl w-[25px] h-[25px] lg:h-[30px]"
+                      className="rounded-xl w-[25px] h-[25px] lg:h-[30px] flex-shrink-0"
                     />
 
+                    {/* Explicit consent (čl. 9 odst. 2 písm. a) GDPR): a message may reveal the sender's faith. */}
                     <label
                       className="form-check-label text-sacred-cream/60 text-[1rem] leading-6 ml-[15px] mt-[3px]"
                       htmlFor="flexCheckDefault"
                     >
-                      {t('contactAgree')}{' '}
-                      <button className="underline" onClick={(e) => toggleShowGdpr(e)}>
-                        {t('contactGdpr')}{' '}
-                      </button>
-                      {showGdpr && (
-                        <p className="w-[300px] lg:w-[240px] text-sacred-cream/60 text-[1rem] text-left mt-2 leading-6">
-                          {t('gdpr1')}
-                        </p>
-                      )}
+                      {t('contactConsent')}{' '}
+                      <a
+                        href={`/${locale}/privacy#kontaktni-formular`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-sacred-gold transition-colors"
+                      >
+                        {t('contactConsentLink')}
+                      </a>
+                      .
                     </label>
                   </div>
                 </div>

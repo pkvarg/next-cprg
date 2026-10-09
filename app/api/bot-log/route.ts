@@ -5,11 +5,6 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
 
     const {
-      name,
-      email,
-      phone,
-      message,
-      honeypot,
       detectionType,
       detectionDetails,
       locale,
@@ -33,13 +28,6 @@ export async function POST(request: NextRequest) {
       userAgent,
       locale,
       origin,
-      formData: {
-        name,
-        email,
-        phone,
-        messageLength: message?.length || 0,
-        honeypotValue: honeypot,
-      },
       timestamp: new Date().toISOString(),
     })
 

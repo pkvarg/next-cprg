@@ -71,6 +71,9 @@
     "cookiesButton": "Souhlasím",
     "cookiesButtonNo": "Nesouhlasím",
     "cookiesLink": "Zásady cookies a soukromí",
+    "contactConsent": "Souhlasím, aby správce webu použil mou zprávu, která může obsahovat informace o mé víře, k odpovědi a domluvení setkání. Souhlas mohu kdykoli odvolat. Více v",
+    "contactConsentLink": "zásadách ochrany osobních údajů",
+    "footerCookieSettings": "Nastavení cookies",
 
     "back": "Naspäť",
 
@@ -85,8 +88,6 @@
 
     "contactPhone": "Telefon",
     "contactMessage": "Vaše zpráva",
-    "contactAgree": "Souhlasím se ",
-    "contactGdpr": "zpracováním mých údajů",
 
     "contactSend": "Poslat",
 
@@ -98,7 +99,6 @@
     "contactInvite03": "V Ňom bol život a život bol svetlom ľudí.",
     "contactInvite04": "Ján 1:4",
 
-    "gdpr1": "Vami poskytnuté údaje neuchováme v žádné databázi.",
     "gdpr2": "Email bude použit jen na odpověď na Vašu správu.",
 
     "contactRightTitle": "Pravidelná setkání",
@@ -174,27 +174,26 @@
   },
 
   "Privacy": {
-    "title": "Zásady používání cookies a ochrany soukromí",
-    "lastUpdated": "Poslední aktualizace: 15. července 2026",
-    "intro": "Vážíme si vašeho soukromí. Na této stránce vysvětlujeme, jaké údaje zpracováváme, jaké cookies a analytické nástroje používáme a jak můžete spravovat svůj souhlas.",
-
-    "dataTitle": "Jaké údaje zpracováváme",
-    "dataText": "Pokud použijete kontaktní formulář, zpracováváme jméno, e-mailovou adresu a zprávu, které uvedete. Tyto údaje slouží výhradně k odpovědi na váš dotaz a nejsou ukládány do žádné databáze. Vaše údaje neprodáváme ani nepředáváme třetím stranám pro marketingové účely.",
-
-    "cookiesTitle": "Cookies a analytika",
-    "cookiesIntro": "Tento web používá následující technologie:",
-    "necessaryTitle": "Nezbytné (vždy aktivní)",
-    "necessaryText": "CookieConsent — jediná cookie, která uchovává vaše rozhodnutí o cookies, abychom se neptali znovu. Neobsahuje žádné osobní údaje a vyprší po 365 dnech.",
-    "analyticsTitle": "Analytické (pouze s vaším souhlasem)",
-    "analyticsText": "S vaším souhlasem používáme Umami, nástroj šetrný k soukromí provozovaný na naší vlastní infrastruktuře. Měří návštěvnost anonymně, nepoužívá žádné cookies a nesleduje vás napříč weby. Načte se až poté, co udělíte souhlas — pokud jej odmítnete, není nikdy aktivován.",
-
-    "notUsedTitle": "Co nepoužíváme",
-    "notUsedText": "Nepoužíváme marketingové ani reklamní cookies, sledovací cookies třetích stran ani cookies sociálních sítí.",
-
-    "consentTitle": "Správa souhlasu",
-    "consentText": "V cookie liště můžete zvolit „Souhlasím\" nebo „Nesouhlasím\"; obě možnosti jsou rovnocenně dostupné a web plně funguje v obou případech. Pokud chcete své rozhodnutí později změnit, vymažte cookies tohoto webu ve svém prohlížeči a lišta se zobrazí znovu.",
-
-    "rightsTitle": "Vaše práva",
-    "rightsText": "Podle GDPR máte právo na přístup ke svým osobním údajům, na jejich opravu nebo výmaz, na omezení či námitku proti jejich zpracování a právo podat stížnost u Úřadu pro ochranu osobních údajů (uoou.gov.cz). Pro uplatnění těchto práv nás kontaktujte na info@cirkevvpraze.cz."
+    "title": "Zásady ochrany osobních údajů a cookies",
+    "lastUpdated": "Účinné od 9. 10. 2026",
+    "intro": "Zde najdete, jaké osobní údaje web cirkevvpraze.cz zpracovává, proč, kdo k nim má přístup a jaká máte práva podle nařízení (EU) 2016/679 (GDPR) a zákona č. 110/2019 Sb., o zpracování osobních údajů.",
+    "controllerTitle": "1. Kdo web provozuje",
+    "controllerText": "Provozovatelem webu a správcem vašich osobních údajů je Adam Surjomartono, Praha, Česká republika.\nKontakt: info@cirkevvpraze.cz\nWeb slouží místní církvi v Praze.",
+    "visitTitle": "2. Návštěva webu",
+    "visitText": "Při každé návštěvě zpracovávají poskytovatel hostingu a Cloudflare technické údaje nezbytné k doručení stránky a k ochraně před útoky: IP adresu, typ prohlížeče a čas požadavku. Právním základem je oprávněný zájem na bezpečném fungování webu (čl. 6 odst. 1 písm. f) GDPR). Tyto záznamy se uchovávají jen krátce, zpravidla několik týdnů.",
+    "contactFormTitle": "3. Kontaktní formulář",
+    "contactFormText": "Údaje: jméno, e-mail, telefon (pokud ho uvedete) a text zprávy.\nÚčel: odpovědět vám, případně domluvit osobní setkání.\nProtože zpráva může prozradit vaši víru nebo náboženské přesvědčení, zpracovávám ji jen s vaším výslovným souhlasem, který udělíte zaškrtnutím políčka pod formulářem (čl. 6 odst. 1 písm. a) a čl. 9 odst. 2 písm. a) GDPR).\nZpráva se doručí e-mailem do schránky info@cirkevvpraze.cz. Souhlas můžete kdykoli odvolat e-mailem na stejnou adresu – vaši zprávu pak smažu. Odvolání nemá vliv na zákonnost zpracování před ním.\nDoba uchování: dokud souhlas neodvoláte, nejdéle 2 roky od poslední komunikace.\nOchrana před spamem: pokud formulář vyhodnotí odeslání jako automatický spam, zaznamená se IP adresa, údaje o prohlížeči a důvod vyhodnocení, nikoli obsah formuláře (oprávněný zájem na ochraně webu). Tyto záznamy se uchovávají nejvýše několik týdnů.",
+    "cookiesTitle": "4. Cookies a měření návštěvnosti",
+    "cookiesText": "Nezbytné (bez souhlasu):\n- CookieConsent – pamatuje si vaši volbu v liště cookies, 365 dní\n- NEXT_LOCALE – pamatuje si zvolený jazyk webu\n- contact_form_submissions (úložiště prohlížeče) – časy odeslání formuláře kvůli ochraně před spamem, 1 hodina\n- přihlašovací cookie administrace – jen pro správce webu\n\nMěření návštěvnosti (jen s vaším souhlasem):\n- Umami – nástroj na měření návštěvnosti na serveru v Německu (Contabo GmbH), který provozuje Pictusweb s.r.o. Nepoužívá cookies, neukládá IP adresu a nevytváří profil návštěvníka; vidět jsou jen souhrnné statistiky. Spustí se až po kliknutí na „Souhlasím“. Pokud měření odmítnete, prohlížeč si to zapamatuje (umami.disabled).\n\nPísma jsou součástí webu a nenačítají se od Googlu. Nepoužíváme Google Analytics, reklamní ani sledovací cookies.\n\nSouhlas můžete kdykoli změnit nebo odvolat odkazem „Nastavení cookies“ v patičce webu. Pravidla pro cookies vycházejí z § 89 odst. 3 zákona č. 127/2005 Sb., o elektronických komunikacích.",
+    "videosTitle": "5. Videa z YouTube",
+    "videosText": "Videa jsou uložena na YouTube (Google Ireland Ltd. / Google LLC). Dokud nekliknete na „Přehrát video“, s YouTube se nenaváže žádné spojení. Po kliknutí se video načte z youtube-nocookie.com a Google získá vaši IP adresu a údaje o prohlížeči a může uložit vlastní cookies. Za toto zpracování odpovídá Google jako samostatný správce (policies.google.com/privacy).",
+    "recipientsTitle": "6. Kdo má k údajům přístup",
+    "recipientsText": "Údaje neprodávám ani nepoužívám k marketingu. Přístup mají jen tito poskytovatelé, v rozsahu nezbytném pro jejich službu:\n- Pictusweb s.r.o., Nábrežná 4895/42, 940 02 Nové Zámky, Slovensko – vývoj a provoz webu včetně hostingu, doručování zpráv z formuláře, podcastů a měření návštěvnosti\n- Contabo GmbH (Německo) – servery\n- Cloudflare, Inc. (USA) – doručování webu a ochrana před útoky\n- Hostinger / Titan Mail – e-mailová schránka info@cirkevvpraze.cz\n- Google (YouTube) – jen pokud spustíte video (část 5)",
+    "transfersTitle": "7. Předávání údajů mimo EU",
+    "transfersText": "Cloudflare, Titan Mail a Google jsou společnosti se sídlem nebo mateřskou společností mimo EU (zejména v USA). K předání dochází jen s vhodnými zárukami podle kapitoly V GDPR – na základě rámce EU–USA pro ochranu osobních údajů (EU-U.S. Data Privacy Framework) nebo standardních smluvních doložek Evropské komise.",
+    "rightsTitle": "8. Vaše práva",
+    "rightsText": "Máte právo na přístup ke svým údajům, jejich opravu a výmaz, na omezení zpracování, na přenositelnost údajů, právo vznést námitku proti zpracování na základě oprávněného zájmu a právo kdykoli odvolat souhlas. Stačí napsat na info@cirkevvpraze.cz – odpovím bez zbytečného odkladu, nejpozději do 1 měsíce.\nPokud se domníváte, že vaše údaje zpracovávám nezákonně, můžete podat stížnost u Úřadu pro ochranu osobních údajů, Pplk. Sochora 27, 170 00 Praha 7, www.uoou.gov.cz.",
+    "changesTitle": "9. Změny",
+    "changesText": "Tyto zásady aktualizuji, když se změní použité služby nebo způsob zpracování. Aktuální znění je vždy na této stránce. Toto znění je účinné od 9. 10. 2026."
   }
 }

@@ -4,6 +4,19 @@ import PagesHeader from '@/components/PagesHeader'
 import React from 'react'
 import { useTranslations } from 'next-intl'
 
+// Section ids double as anchors, e.g. /privacy#cookies from the cookie banner.
+const sections = [
+  { id: 'spravce', key: 'controller' },
+  { id: 'navsteva', key: 'visit' },
+  { id: 'kontaktni-formular', key: 'contactForm' },
+  { id: 'cookies', key: 'cookies' },
+  { id: 'videa', key: 'videos' },
+  { id: 'prijemci', key: 'recipients' },
+  { id: 'predavani', key: 'transfers' },
+  { id: 'prava', key: 'rights' },
+  { id: 'zmeny', key: 'changes' },
+]
+
 const Privacy = () => {
   const t = useTranslations('Privacy')
 
@@ -22,52 +35,16 @@ const Privacy = () => {
             {t('intro')}
           </p>
 
-          <h2 className="font-cormorant text-[1.6rem] text-sacred-cream font-semibold mt-6">
-            {t('dataTitle')}
-          </h2>
-          <p className="font-lato text-sacred-cream/80 leading-relaxed text-[1.15rem]">
-            {t('dataText')}
-          </p>
-
-          <h2 className="font-cormorant text-[1.6rem] text-sacred-cream font-semibold mt-6">
-            {t('cookiesTitle')}
-          </h2>
-          <p className="font-lato text-sacred-cream/80 leading-relaxed text-[1.15rem]">
-            {t('cookiesIntro')}
-          </p>
-          <h3 className="font-cormorant text-[1.3rem] italic text-sacred-gold mt-2">
-            {t('necessaryTitle')}
-          </h3>
-          <p className="font-lato text-sacred-cream/80 leading-relaxed text-[1.15rem]">
-            {t('necessaryText')}
-          </p>
-          <h3 className="font-cormorant text-[1.3rem] italic text-sacred-gold mt-2">
-            {t('analyticsTitle')}
-          </h3>
-          <p className="font-lato text-sacred-cream/80 leading-relaxed text-[1.15rem]">
-            {t('analyticsText')}
-          </p>
-
-          <h2 className="font-cormorant text-[1.6rem] text-sacred-cream font-semibold mt-6">
-            {t('notUsedTitle')}
-          </h2>
-          <p className="font-lato text-sacred-cream/80 leading-relaxed text-[1.15rem]">
-            {t('notUsedText')}
-          </p>
-
-          <h2 className="font-cormorant text-[1.6rem] text-sacred-cream font-semibold mt-6">
-            {t('consentTitle')}
-          </h2>
-          <p className="font-lato text-sacred-cream/80 leading-relaxed text-[1.15rem]">
-            {t('consentText')}
-          </p>
-
-          <h2 className="font-cormorant text-[1.6rem] text-sacred-cream font-semibold mt-6">
-            {t('rightsTitle')}
-          </h2>
-          <p className="font-lato text-sacred-cream/80 leading-relaxed text-[1.15rem]">
-            {t('rightsText')}
-          </p>
+          {sections.map(({ id, key }) => (
+            <section key={id} id={id} className="scroll-mt-28">
+              <h2 className="font-cormorant text-[1.6rem] text-sacred-cream font-semibold mt-6 mb-2">
+                {t(`${key}Title`)}
+              </h2>
+              <p className="font-lato text-sacred-cream/80 leading-relaxed text-[1.15rem] whitespace-pre-line">
+                {t(`${key}Text`)}
+              </p>
+            </section>
+          ))}
         </div>
       </div>
       <Footer />

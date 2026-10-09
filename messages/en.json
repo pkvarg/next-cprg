@@ -67,6 +67,9 @@
     "cookiesButton": "Accept",
     "cookiesButtonNo": "Reject",
     "cookiesLink": "Cookie & privacy policy",
+    "contactConsent": "I agree that the website operator may use my message, which may contain information about my faith, to reply and arrange a meeting. I can withdraw my consent at any time. More in the",
+    "contactConsentLink": "privacy policy",
+    "footerCookieSettings": "Cookie settings",
 
     "back": "Back",
 
@@ -81,8 +84,6 @@
     "contactEmail": "Your e-mail",
     "contactPhone": "Phone",
     "contactMessage": "Your message",
-    "contactAgree": "I agree to",
-    "contactGdpr": "process my data",
 
     "contactSend": "Send",
     "contactError2": "Not sent! Contact via our email, please.",
@@ -93,7 +94,6 @@
     "contactInvite02": "contact us via contact form please.",
     "contactInvite03": "In him was life, and that life was the light of all mankind.",
     "contactInvite04": "John 1:4",
-    "gdpr1": "We do not store the data provided by you in any database.",
     "gdpr2": "The email will only be used to respond to your message.",
 
     "contactRightTitle": "Regular meetings",
@@ -173,27 +173,26 @@
   },
 
   "Privacy": {
-    "title": "Cookie & Privacy Policy",
-    "lastUpdated": "Last updated: 15 July 2026",
-    "intro": "We respect your privacy. This page explains what data we process, which cookies and analytics we use, and how you can manage your consent.",
-
-    "dataTitle": "What data we process",
-    "dataText": "If you use the contact form, we process the name, e-mail address and message you provide. These are used solely to reply to your enquiry and are not stored in any database. We do not sell or share your data with third parties for marketing purposes.",
-
-    "cookiesTitle": "Cookies and analytics",
-    "cookiesIntro": "This website uses the following technologies:",
-    "necessaryTitle": "Necessary (always active)",
-    "necessaryText": "CookieConsent — a single cookie that stores your cookie preference so we do not ask again. It contains no personal data and expires after 365 days.",
-    "analyticsTitle": "Analytics (only with your consent)",
-    "analyticsText": "With your consent we use Umami, a privacy-friendly analytics tool hosted on our own infrastructure. It measures visits anonymously, uses no cookies, and does not track you across websites. It is loaded only after you accept — if you reject, it is never activated.",
-
-    "notUsedTitle": "What we do not use",
-    "notUsedText": "We do not use marketing or advertising cookies, third-party tracking cookies, or social-media cookies.",
-
-    "consentTitle": "Managing your consent",
-    "consentText": "You can choose \"Accept\" or \"Reject\" in the cookie banner; both options are equally available and the site works fully either way. To review or change your choice later, clear this site's cookies in your browser and the banner will appear again.",
-
-    "rightsTitle": "Your rights",
-    "rightsText": "Under the GDPR you have the right to access, rectify or erase your personal data, to restrict or object to its processing, and to lodge a complaint with the Czech Data Protection Authority (Úřad pro ochranu osobních údajů, uoou.gov.cz). To exercise these rights, contact us at info@cirkevvpraze.cz."
+    "title": "Privacy & Cookie Policy",
+    "lastUpdated": "Effective from 9 October 2026",
+    "intro": "This page explains what personal data the website cirkevvpraze.cz processes, why, who has access to it and what rights you have under Regulation (EU) 2016/679 (GDPR) and Czech Act No. 110/2019 Coll. on personal data processing.",
+    "controllerTitle": "1. Who runs this website",
+    "controllerText": "The website is run by, and your personal data is controlled by, Adam Surjomartono, Prague, Czech Republic.\nContact: info@cirkevvpraze.cz\nThe website serves the local church in Prague.",
+    "visitTitle": "2. Visiting the website",
+    "visitText": "On every visit, the hosting provider and Cloudflare process the technical data needed to deliver the page and protect it from attacks: IP address, browser type and time of request. The legal basis is the legitimate interest in running the website securely (Art. 6(1)(f) GDPR). These logs are kept only briefly, usually a few weeks.",
+    "contactFormTitle": "3. Contact form",
+    "contactFormText": "Data: name, e-mail, phone (if you provide it) and the text of your message.\nPurpose: to reply to you and, where relevant, arrange a personal meeting.\nBecause a message may reveal your faith or religious beliefs, I process it only with your explicit consent, which you give by ticking the box below the form (Art. 6(1)(a) and Art. 9(2)(a) GDPR).\nThe message is delivered by e-mail to the info@cirkevvpraze.cz mailbox. You can withdraw your consent at any time by writing to the same address – I will then delete your message. Withdrawal does not affect the lawfulness of processing before it.\nRetention: until you withdraw consent, at most 2 years after our last communication.\nSpam protection: if the form classifies a submission as automated spam, it records the IP address, browser details and the reason for the classification, not the form contents (legitimate interest in protecting the website). These records are kept for a few weeks at most.",
+    "cookiesTitle": "4. Cookies and visitor statistics",
+    "cookiesText": "Necessary (no consent required):\n- CookieConsent – remembers your choice in the cookie bar, 365 days\n- NEXT_LOCALE – remembers the selected website language\n- contact_form_submissions (browser storage) – times of form submissions for spam protection, 1 hour\n- administration login cookie – for the website administrator only\n\nVisitor statistics (only with your consent):\n- Umami – a visitor statistics tool on a server in Germany (Contabo GmbH), run by Pictusweb s.r.o. It uses no cookies, does not store IP addresses and does not build visitor profiles; only aggregate statistics are visible. It starts only after you click “Accept”. If you decline, your browser remembers it (umami.disabled).\n\nFonts are part of the website and are not loaded from Google. We do not use Google Analytics, advertising or tracking cookies.\n\nYou can change or withdraw your consent at any time via “Cookie settings” in the website footer. The cookie rules follow Section 89(3) of Czech Act No. 127/2005 Coll. on electronic communications.",
+    "videosTitle": "5. YouTube videos",
+    "videosText": "Videos are hosted on YouTube (Google Ireland Ltd. / Google LLC). Until you click “Play video”, no connection to YouTube is made. After you click, the video loads from youtube-nocookie.com and Google receives your IP address and browser details and may set its own cookies. Google is responsible for this processing as an independent controller (policies.google.com/privacy).",
+    "recipientsTitle": "6. Who has access to the data",
+    "recipientsText": "I do not sell your data or use it for marketing. Only the following providers have access, to the extent needed for their service:\n- Pictusweb s.r.o., Nábrežná 4895/42, 940 02 Nové Zámky, Slovakia – development and operation of the website, including hosting, delivery of form messages, podcasts and visitor statistics\n- Contabo GmbH (Germany) – servers\n- Cloudflare, Inc. (USA) – website delivery and attack protection\n- Hostinger / Titan Mail – the info@cirkevvpraze.cz mailbox\n- Google (YouTube) – only if you play a video (section 5)",
+    "transfersTitle": "7. Transfers outside the EU",
+    "transfersText": "Cloudflare, Titan Mail and Google are companies based, or with parent companies, outside the EU (mainly in the USA). Transfers take place only with appropriate safeguards under Chapter V GDPR – the EU-U.S. Data Privacy Framework or the European Commission’s standard contractual clauses.",
+    "rightsTitle": "8. Your rights",
+    "rightsText": "You have the right to access your data, have it corrected or erased, restrict its processing, receive it in a portable format, object to processing based on legitimate interest, and withdraw your consent at any time. Just write to info@cirkevvpraze.cz – I will reply without undue delay, within 1 month at the latest.\nIf you believe your data is being processed unlawfully, you can lodge a complaint with the Czech Office for Personal Data Protection (Úřad pro ochranu osobních údajů), Pplk. Sochora 27, 170 00 Praha 7, www.uoou.gov.cz.",
+    "changesTitle": "9. Changes",
+    "changesText": "I update this policy when the services used or the way data is processed change. The current version is always on this page. This version is effective from 9 October 2026."
   }
 }

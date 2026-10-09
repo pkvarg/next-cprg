@@ -1,6 +1,6 @@
 'use client'
-import React from 'react'
-import CookieConsent from 'react-cookie-consent'
+import React, { useEffect, useState } from 'react'
+import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent'
 import Link from 'next/link'
 import { Link as LocaleLink } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl'
 
 const Footer = () => {
   const t = useTranslations('Home')
+  const [bannerVisible, setBannerVisible] = useState<'byCookieValue' | 'show' | 'hidden'>('byCookieValue')
 
   // const increaseVisitors = async () => {
   //   await updateVisitors()
@@ -45,9 +46,37 @@ const Footer = () => {
     document.head.appendChild(script)
   }
 
+  // Consent given on an earlier visit: load analytics on every page load.
+  useEffect(() => {
+    if (getCookieConsentValue() === 'true') {
+      loadUmamiScript()
+    }
+  }, [])
+
+  // Umami honours `umami.disabled`, so withdrawing consent stops tracking at once.
+  const decide = (granted: boolean) => {
+    try {
+      if (granted) {
+        localStorage.removeItem('umami.disabled')
+      } else {
+        localStorage.setItem('umami.disabled', '1')
+      }
+    } catch {
+      // storage unavailable — the banner simply shows again next visit
+    }
+    if (granted) {
+      loadUmamiScript()
+    }
+    if (bannerVisible === 'byCookieValue') {
+      incrementCount()
+    }
+    setBannerVisible('hidden')
+  }
+
   return (
     <>
       <CookieConsent
+        visible={bannerVisible}
         location="bottom"
         style={{
           background: '#1c1917',
@@ -71,10 +100,7 @@ const Footer = () => {
         buttonText={t('cookiesButton')}
         expires={365}
         enableDeclineButton
-        onAccept={() => {
-          incrementCount()
-          loadUmamiScript()
-        }}
+        onAccept={() => decide(true)}
         declineButtonStyle={{
           background: 'transparent',
           color: '#faf7f2',
@@ -87,12 +113,10 @@ const Footer = () => {
           border: '1px solid rgba(201, 162, 39, 0.5)',
         }}
         declineButtonText={t('cookiesButtonNo')}
-        onDecline={() => {
-          incrementCount()
-        }}
+        onDecline={() => decide(false)}
       >
         {t('cookiesText')}{' '}
-        <LocaleLink href="/privacy" style={{ color: '#e8c460', textDecoration: 'underline' }}>
+        <LocaleLink href="/privacy#cookies" style={{ color: '#e8c460', textDecoration: 'underline' }}>
           {t('cookiesLink')}
         </LocaleLink>
       </CookieConsent>
@@ -110,6 +134,13 @@ const Footer = () => {
             >
               {t('cookiesLink')}
             </LocaleLink>
+            <button
+              type="button"
+              onClick={() => setBannerVisible('show')}
+              className="text-sacred-muted hover:text-sacred-gold transition-colors text-[0.85rem]"
+            >
+              {t('footerCookieSettings')}
+            </button>
           </div>
           <div className="flex justify-center mt-0 lg:mt-2">
             <Link
